@@ -9,6 +9,10 @@ class MealTracker:
         # Initialize the MtProfile instance with the TestClient
         self.mt_profile = MtProfile(self.client)
 
-    def create_new_user(self):
+    def create_profiles(self):
         # Delegate the creation of a new profile to the MtProfile instance
-        return self.mt_profile.create_new_profile()
+        return self.mt_profile.create_profiles()
+    
+    def create_new_user(self, username: str, email: str, password: str):
+        # Delegate the creation of a new profile to the MtProfile instance
+        return self.mt_profile.create_new_profile(username=username, email=email, password=password)
