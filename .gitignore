@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pyvenv/
+.logs/
+.vscode
+.log.html
+.output.xml
+.report.html

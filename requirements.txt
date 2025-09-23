@@ -3,3 +3,7 @@ uvicorn
 sqlalchemy
 passlib
 bcrypt
+robotframework
+httpx
+robotframework-requests
+requests
