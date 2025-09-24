@@ -16,3 +16,16 @@ class MealTracker:
     def create_new_user(self, username: str, email: str, password: str):
         # Delegate the creation of a new profile to the MtProfile instance
         return self.mt_profile.create_new_profile(username=username, email=email, password=password)
+    
+    def verify_user(self, email: str,code: str):
+        # Delegate the verification of a user to the MtProfile instance
+        return self.mt_profile.verify_user(email, code)
+    
+    def resend_verification(self, email: str):
+        # Delegate the resending of verification code to the MtProfile instance
+        return self.mt_profile.resend_verification(email)
+    
+    def get_verification_code(self, email: str):
+        # Delegate the retrieval of the verification code to the MtProfile instance
+        return self.mt_profile.get_verification_code(email)
+    
