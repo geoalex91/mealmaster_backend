@@ -6,6 +6,13 @@ class Logger:
     _instance = None
     _lock = threading.Lock()
 
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super(Logger, cls).__new__(cls)
+        return cls._instance
+
     def __init__(self, log_dir: str = "logs",debug = True) -> None:
         if hasattr(self, "_initialized") and self._initialized:
             return
@@ -19,14 +26,6 @@ class Logger:
         self.debug = debug
         # Optionally, write session start header
         self.log("INFO", f"--- New logging session started: {self.logfile} ---")
-    
-    @classmethod
-    def get_instance(cls):
-        if cls._instance is None:
-            with cls._lock:
-                if cls._instance is None:  # double-checked locking
-                    cls._instance = cls()
-        return cls._instance
 
     def log(self, level: str, message: str) -> None:
         if self.debug is False:

@@ -14,7 +14,7 @@ class MtProfile:
         self.fake_emal_client = get_fake_email_client()
         app.dependency_overrides = {
                 "dependencies.get_email_client": get_fake_email_client}
-        self.email_keywords = FakeEmailKeywords()
+        self.email_keywords = FakeEmailKeywords(self.fake_emal_client)
     def _load_users(self):
         """Load users from the CSV file."""
         try:
@@ -71,18 +71,17 @@ class MtProfile:
         self.utilities.log_info(f"Response status code: {response.status_code}")
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to create user {user_json}: {response.json()}")
-            return False
         return response.json()
     
     def resend_verification(self,email: str):
         """Resend verification code to the user profile using the email."""
         
         user_json = {"email": email}
-        self.utilities.log_info(f"Resending verification code to user: {user_json}")
+        self.utilities.log_info(f"Resending verification code to user: {email}")
         self.fake_emal_client.clear()
-        response = self.client.post(f"{LOCALHOST}/users/resend-verification", json=user_json)
+        response = self.client.post(f"{LOCALHOST}/users/resend-verification", params=user_json)
         self.utilities.log_info(f"Response status code: {response.status_code}")
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to resend verification code to user {user_json}: {response.json()}")
-            return False
+            return response.json()
         return True

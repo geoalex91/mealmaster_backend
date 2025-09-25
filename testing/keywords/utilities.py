@@ -19,8 +19,8 @@ class Utilities:
         self._log_message(message, "ERROR")
 
 class FakeEmailKeywords:
-    def __init__(self):
-        self.client = FakeEmailClient().get_instance()
+    def __init__(self,client):
+        self.client = client
         self.last_code = None
 
     def _handle_email(self, email):

@@ -6,15 +6,15 @@ from db import db_user
 from datetime import datetime, timedelta, timezone
 from resources.logger import Logger
 import random
-from resources.email_client import EmailClient, get_email_client
+from resources.email_client import EmailClient, get_email_client, get_fake_email_client
 
 router = APIRouter(prefix="/users", tags=["users"])
-logger = Logger.get_instance()
+logger = Logger()
 
 @router.post('/register', response_model=UserDisplay, summary="Create a new user", 
              description="This endpoint allows the creation of a new user. It checks if a user with the same username or email already exists before creating a new user.",
              response_description="The created user data.")
-def create_user(request: UserBase, db: Session = Depends(get_db),email_client: EmailClient = Depends(get_email_client)):
+def create_user(request: UserBase, db: Session = Depends(get_db),email_client: EmailClient = Depends(get_fake_email_client)):
     """
     Creates a new user in the database and sends a verification code to the user's email.
     Args:
@@ -52,18 +52,18 @@ def create_user(request: UserBase, db: Session = Depends(get_db),email_client: E
              summary="Resend verification code", 
              description="This endpoint allows resending a new verification code to the user's email if the user is not already verified.",
              response_description="A message indicating that the verification code has been resent.")
-def resend_verification(request: UserBase, db: Session = Depends(get_db), email_client: EmailClient = Depends(get_email_client)):
+def resend_verification(email: str, db: Session = Depends(get_db), email_client: EmailClient = Depends(get_fake_email_client)):
     """
     Resends a new verification code to the user's email if the user is not already verified.
     Args:
-        request (UserBase): The user data containing email.
+        request (ResendVerificationRequest): The user data containing email.
         db (Session): The database session dependency.
         Returns:
         dict: A message indicating that the verification code has been resent.
     Raises:
         HTTPException: If the user is not found or already verified.
     """
-    user = db.query(db_user.User).filter(db_user.User.email == request.email).first()
+    user = db.query(db_user.User).filter(db_user.User.email == email).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
     if user.is_verified:
@@ -94,7 +94,7 @@ def verify_user(email: str, code: str, db: Session = Depends(get_db)):
     Raises:
         HTTPException: If the user is not found, the code is invalid, or the code has expired."""
     user = db.query(db_user.User).filter(db_user.User.email == email).first()
-    if not user or user.verification_code != code or user.code_expiry < datetime.now(timezone.utc):
+    if not user or user.verification_code != code or user.code_expiry.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc):
         raise HTTPException(status_code=400, detail="Invalid or expired code")
     user.is_verified = True
     user.verification_code = None

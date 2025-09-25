@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 import os
 from resources.logger import Logger
 from typing import List, Dict
+import threading
 
 
 class EmailClient:
@@ -12,7 +13,7 @@ class EmailClient:
         self.smtp_port = int(os.getenv("SMTP_PORT", "587"))
         self.sender_email = os.getenv("SMTP_USER", "codemaster9123@gmail.com")
         self.sender_password = os.getenv("SMTP_PASSWORD")
-        self.logger = Logger.get_instance()
+        self.logger = Logger()
 
     def send_email(self, subject: str, recipient: str, body: str):
         try:
@@ -35,16 +36,19 @@ class EmailClient:
 
 class FakeEmailClient:
     _instance = None
-    def __init__(self):
-        if FakeEmailClient._instance is not None:
-            raise RuntimeError("Use FakeEmailClient.get_instance() instead of creating directly")
-        self._sent_emails: List[Dict] = []
-
-    @classmethod
-    def get_instance(cls):
+    _lock = threading.Lock()
+    def __new__(cls, *args, **kwargs):
         if cls._instance is None:
-            cls._instance = FakeEmailClient()
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super(FakeEmailClient, cls).__new__(cls)
         return cls._instance
+
+    def __init__(self):
+        if hasattr(self, "_initialized") and self._initialized:
+            return
+        self._sent_emails: List[Dict] = []
+        self._initialized = True
 
     def send_email(self, subject: str, recipient: str, body: str):
         email = {
@@ -71,4 +75,4 @@ def get_email_client():
 
 def get_fake_email_client():
     """Provider for testing"""
-    return FakeEmailClient.get_instance()
+    return FakeEmailClient()
