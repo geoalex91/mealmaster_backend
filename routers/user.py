@@ -3,6 +3,7 @@ from routers.schemas import UserDisplay, UserBase
 from sqlalchemy.orm.session import Session
 from db.database import get_db
 from db import db_user
+from db.hashing import Hash
 from datetime import datetime, timedelta, timezone
 from resources.logger import Logger
 import random
@@ -25,8 +26,10 @@ def create_user(request: UserBase, db: Session = Depends(get_db),email_client: E
     Raises:
         HTTPException: If a user with the same username or email already exists.
     """
+    if "@" not in request.email:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Invalid email address")
     existing_user = db.query(db_user.User).filter(
-        (db_user.User.username == request.username) | (db_user.User.email == request.email)).first()
+        (db_user.User.username == request.username) | (request.email == db_user.User.email)).first()
     if existing_user:
         logger.error(f"Attempt to create a user that already exists: {request.username} or {request.email}")
         raise HTTPException(status_code=status.HTTP_424_FAILED_DEPENDENCY, detail="User already exists")
@@ -38,10 +41,13 @@ def create_user(request: UserBase, db: Session = Depends(get_db),email_client: E
     email_subject = "Your Verification Code"
     email_body = f"Hello {request.username},\n\nYour verification code is: {verification_code}"
     try:
-        email_client.send_email(email_subject, request.email, email_body)
+        mail_sent = email_client.send_email(email_subject, request.email, email_body)
+        if mail_sent["status"] != "fake-sent":
+            logger.error(f"Failed to send verification email to {request.email} Reaseon {mail_sent['reason']}")
+            raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Failed to send verification email")
     except Exception as e:
         logger.error(f"Failed to send verification email to {request.email}: {e}")
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to send verification email")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f"Failed to resend verification email. {mail_sent['reason']}")
     
     # Create the user in the database
     user = db_user.create_user(db, request, verification_code)
@@ -63,6 +69,8 @@ def resend_verification(email: str, db: Session = Depends(get_db), email_client:
     Raises:
         HTTPException: If the user is not found or already verified.
     """
+    if "@" not in email:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Invalid email address")
     user = db.query(db_user.User).filter(db_user.User.email == email).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
@@ -78,7 +86,10 @@ def resend_verification(email: str, db: Session = Depends(get_db), email_client:
     # Send email
     email_subject = "Your New Verification Code"
     email_body = f"Hello {user.username},\n\nYour new verification code is: {verification_code}"
-    email_client.send_email(email_subject, user.email, email_body)
+    status = email_client.send_email(email_subject, user.email, email_body)
+    if status["status"] != "fake-sent":
+        logger.error(f"Failed to resend verification email to {email} Reaseon {status['reason']}")
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=f"Failed to resend verification email. {status['reason']}")
     return {"message": "Verification code resent"}
 
 @router.post('/verify', summary="Verify user",description="Verify a user using the verification code sent to their email.",

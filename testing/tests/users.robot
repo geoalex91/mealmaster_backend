@@ -41,3 +41,8 @@ Library    keywords.meal_tracker_testing.MealTracker
     ${msg}=    Resend Verification    user_2@fake.com
     Should Be Equal As Strings    ${msg["detail"]}    User already verified
     Log     Test Case Passed
+
+7_Create_User_Invalid_Email
+    ${msg}=    Create New User    new_user3    invalid_email@email.c2m    user_password
+    Should Contain    ${msg["detail"]}    Invalid email domain
+    Log     Test Case Passed

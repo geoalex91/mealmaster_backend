@@ -8,3 +8,7 @@ httpx
 robotframework-requests
 requests
 python-dotenv
+dnspython
+pydantic[email]
+python-jose
+alembic

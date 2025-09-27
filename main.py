@@ -1,12 +1,14 @@
 from fastapi import FastAPI
 from db import models
 from db.database import engine
-from routers import user
+from routers import user, ingredient_router
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
 app.include_router(user.router)
+app.include_router(ingredient_router.router)
+
 @app.get("/")
 def read_root():
     return {"message": "MealTracker API is running"}
