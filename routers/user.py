@@ -80,7 +80,7 @@ def resend_verification(email: str, db: Session = Depends(get_db), email_client:
     # Generate new code and expiry
     verification_code = f"{random.randint(100000, 999999)}"
     user.verification_code = verification_code
-    user.code_expiry = datetime.now(timezone.utc) + timedelta(minutes=10)
+    user.code_expiry = datetime.now(timezone.utc) + timedelta(minutes=1)
     db.commit()
 
     # Send email

@@ -12,3 +12,4 @@ dnspython
 pydantic[email]
 python-jose
 alembic
+python-multipart
