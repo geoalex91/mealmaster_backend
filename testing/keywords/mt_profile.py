@@ -15,6 +15,7 @@ class MtProfile:
         app.dependency_overrides = {
                 "dependencies.get_email_client": get_fake_email_client}
         self.email_keywords = FakeEmailKeywords(self.fake_emal_client)
+        self.login_user_json = None
     def _load_users(self):
         """Load users from the CSV file."""
         try:
@@ -85,3 +86,50 @@ class MtProfile:
             self.utilities.log_error(f"Failed to resend verification code to user {user_json}: {response.json()}")
             return response.json()
         return True
+    
+    def login_user(self, username: str, password: str):
+        """Login a user using the username and password."""
+        login_data = {"username": username,"password": password}
+        self.utilities.log_info(f"Logging in user: {username}")
+        response = self.client.post(f"{LOCALHOST}/token", data=login_data)
+        self.utilities.log_info(f"Response status code: {response.status_code}")
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to login user {username}: {response.json()}")
+            return response.json()
+        self.utilities.log_info(f"Login successful for user: {username}")
+        self.login_user_json = response.json()
+        return True
+    
+    def __get_info_from_login_json(self, login_json: dict, key: str):
+        """Get information from the login JSON response."""
+        if not login_json:
+            self.utilities.log_error("Login JSON is None")
+            return None
+        return login_json.get(key, None)
+    
+    def change_password(self, username: str, old_password: str, new_password: str):
+        """Change the password of a user using the token."""
+        self.utilities.log_info(f"Changing password for user: {username}")
+        if not self.login_user_json:
+            self.utilities.log_error("Login JSON is None. Please login first.")
+            return False
+        try:
+            json_username = self.__get_info_from_login_json(self.login_user_json, "username")
+            if json_username != username:
+                self.utilities.log_error(f"Logged in user {json_username} does not match the provided username {username}. Please login with the correct user.")
+                return False
+            token = self.__get_info_from_login_json(self.login_user_json, "access_token")
+        except Exception as e:
+            self.utilities.log_error(f"Failed to get access token from login JSON: {e}")
+            return False
+        headers = {"Authorization": f"Bearer {token}"}
+        response = self.client.post(f"{LOCALHOST}/change-password", 
+                                    params={"old_pasword": old_password, "new_password": new_password},
+                                    headers=headers)
+        self.utilities.log_info(f"Response status code: {response.status_code}")
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to change password for user {username}: {response.json()}")
+            return False
+        self.utilities.log_info(f"Password changed successfully for user: {username}")
+        return True
+        

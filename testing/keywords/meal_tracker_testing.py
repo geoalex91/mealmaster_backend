@@ -29,3 +29,10 @@ class MealTracker:
         # Delegate the retrieval of the verification code to the MtProfile instance
         return self.mt_profile.get_verification_code(email)
     
+    def login_user(self, username: str, password: str):
+        # Delegate the login of a user to the MtProfile instance
+        return self.mt_profile.login_user(username, password)
+    def change_password(self, username: str, old_password: str, new_password: str):
+        # Delegate the change password of a user to the MtProfile instance
+        return self.mt_profile.change_password(username, old_password, new_password)
+    

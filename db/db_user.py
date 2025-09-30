@@ -12,7 +12,7 @@ def create_user(db: Session, request: UserBase, verification_code: str):
     password = Hash.bcrypt(request.password)
     hashed_code = Hash.bcrypt(verification_code)
     expiry = datetime.now(timezone.utc) + timedelta(minutes=1)
-    new_user = User(username=request.username, email=request.email, hashed_password=password,
+    new_user = User(username=request.username, email=request.email.lower(), hashed_password=password,
                     verification_code=hashed_code, code_expiry=expiry, is_verified=False)
     db.add(new_user)
     db.commit()

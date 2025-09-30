@@ -29,7 +29,7 @@ def create_user(request: UserBase, db: Session = Depends(get_db),email_client: E
     if "@" not in request.email:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Invalid email address")
     existing_user = db.query(db_user.User).filter(
-        (db_user.User.username == request.username) | (db_user.User.email == request.email)).first()
+        (db_user.User.username == request.username) | (db_user.User.email == request.email.lower())).first()
     if existing_user:
         logger.error(f"Attempt to create a user that already exists: {request.username} or {request.email}")
         raise HTTPException(status_code=status.HTTP_424_FAILED_DEPENDENCY, detail="User already exists")
@@ -41,7 +41,7 @@ def create_user(request: UserBase, db: Session = Depends(get_db),email_client: E
     email_subject = "Your Verification Code"
     email_body = f"Hello {request.username},\n\nYour verification code is: {verification_code}"
     try:
-        mail_sent = email_client.send_email(email_subject, request.email, email_body)
+        mail_sent = email_client.send_email(email_subject, request.email.lower(), email_body)
         if mail_sent["status"] != "fake-sent":
             logger.error(f"Failed to send verification email to {request.email} Reaseon {mail_sent['reason']}")
             raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Failed to send verification email")

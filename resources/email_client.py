@@ -6,6 +6,9 @@ from resources.logger import Logger
 from typing import List, Dict
 import threading
 from dns import resolver
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class FakeEmailClient:
     _instance = None

@@ -5,11 +5,14 @@ from datetime import datetime, timedelta, timezone
 from jose import jwt, JWTError
 from sqlalchemy.orm.session import Session
 from db.database import get_db
+from dotenv import load_dotenv
 from db import db_user
+import os
 
+load_dotenv()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-SECRET_KEY = "75aef51a691b74da692cb5f3fa3fad6227b42604e1aa124af2edbc640e84dce4"
+SECRET_KEY = os.getenv("SECRET_KEY","no key")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 

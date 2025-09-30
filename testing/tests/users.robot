@@ -65,3 +65,49 @@ Library    keywords.meal_tracker_testing.MealTracker
     ${is_verified}    Verify User    user_4@fake.com    ${verification_code}
     Should Not Be True    ${is_verified}    User was verified, expiry code timeout failed
     Log     Test Case Passed
+
+10_Login_User_invalid_Credentials
+    ${msg}    Login User    user_not_existent    wrong_password
+    Should Be Equal As Strings    ${msg["detail"]}    Invalid Credentials
+    Log     Test Case Passed
+11_Login_user_wrong_password
+    ${msg}    Login User    user1    wrong_password
+    Should Be Equal As Strings    ${msg["detail"]}    Incorrect password
+    Log     Test Case Passed
+
+12_Login_user_not_verified
+    ${msg}=    Login User    user_4@fake.com    user_password
+    Should Be Equal As Strings    ${msg["detail"]}    User not verified. Please verify your email before logging in.
+    Log     Test Case Passed
+
+13_Login_user_success_username
+    ${msg}=    Login User    user1    user_password
+    Should Be True    ${msg}    Login failed
+    Log     Test Case Passed
+
+14_Login_user_success_email
+    ${msg}=    Login User    user_email1@fake.com    user_password
+    Should Be True    ${msg}    Login failed
+    Log     Test Case Passed
+15_Change_Password_Success
+    ${msg}=    Login User    user_email1@fake.com    user_password
+    Should Be True    ${msg}    Login failed
+    ${msg}=    Change Password    user1    user_password    new_password
+    Should Be True    ${msg}    Password change failed
+    Log     Test Case Passed
+
+16_Login_user_old_password_fail
+    ${msg}=    Login User    user1    user_password
+    Should Be Equal As Strings    ${msg["detail"]}    Incorrect password
+    Log     Test Case Passed
+
+17_Login_user_new_password_success
+    ${msg}=    Login User    user1    new_password
+    Should Be True    ${msg}    Login failed
+    Log     Test Case Passed
+
+18_Change_Password_Invalid_Old_Password
+    ${msg}=    Change Password    user1    wrong_password    new_password
+    Should Not Be True    ${msg}    Old password should not be accepted
+    Log     Test Case Passed
+
