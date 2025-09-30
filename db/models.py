@@ -10,7 +10,7 @@ class User(Base):
     username = Column(String, unique=True, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String(100))
-    verification_code = Column(String, nullable=True)
+    verification_code = Column(String(100), nullable=True)
     code_expiry = Column(DateTime, nullable=True)
     is_verified = Column(Boolean, default=False)
     ingredients = relationship("Ingredients", back_populates="user")

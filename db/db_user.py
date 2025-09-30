@@ -10,15 +10,14 @@ logger = Logger()
 
 def create_user(db: Session, request: UserBase, verification_code: str): 
     password = Hash.bcrypt(request.password)
-    #hashed_code = Hash.bcrypt(verification_code)
-    #hashed_email = Hash.bcrypt(request.email)
+    hashed_code = Hash.bcrypt(verification_code)
     expiry = datetime.now(timezone.utc) + timedelta(minutes=1)
     new_user = User(username=request.username, email=request.email, hashed_password=password,
-                    verification_code=verification_code, code_expiry=expiry, is_verified=False)
+                    verification_code=hashed_code, code_expiry=expiry, is_verified=False)
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
-    logger.info(f"User created: {new_user.username} with email: {new_user.email}")
+    logger.info(f"User created: {new_user.username}")
     return new_user
 
 def get_user_by_username(db: Session, username: str):

@@ -29,7 +29,7 @@ def create_user(request: UserBase, db: Session = Depends(get_db),email_client: E
     if "@" not in request.email:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Invalid email address")
     existing_user = db.query(db_user.User).filter(
-        (db_user.User.username == request.username) | (request.email == db_user.User.email)).first()
+        (db_user.User.username == request.username) | (db_user.User.email == request.email)).first()
     if existing_user:
         logger.error(f"Attempt to create a user that already exists: {request.username} or {request.email}")
         raise HTTPException(status_code=status.HTTP_424_FAILED_DEPENDENCY, detail="User already exists")
@@ -79,7 +79,7 @@ def resend_verification(email: str, db: Session = Depends(get_db), email_client:
 
     # Generate new code and expiry
     verification_code = f"{random.randint(100000, 999999)}"
-    user.verification_code = verification_code
+    user.verification_code = Hash.bcrypt(verification_code)
     user.code_expiry = datetime.now(timezone.utc) + timedelta(minutes=1)
     db.commit()
 
@@ -105,8 +105,20 @@ def verify_user(email: str, code: str, db: Session = Depends(get_db)):
     Raises:
         HTTPException: If the user is not found, the code is invalid, or the code has expired."""
     user = db.query(db_user.User).filter(db_user.User.email == email).first()
-    if not user or user.verification_code != code or user.code_expiry.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc):
+    if not user:
+        # Create a dummy hash to run the verification against.
+        # The hash is for an empty string, which will never match a real code.
+        dummy_hash = Hash.bcrypt("")
+        Hash.verify(code, dummy_hash) # This call is for timing consistency.
+        raise HTTPException(status_code=400, detail="Invalid or expired 1-time code")
+
+    # Check if the code is valid and not expired
+    is_code_valid = Hash.verify(code, user.verification_code)
+    is_code_expired = user.code_expiry.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc)
+
+    if not is_code_valid or is_code_expired:
         raise HTTPException(status_code=400, detail="Invalid or expired code")
+
     user.is_verified = True
     user.verification_code = None
     user.code_expiry = None

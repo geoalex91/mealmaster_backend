@@ -14,18 +14,29 @@ class Logger:
         return cls._instance
 
     def __init__(self, log_dir: str = "logs",debug = True) -> None:
-        if hasattr(self, "_initialized") and self._initialized:
+        if getattr(self, "_initialized", False):
+            # Check if the day changed → rotate log file
+            today = datetime.now().strftime("%Y%m%d")
+            if today != self._current_day:
+                self._rotate_log_file(log_dir)
             return
         # Ensure log directory exists
         os.makedirs(log_dir, exist_ok=True)
 
-        # Create a unique log file for this session
-        session_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.logfile = os.path.join(log_dir, f"session_{session_time}.log")
-        self._initialized = True
+        # Create first logfile
+        self._current_day = datetime.now().strftime("%Y%m%d")
+        self.logfile = os.path.join(log_dir, f"app_{self._current_day}.log")
+
         self.debug = debug
-        # Optionally, write session start header
+        self._initialized = True
+
         self.log("INFO", f"--- New logging session started: {self.logfile} ---")
+
+    def _rotate_log_file(self, log_dir: str):
+        """Create a new log file when the date changes."""
+        self._current_day = datetime.now().strftime("%Y%m%d")
+        self.logfile = os.path.join(log_dir, f"app_{self._current_day}.log")
+        self.log("INFO", f"--- Log rotated: {self.logfile} ---")
 
     def log(self, level: str, message: str) -> None:
         if self.debug is False:

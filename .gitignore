@@ -1,9 +1,24 @@
+# Environment variables
+.env
+
+# Python
 __pycache__/
 *.pyc
-.pyvenv/
+*.pyo
+*.pyd
+
+# Virtual environment
+pyvenv/
+venv/
+
+# Database files
+*.db
+*.db-journal
+
+# IDE settings
+.vscode/
+__pycache__/
 .logs/
-.vscode
 .log.html
 .output.xml
 .report.html
-.env

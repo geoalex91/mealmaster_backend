@@ -10,8 +10,6 @@ class UserBase(BaseModel):
 class UserDisplay(BaseModel):
     """Schema for displaying user data."""
     username: str
-    email: str
-    is_verified: bool
     class Config:
         from_attributes = True
 
