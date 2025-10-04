@@ -1,4 +1,5 @@
-from pydantic import BaseModel
+from pydantic import BaseModel,ConfigDict
+from typing import Optional
 
 # User Schemas
 class UserBase(BaseModel):
@@ -16,6 +17,7 @@ class UserDisplay(BaseModel):
 # Ingredient Schemas
 class IngredientsBase(BaseModel):
     """Base schema for ingredient data."""
+    model_config = ConfigDict(extra='forbid')
     name: str
     calories: float
     protein: float
@@ -24,7 +26,7 @@ class IngredientsBase(BaseModel):
     fibers: float
     sugar: float
     saturated_fats: float
-    creator_id: int
+    category: str
 
 class User(BaseModel):
     username: str
@@ -33,6 +35,8 @@ class User(BaseModel):
 
 class IngredientsDisplay(BaseModel):
     """Schema for displaying ingredient data."""
+    model_config = ConfigDict(from_attributes=True, extra='forbid')
+    id: int
     name: str
     calories: float
     protein: float
@@ -41,6 +45,19 @@ class IngredientsDisplay(BaseModel):
     fibers: float
     sugar: float
     saturated_fats: float
+    category: str
     user: User
     class Config:
         from_attributes = True
+
+class IngredientsUpdate(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    name: Optional[str] = None
+    calories: Optional[float] = None
+    protein: Optional[float] = None
+    carbs: Optional[float] = None
+    fat: Optional[float] = None
+    fibers: Optional[float] = None
+    sugar: Optional[float] = None
+    saturated_fats: Optional[float] = None
+    category: Optional[str] = None

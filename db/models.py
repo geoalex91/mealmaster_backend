@@ -27,5 +27,7 @@ class Ingredients(Base):
     fibers = Column(Float,default=0.0)
     sugar = Column(Float,default=0.0)
     saturated_fats = Column(Float,default=0.0)
+    # New category column to classify ingredient (e.g., 'meat', 'vegetable', 'fruit').
+    category = Column(String(50), nullable=True, index=True)
     user_id = Column(Integer, ForeignKey("user.id"))
     user = relationship("User",back_populates="ingredients")

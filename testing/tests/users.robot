@@ -94,20 +94,28 @@ Library    keywords.meal_tracker_testing.MealTracker
     Should Be True    ${msg}    Login failed
     ${msg}=    Change Password    user1    user_password    new_password
     Should Be True    ${msg}    Password change failed
-    Log     Test Case Passed
-
-16_Login_user_old_password_fail
     ${msg}=    Login User    user1    user_password
     Should Be Equal As Strings    ${msg["detail"]}    Incorrect password
-    Log     Test Case Passed
-
-17_Login_user_new_password_success
     ${msg}=    Login User    user1    new_password
     Should Be True    ${msg}    Login failed
-    Log     Test Case Passed
-
-18_Change_Password_Invalid_Old_Password
     ${msg}=    Change Password    user1    wrong_password    new_password
     Should Not Be True    ${msg}    Old password should not be accepted
+    Log     Test Case Passed
+
+16_Delete_User_Success
+    ${msg}=    Login User    user1    new_password
+    Should Be True    ${msg}    Login failed
+    ${msg}=    Delete User    user1    new_password
+    Should Be True    ${msg}    User deletion failed
+    ${msg}=    Login User    user1    new_password
+    Should Be Equal As Strings    ${msg["detail"]}    Invalid Credentials
+    Log     Test Case Passed
+17_Delete_User_Wrong_Password
+    ${msg}=    Login User    user3    user_password
+    Should Be True    ${msg}    Login failed
+    ${msg}=    Delete User    user3    new_password
+    Should Be Equal As Strings    ${msg["detail"]}    Password is incorrect
+    ${msg}=    Delete User    user3    user_password
+    Should Be True    ${msg}    User deletion failed
     Log     Test Case Passed
 

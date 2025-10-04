@@ -8,12 +8,48 @@ from db.hashing import Hash
 from auth.auth2 import create_access_token
 from resources.logger import Logger
 from auth.auth2 import get_current_user
+from db.database import SessionLocal
+from datetime import datetime, timedelta, timezone
+from resources.background_task_queue import BackgroundTaskQueue
+import threading
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
+# --- Start of Changes ---
+
+# Configuration for the unverified user cleanup task
+UNVERIFIED_CLEAN_INTERVAL_HOURS = 5 * 3600
+_scheduler_started = False
+_stop_scheduler_event = threading.Event()
+
+# --- End of Changes ---
 
 router = APIRouter(tags=["authentication"])
 logger = Logger()
+task_queue = BackgroundTaskQueue()
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    schedule_delete_unverified_users()
+    try:
+        yield   # Application runs here
+    finally:
+        stop_scheduler()
 
 @router.post('/token', description = "This endpoint generates an access token for a user based on their username and password.")
 def get_token(request: OAuth2PasswordRequestForm = Depends(),db: Session = Depends(get_db)):
+    """
+    Authenticates a user and generates an access token.
+    This function verifies the user's credentials (username or email and password),
+    checks if the user is verified, and returns an access token along with user details.
+    Args:
+        request (OAuth2PasswordRequestForm): The OAuth2 request form containing username and password.
+        db (Session): The database session dependency.
+    Returns:
+        dict: A dictionary containing the access token, token type, user ID, and username.
+    Raises:
+        HTTPException: If credentials are invalid, password is incorrect, or user is not verified.
+    """
+    
     user = db.query(User).filter(User.username == request.username).first()
     email = db.query(User).filter(User.email == request.username.lower()).first()
     if not user and not email:
@@ -43,3 +79,84 @@ def change_password(old_pasword: str, new_password: str, db: Session = Depends(g
     db.commit()
     logger.info(f"Password changed successfully for user: {user.username}")
     return {"message": "Password changed successfully"}
+
+@router.delete('/delete-account',description="This endpoint allows a user to delete their account by providing their password for verification.")
+def delete_account(password:str, db: Session = Depends(get_db),current_user: User = Depends(get_current_user)):
+    user = db.query(User).filter(User.id == current_user.id).first()
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+    if not Hash.verify(password, user.hashed_password):
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Password is incorrect")
+    db.delete(user)
+    db.commit()
+    logger.info(f"{user.username} Account deleted successfully for user: {user.username}")
+    return {"message": "Account deleted successfully"}
+
+def delete_unverified_users():
+    """
+    Deletes unverified users from the database whose verification code has expired.
+    This function queries the database for users who have not been verified and whose
+    verification code expiry time is older than 10 minutes from the current UTC time.
+    It deletes each matching user and commits the changes to the database.
+    Logging:
+        Logs the email of each deleted user.
+    Raises:
+        Any exceptions raised by the database session or commit will propagate.
+    Note:
+        The database session is closed after the operation.
+    """
+    db: Session = SessionLocal()
+    expiry_time = datetime.now(timezone.utc) - timedelta(minutes=10)
+    users = db.query(User).filter(User.is_verified == False,User.code_expiry < expiry_time).all()
+    if not users:
+        logger.info("No unverified users to delete.")
+        db.close()
+        return
+    for user in users:
+        logger.info(f"Deleting unverified user: {user.email}")
+        db.delete(user)
+    db.commit()
+    db.close()
+
+def scheduler():
+    """
+    Periodically schedules the deletion of unverified users.
+    This function runs in a loop, adding the `delete_unverified_users` task 
+    to the background queue at a fixed interval.
+    """
+    while not _stop_scheduler_event.is_set():
+        try:
+            logger.info("Scheduler is running: queuing task to delete unverified users.")
+            task_queue.add_task(delete_unverified_users)
+            # Wait for the configured interval, but check for the stop event periodically.
+            _stop_scheduler_event.wait(UNVERIFIED_CLEAN_INTERVAL_HOURS)
+        except Exception as e:
+            logger.error(f"An error occurred in the scheduler loop: {e}")
+            # Avoid busy-looping on repeated errors
+            _stop_scheduler_event.wait(60)
+
+#@router.on_event("startup")
+def schedule_delete_unverified_users():
+    """
+    Starts the background scheduler for deleting unverified users.
+    This function is triggered on application startup, ensures the scheduler
+    is started only once, and logs its status.
+    """
+    global _scheduler_started
+    if _scheduler_started:
+        logger.warning("Scheduler already started. Skipping.")
+        return
+
+    task_queue.start()
+    thread = threading.Thread(target=scheduler, daemon=True)
+    thread.start()
+    _scheduler_started = True
+    logger.info("Background scheduler for deleting unverified users has been started.")
+
+#@router.on_event("shutdown")
+def stop_scheduler():
+    """
+    Signals the scheduler to stop gracefully during application shutdown.
+    """
+    logger.info("Application shutting down. Signaling scheduler to stop.")
+    _stop_scheduler_event.set()

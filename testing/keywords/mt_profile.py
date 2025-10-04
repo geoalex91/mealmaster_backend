@@ -132,4 +132,27 @@ class MtProfile:
             return False
         self.utilities.log_info(f"Password changed successfully for user: {username}")
         return True
-        
+    
+    def delete_account(self, username: str,password: str):
+        """Delete the account of a user using the token."""
+        if not self.login_user_json:
+            self.utilities.log_error("Login JSON is None. Please login first.")
+            return False
+        try:
+            json_username = self.__get_info_from_login_json(self.login_user_json, "username")
+            if json_username != username:
+                self.utilities.log_error(f"Logged in user {json_username} does not match the provided username {username}. Please login with the correct user.")
+                return False
+            token = self.__get_info_from_login_json(self.login_user_json, "access_token")
+        except Exception as e:
+            self.utilities.log_error(f"Failed to get access token from login JSON: {e}")
+            return False
+        headers = {"Authorization": f"Bearer {token}"}
+        response = self.client.delete(f"{LOCALHOST}/delete-account", params={"pasword": password},headers=headers)
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to delete account for user {username}: {response.json()}")
+            return response.json()
+        self.utilities.log_info(f"Account deleted successfully for user: {username}")
+        return True
+    
+

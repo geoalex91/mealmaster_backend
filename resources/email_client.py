@@ -45,7 +45,7 @@ class FakeEmailClient:
         self._sent_emails.append(email)
         return {"status": "fake-sent"}
 
-    def get_last_email(self, recipient: str) -> Dict | None:
+    def get_last_email(self, recipient: str):
         for email in reversed(self._sent_emails):
             if email["recipient"] == recipient:
                 return email
