@@ -19,14 +19,14 @@ class IngredientsBase(BaseModel):
     """Base schema for ingredient data."""
     model_config = ConfigDict(extra='forbid')
     name: str
-    calories: float
-    protein: float
-    carbs: float
-    fat: float
-    fibers: float
-    sugar: float
-    saturated_fats: float
-    category: str
+    calories: Optional[float] = None
+    protein: Optional[float] = None
+    carbs: Optional[float] = None
+    fat: Optional[float] = None
+    fibers: Optional[float] = None
+    sugar: Optional[float] = None
+    saturated_fats: Optional[float] = None
+    category: Optional[str] = None
 
 class User(BaseModel):
     username: str
@@ -35,7 +35,6 @@ class User(BaseModel):
 
 class IngredientsDisplay(BaseModel):
     """Schema for displaying ingredient data."""
-    model_config = ConfigDict(from_attributes=True, extra='forbid')
     id: int
     name: str
     calories: float

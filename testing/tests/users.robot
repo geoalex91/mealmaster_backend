@@ -105,7 +105,7 @@ Library    keywords.meal_tracker_testing.MealTracker
 16_Delete_User_Success
     ${msg}=    Login User    user1    new_password
     Should Be True    ${msg}    Login failed
-    ${msg}=    Delete User    user1    new_password
+    ${msg}=    Delete Account    user1    new_password
     Should Be True    ${msg}    User deletion failed
     ${msg}=    Login User    user1    new_password
     Should Be Equal As Strings    ${msg["detail"]}    Invalid Credentials
@@ -113,9 +113,9 @@ Library    keywords.meal_tracker_testing.MealTracker
 17_Delete_User_Wrong_Password
     ${msg}=    Login User    user3    user_password
     Should Be True    ${msg}    Login failed
-    ${msg}=    Delete User    user3    new_password
+    ${msg}=    Delete Account    user3    new_password
     Should Be Equal As Strings    ${msg["detail"]}    Password is incorrect
-    ${msg}=    Delete User    user3    user_password
+    ${msg}=    Delete Account    user3    user_password
     Should Be True    ${msg}    User deletion failed
     Log     Test Case Passed
 

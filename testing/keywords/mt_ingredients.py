@@ -9,7 +9,7 @@ class MTIngredients:
     def __init__(self, client: TestClient, mt_profile: MtProfile):
         self.client = client
         self.utilities = Utilities()
-        self.profile_json = mt_profile.login_user_json
+        self.mt_profile = mt_profile
         self.all_ingredients = None
     
     def create_ingredient(self, ingredient_data: dict):
@@ -25,17 +25,17 @@ class MTIngredients:
             "saturated_fats": ingredient_data.get("saturated_fats"),
             "category": ingredient_data.get("category")
         }
-        if not self.profile_json:
+        if not self.mt_profile.login_user_json:
             self.utilities.log_error("Login JSON is None. Please login first.")
             return False
         try:
-            token = self.profile_json.get("access_token")
+            token = self.mt_profile.login_user_json.get("access_token")
         except Exception as e:
             self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
             return False
         headers = {"Authorization": f"Bearer {token}"}
         self.utilities.log_info(f"Creating ingredient: {ingredient_json}")
-        response = self.client.post(f"{LOCALHOST}/ingredients/", json=ingredient_json, headers=headers)
+        response = self.client.post(f"{LOCALHOST}/ingredients/create_ingredient/", json=ingredient_json, headers=headers)
         self.utilities.log_info(f"Response status code: {response.status_code}")
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to create ingredient: {response.json()}")
@@ -44,11 +44,11 @@ class MTIngredients:
 
     def get_all_ingredients(self):
         """Retrieve all ingredients."""
-        if not self.profile_json:
+        if not self.mt_profile.login_user_json:
             self.utilities.log_error("Login JSON is None. Please login first.")
             return False
         try:
-            token = self.profile_json.get("access_token")
+            token = self.mt_profile.login_user_json.get("access_token")
         except Exception as e:
             self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
             return False
@@ -64,11 +64,11 @@ class MTIngredients:
     
     def update_ingredient(self, ingredient_id: int, updates: dict):
         """Update an existing ingredient."""
-        if not self.profile_json:
+        if not self.mt_profile.login_user_json:
             self.utilities.log_error("Login JSON is None. Please login first.")
             return False
         try:
-            token = self.profile_json.get("access_token")
+            token = self.mt_profile.login_user_json.get("access_token")
         except Exception as e:
             self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
             return False
@@ -83,11 +83,11 @@ class MTIngredients:
     
     def delete_ingredient(self, ingredient_id: int):
         """Delete an ingredient."""
-        if not self.profile_json:
+        if not self.mt_profile.login_user_json:
             self.utilities.log_error("Login JSON is None. Please login first.")
             return False
         try:
-            token = self.profile_json.get("access_token")
+            token = self.mt_profile.login_user_json.get("access_token")
         except Exception as e:
             self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
             return False
@@ -104,9 +104,9 @@ class MTIngredients:
         """Get the ID of an ingredient by name."""
         if not self.all_ingredients or not isinstance(self.all_ingredients, list):
             self.utilities.log_error("No ingredients found or invalid response format.")
-            return None
+            return False
         for ingredient in self.all_ingredients:
             if ingredient.get("name") == ingredient_name:
                 return ingredient.get("id")
         self.utilities.log_error(f"Ingredient with name {ingredient_name} not found.")
-        return None
+        return False

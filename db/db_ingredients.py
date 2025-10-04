@@ -23,11 +23,13 @@ def create(db: Session, request: IngredientsBase, creator_id: int):
         request.fat, request.fibers, request.sugar, request.saturated_fats, request.category
     ]
     if any(field is None for field in required_fields):
+        logger.error("Missing required ingredient fields.")
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="Missing or invalid ingredient data.")
     # Optionally, add more checks (e.g., negative values)
     if request.calories < 0 or request.protein < 0:
+        logger.error("Nutritional values cannot be negative.")
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="Nutritional values must be non-negative.")
@@ -43,6 +45,9 @@ def create(db: Session, request: IngredientsBase, creator_id: int):
         category=request.category,
         user_id=creator_id
     )
+    if db.query(Ingredients).filter(Ingredients.name == request.name).first():
+        logger.error(f"Ingredient with name {request.name} already exists")
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT,detail="An ingredient with that name already exists")
     db.add(new_ingredient)
     db.commit()
     db.refresh(new_ingredient)

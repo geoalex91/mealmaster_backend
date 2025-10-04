@@ -44,25 +44,20 @@ class MealTracker:
     
     def create_ingredient(self, ingredient_data: dict):
         # Import MTIngredients here to avoid circular import issues
-        mt_ingredients = MTIngredients(self.client)
-        return mt_ingredients.create_ingredient(ingredient_data)
+        return self.mt_ingredients.create_ingredient(ingredient_data)
     
     def get_all_ingredients(self):
         # Import MTIngredients here to avoid circular import issues
-        mt_ingredients = MTIngredients(self.client)
-        return mt_ingredients.get_all_ingredients()
+        return self.mt_ingredients.get_all_ingredients()
     
     def update_ingredient(self, ingredient_id: int, updates: dict):
         # Import MTIngredients here to avoid circular import issues
-        mt_ingredients = MTIngredients(self.client)
-        return mt_ingredients.update_ingredient(ingredient_id, updates)
+        return self.mt_ingredients.update_ingredient(ingredient_id, updates)
     
     def delete_ingredient(self, ingredient_id: int):
         # Import MTIngredients here to avoid circular import issues
-        mt_ingredients = MTIngredients(self.client)
-        return mt_ingredients.delete_ingredient(ingredient_id)
+        return self.mt_ingredients.delete_ingredient(ingredient_id)
     
     def get_ingredient_id(self, ingredient_name: str):
         # Import MTIngredients here to avoid circular import issues
-        mt_ingredients = MTIngredients(self.client)
-        return mt_ingredients.get_ingredient_id(ingredient_name)
+        return self.mt_ingredients.get_ingredient_id(ingredient_name)
