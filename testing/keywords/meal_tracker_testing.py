@@ -1,6 +1,7 @@
 from mt_profile import MtProfile
 from fastapi.testclient import TestClient
 from testing.keywords.mt_ingredients import MTIngredients
+from testing.keywords.mt_recipes import MTRecipes
 from main import app
 
 class MealTracker:
@@ -10,6 +11,7 @@ class MealTracker:
         # Initialize the MtProfile instance with the TestClient
         self.mt_profile = MtProfile(self.client)
         self.mt_ingredients = MTIngredients(self.client,self.mt_profile)
+        self.mt_recipes = MTRecipes(self.client,self.mt_profile)
 
     def create_profiles(self):
         # Delegate the creation of a new profile to the MtProfile instance
@@ -61,3 +63,25 @@ class MealTracker:
     def get_ingredient_id(self, ingredient_name: str):
         # Import MTIngredients here to avoid circular import issues
         return self.mt_ingredients.get_ingredient_id(ingredient_name)
+
+    def create_ingredients_from_file(self):
+        """Create ingredients from a predefined JSON file."""
+        return self.mt_ingredients.create_ingredients_from_file()
+
+    def search_ingredients(self, query: str, search_type: str = "normal", limit: int = 10):
+        return self.mt_ingredients.search_ingredient_in_database(ingredient_name=query, type=search_type, limit=limit)
+
+    def get_ingredient_by_id(self, ingredient_dict: dict):
+        return self.mt_ingredients.get_ingredient_by_id(ingredient_dict)
+
+    def create_recipe(self, recipe_data: dict):
+        return self.mt_recipes.create_recipe(recipe_data)
+    
+    def edit_recipe(self, recipe_id: int, recipe_data: dict):
+        return self.mt_recipes.update_recipe(recipe_id, recipe_data)
+    
+    def delete_recipe(self, recipe_id: int):
+        return self.mt_recipes.delete_recipe(recipe_id)
+    
+    def get_recipe(self, recipe_id: int):
+        return self.mt_recipes.get_recipe(recipe_id)

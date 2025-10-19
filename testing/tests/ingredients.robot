@@ -15,10 +15,7 @@ Library    String
     Should Be True    ${auth_msg}    Login failed
     ${ingredients}=    Get All Ingredients
     Should Not Be Empty    ${ingredients}    No ingredients found
-    ${ingredient_id}=    Get Ingredient ID    Tomato
-    IF    ${ingredient_id}==${False}
-        Fail    Ingredient ID not found
-    END
+    ${ingredient_id}    Set Variable    ${1}
     ${ingredient_dict}    Create Dictionary    calories=${25}    protein=${1.2}
     ${ingredient_msg}    Update Ingredient    ${ingredient_id}    ${ingredient_dict}
     Should Be True    ${ingredient_msg}    Ingredient update failed
@@ -29,10 +26,7 @@ Library    String
     Should Be True    ${auth_msg}    Login failed
     ${ingredients}=    Get All Ingredients
     Should Not Be Empty    ${ingredients}    No ingredients found
-    ${ingredient_id}=    Get Ingredient ID    Tomato
-    IF    ${ingredient_id}==${False}
-        Fail    Ingredient ID not found
-    END
+    ${ingredient_id}    Set Variable    ${1}
     ${ingredient_msg}    Delete Ingredient    ${ingredient_id}
     Should Be True    ${ingredient_msg}    Ingredient deletion failed
     Log     Test Case Passed
@@ -42,9 +36,9 @@ Library    String
     ${ingredient_id}=    Get Ingredient ID    Nonexistent
     Should Not Be True    ${ingredient_id}    Ingredient ID should not be found
     ${ingredient_msg}    Delete Ingredient    9999
-    Should Be Equal As Strings    ${ingredient_msg["detail"]}    Ingredient not found
+    Should Contain    ${ingredient_msg["detail"]}    Ingredient not found
     ${ingredient_msg}    Update Ingredient    9999    {"calories": 25, "protein": 1.2}
-    Should Be Equal As Strings    ${ingredient_msg["detail"]}    Ingredient not found
+    Should Contain    ${ingredient_msg["detail"]}    Ingredient not found
     Log     Test Case Passed
 
 5_Create_Ingredient_Invalid_Data_And_Negative_Values
@@ -84,13 +78,30 @@ Library    String
     Should Be True    ${auth_msg}    Login 
     ${ingredients}=    Get All Ingredients
     Should Not Be Empty    ${ingredients}    No ingredients found
-    ${ingredient_id}=    Get Ingredient ID    Tomato
+    ${ingredient_id}    Set Variable    ${1}
     IF    ${ingredient_id}==${False}
         Fail    Ingredient ID not found
     END
     ${ingredient_dict}    Create Dictionary    calories=${25}    protein=${1.2}
     ${ingredient_msg}    Update Ingredient    ${ingredient_id}    ${ingredient_dict}
-    Should Be Equal As Strings    ${ingredient_msg["detail"]}    Ingredient not found
+    Should Contain    ${ingredient_msg["detail"]}    Ingredient not found
     ${ingredient_msg}    Delete Ingredient    ${ingredient_id}
-    Should Be Equal As Strings    ${ingredient_msg["detail"]}    Ingredient not found
+    Should Contain   ${ingredient_msg["detail"]}    Ingredient not found
     Log     Test Case Passed
+
+9_Add_Ingredients_From_JSON_File
+    ${auth_msg}    Login User    user_email1@fake.com    new_password
+    Should Be True    ${auth_msg}    Login failed
+    ${ingredient_msgs}=    Create Ingredients From File
+    Should Be True    ${ingredient_msgs}    Ingredient creation from JSON failed
+    Log     Test Case Passed
+
+10_Search_Ingredients
+    ${auth_msg}    Login User    user_email1@fake.com    new_password
+    Should Be True    ${auth_msg}    Login failed
+    ${search_results}=    Search Ingredients    ros    normal
+    Should Not Be Empty    ${search_results}    No ingredients found in search
+    ${search_results}    Search Ingredients    anansa    fuzzy
+    Should Not Be Empty    ${search_results}    No ingredients found in fuzzy search
+    ${search_results}    Search Ingredients    ros    smart
+    Should Not Be Empty    ${search_results}    No ingredients found

@@ -18,22 +18,11 @@ from fastapi import FastAPI
 
 # Configuration for the unverified user cleanup task
 UNVERIFIED_CLEAN_INTERVAL_HOURS = 5 * 3600
-_scheduler_started = False
-_stop_scheduler_event = threading.Event()
 
 # --- End of Changes ---
 
 router = APIRouter(tags=["authentication"])
 logger = Logger()
-task_queue = BackgroundTaskQueue()
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    schedule_delete_unverified_users()
-    try:
-        yield   # Application runs here
-    finally:
-        stop_scheduler()
 
 @router.post('/token', description = "This endpoint generates an access token for a user based on their username and password.")
 def get_token(request: OAuth2PasswordRequestForm = Depends(),db: Session = Depends(get_db)):
@@ -117,46 +106,3 @@ def delete_unverified_users():
         db.delete(user)
     db.commit()
     db.close()
-
-def scheduler():
-    """
-    Periodically schedules the deletion of unverified users.
-    This function runs in a loop, adding the `delete_unverified_users` task 
-    to the background queue at a fixed interval.
-    """
-    while not _stop_scheduler_event.is_set():
-        try:
-            logger.info("Scheduler is running: queuing task to delete unverified users.")
-            task_queue.add_task(delete_unverified_users)
-            # Wait for the configured interval, but check for the stop event periodically.
-            _stop_scheduler_event.wait(UNVERIFIED_CLEAN_INTERVAL_HOURS)
-        except Exception as e:
-            logger.error(f"An error occurred in the scheduler loop: {e}")
-            # Avoid busy-looping on repeated errors
-            _stop_scheduler_event.wait(60)
-
-#@router.on_event("startup")
-def schedule_delete_unverified_users():
-    """
-    Starts the background scheduler for deleting unverified users.
-    This function is triggered on application startup, ensures the scheduler
-    is started only once, and logs its status.
-    """
-    global _scheduler_started
-    if _scheduler_started:
-        logger.warning("Scheduler already started. Skipping.")
-        return
-
-    task_queue.start()
-    thread = threading.Thread(target=scheduler, daemon=True)
-    thread.start()
-    _scheduler_started = True
-    logger.info("Background scheduler for deleting unverified users has been started.")
-
-#@router.on_event("shutdown")
-def stop_scheduler():
-    """
-    Signals the scheduler to stop gracefully during application shutdown.
-    """
-    logger.info("Application shutting down. Signaling scheduler to stop.")
-    _stop_scheduler_event.set()

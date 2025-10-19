@@ -1,10 +1,12 @@
 from routers.schemas import IngredientsBase, IngredientsUpdate
 from sqlalchemy.orm import Session
-from db.models import Ingredients
+from db.models import Recipes, Ingredients, RecipeIngredients
 from resources.logger import Logger
 from sqlalchemy.exc import IntegrityError
 from fastapi import HTTPException, status
-
+from sqlalchemy import func
+import threading
+from resources.core.cache import sync_usage_to_db
 logger = Logger()
 
 def create(db: Session, request: IngredientsBase, creator_id: int):
@@ -56,6 +58,15 @@ def create(db: Session, request: IngredientsBase, creator_id: int):
 
 def get_all(db: Session):
     return db.query(Ingredients).all()
+
+def get_ingredient_by_id(db: Session, ingredient_id: int):
+    return db.query(Ingredients).filter(Ingredients.id == ingredient_id).first()
+
+def get_ingredients_by_recipe(db: Session, recipe_id: int):
+    return db.query(Ingredients).join(RecipeIngredients).filter(RecipeIngredients.recipe_id == recipe_id).all()
+
+def get_ingredient_by_name(db: Session, name: str):
+    return db.query(Ingredients).filter(Ingredients.name == name).first()
 
 def update(db: Session, ingredient_id: int, user_id: int, updates: IngredientsUpdate):
     """

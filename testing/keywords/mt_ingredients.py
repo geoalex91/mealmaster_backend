@@ -3,6 +3,7 @@ from testing.keywords.utilities import Utilities
 from fastapi.testclient import TestClient
 from main import app
 from mt_profile import MtProfile
+import os, json
 
 LOCALHOST = "http://localhost:8000"
 class MTIngredients:
@@ -11,6 +12,7 @@ class MTIngredients:
         self.utilities = Utilities()
         self.mt_profile = mt_profile
         self.all_ingredients = None
+        self.ingredient_json_path = os.path.join(DATA_PATH, "ingredients_ro.json")
     
     def create_ingredient(self, ingredient_data: dict):
         """Create a new ingredient."""
@@ -110,3 +112,71 @@ class MTIngredients:
                 return ingredient.get("id")
         self.utilities.log_error(f"Ingredient with name {ingredient_name} not found.")
         return False
+    
+    def load_ingredient_data_from_file(self):
+        """Load ingredient data from a JSON file."""
+        try:
+            with open(self.ingredient_json_path, 'r', encoding='utf-8') as file:
+                ingredient_data = json.load(file)
+                self.utilities.log_info(f"Loaded ingredient data from {self.ingredient_json_path}")
+                return ingredient_data
+        except Exception as e:
+            self.utilities.log_error(f"Failed to load ingredient data from file: {e}")
+            return None
+        
+    def create_ingredients_from_file(self):
+        """Create multiple ingredients from a JSON file."""
+        ingredient_data = self.load_ingredient_data_from_file()
+        if not ingredient_data:
+            return False
+        for ingredient in ingredient_data:
+            result = self.create_ingredient(ingredient)
+            if result is not True:
+                self.utilities.log_error(f"Failed to create ingredient from file data: {ingredient}")
+        return True
+    
+    def search_ingredient_in_database(self, ingredient_name:str,type='normal',limit=10):
+        if not self.mt_profile.login_user_json:
+            self.utilities.log_error("Login JSON is None. Please login first.")
+            return False
+        try:
+            token = self.mt_profile.login_user_json.get("access_token")
+        except Exception as e:
+            self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
+            return False
+        headers = {"Authorization": f"Bearer {token}"}
+        self.utilities.log_info(f"Searching for ingredient: {ingredient_name}")
+        params = {
+            "querry": ingredient_name,
+            "search_type": type,
+            "limit": limit
+        }
+        response = self.client.get(f"{LOCALHOST}/ingredients/search", params=params, headers=headers)
+        self.utilities.log_info(f"Response status code: {response.status_code}")
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to search ingredient: {response.json()}")
+            return response.json()
+        return response.json()
+    
+    def get_ingredient_by_id(self, ingredient_dict: dict):
+        """Get ingredient details by ID."""
+        ingredient_id = ingredient_dict.get("id")
+        if not ingredient_id:
+            self.utilities.log_error("Ingredient ID not provided in the dictionary.")
+            return False
+        if not self.mt_profile.login_user_json:
+            self.utilities.log_error("Login JSON is None. Please login first.")
+            return False
+        try:
+            token = self.mt_profile.login_user_json.get("access_token")
+        except Exception as e:
+            self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
+            return False
+        headers = {"Authorization": f"Bearer {token}"}
+        self.utilities.log_info(f"Retrieving ingredient by ID: {ingredient_id}")
+        response = self.client.get(f"{LOCALHOST}/ingredients/{ingredient_id}", headers=headers)
+        self.utilities.log_info(f"Response status code: {response.status_code}")
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to retrieve ingredient: {response.json()}")
+            return response.json()
+        return response.json()
