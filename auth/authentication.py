@@ -10,16 +10,6 @@ from resources.logger import Logger
 from auth.auth2 import get_current_user
 from db.database import SessionLocal
 from datetime import datetime, timedelta, timezone
-from resources.background_task_queue import BackgroundTaskQueue
-import threading
-from contextlib import asynccontextmanager
-from fastapi import FastAPI
-# --- Start of Changes ---
-
-# Configuration for the unverified user cleanup task
-UNVERIFIED_CLEAN_INTERVAL_HOURS = 5 * 3600
-
-# --- End of Changes ---
 
 router = APIRouter(tags=["authentication"])
 logger = Logger()

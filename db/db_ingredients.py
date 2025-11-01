@@ -1,12 +1,10 @@
 from routers.schemas import IngredientsBase, IngredientsUpdate
 from sqlalchemy.orm import Session
-from db.models import Recipes, Ingredients, RecipeIngredients
+from db.models import Ingredients, RecipeIngredients
 from resources.logger import Logger
 from sqlalchemy.exc import IntegrityError
 from fastapi import HTTPException, status
 from sqlalchemy import func
-import threading
-from resources.core.cache import sync_usage_to_db
 logger = Logger()
 
 def create(db: Session, request: IngredientsBase, creator_id: int):
@@ -21,20 +19,19 @@ def create(db: Session, request: IngredientsBase, creator_id: int):
             Returns:
             Ingredients: The created ingredient instance."""
     required_fields = [
-        request.name, request.calories, request.protein, request.carbs,
+        request.calories, request.protein, request.carbs,
         request.fat, request.fibers, request.sugar, request.saturated_fats, request.category
     ]
-    if any(field is None for field in required_fields):
+    if request.name is None:
         logger.error("Missing required ingredient fields.")
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="Missing or invalid ingredient data.")
-    # Optionally, add more checks (e.g., negative values)
-    if request.calories < 0 or request.protein < 0:
-        logger.error("Nutritional values cannot be negative.")
+    if any(field < 0 for field in required_fields):
+        logger.error("Nutritional values must be non-negative.")
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="Nutritional values must be non-negative.")
+            detail="Missing or invalid ingredient data.")
     new_ingredient = Ingredients(
         name=request.name,
         calories=request.calories,
@@ -143,3 +140,17 @@ def delete(db: Session, ingredient_id: int, user_id: int):
     db.commit()
     logger.info(f"Ingredient deleted: id={ingredient_id} by user {user_id}")
     return {"message": "Ingredient deleted successfully", "ingredient_id": ingredient_id}
+
+def get_ingredient_usage_count(db: Session, ingredient_name: str):
+    """Get the usage count of an ingredient across all recipes.
+
+    Args:
+        db: Database session
+        ingredient_name: Name of the ingredient
+    Returns:
+        int: Usage count
+    """
+    count = db.query(func.count(RecipeIngredients.recipe_id)).filter(
+        RecipeIngredients.ingredient_name == ingredient_name
+    ).scalar()
+    return count

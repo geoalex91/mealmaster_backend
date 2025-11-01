@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from db.models import Recipes, Ingredients, RecipeIngredients
+from db.models import Recipes, RecipeIngredients
 from routers.schemas import RecipesBase, RecipeIngredientBase
-from db_ingredients import get_ingredient_by_id, get_ingredients_by_recipes
+from db.db_ingredients import get_ingredient_by_id
 from fastapi import HTTPException, status
 from resources.logger import Logger
 
@@ -10,8 +10,31 @@ logger = Logger()
 def create_recipe(db: Session, recipe_data: RecipesBase, user_id: int):
     """Create a new recipe along with its ingredients."""
     # Create the recipe
+    required_fields = [
+        recipe_data.name, recipe_data.description]
+    if any(field is None for field in required_fields):
+        logger.error("Missing required recipe fields.")
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Missing or invalid recipe data.")
+    if recipe_data.cooking_time < 0 or recipe_data.portions < 0:
+        logger.error("Cooking time and portions cannot be negative.")
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Cooking time and portions must be non-negative.")
+    if not recipe_data.recipe_ingredients:
+        logger.error("Attempted to create recipe without ingredients.")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Recipe must have at least one ingredient")
     new_recipe = Recipes(name=recipe_data.name,description=recipe_data.description,
-        category=recipe_data.category,user_id=user_id)
+        category=recipe_data.category,user_id=user_id, portions=recipe_data.portions,
+        season=recipe_data.season,type=recipe_data.type,
+        photograph_url=recipe_data.photograph_url, cooking_time=recipe_data.cooking_time
+    )
+    if db.query(Recipes).filter(Recipes.name == recipe_data.name).first():
+        logger.error(f"Recipe with name {recipe_data.name} already exists")
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT,detail="A recipe with that name already exists")
     db.refresh(new_recipe)
     recipe_calories = 0.0
     recipe_protein = 0.0
@@ -22,6 +45,11 @@ def create_recipe(db: Session, recipe_data: RecipesBase, user_id: int):
     recipe_saturated_fats = 0.0
     # Add ingredients to the recipe
     for ingredient in recipe_data.recipe_ingredients:
+        if ingredient.quantity <= 0:
+            logger.error("Ingredient quantity must be greater than zero.")
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail="Ingredient quantity must be greater than zero.")
         recipe_ingredient = RecipeIngredients(
             recipe_id=new_recipe.id,
             ingredient_id=ingredient.ingredient_id,
@@ -43,6 +71,7 @@ def create_recipe(db: Session, recipe_data: RecipesBase, user_id: int):
     new_recipe.fibers = recipe_fibers
     new_recipe.sugar = recipe_sugar
     new_recipe.saturated_fats = recipe_saturated_fats
+    
     db.add(new_recipe)
     db.commit()
     db.refresh(new_recipe)
@@ -56,7 +85,7 @@ def get_recipe_by_id(db: Session, recipe_id: int):
 def get_recipes_by_name(db: Session, name: str):
     """Retrieve recipes by their name."""
     logger.info(f"Fetching recipes with name: {name}")
-    return db.query(Recipes).filter(Recipes.name.ilike(f"%{name}%")).all()
+    return db.query(Recipes).filter(Recipes.name == name).first()
 
 def get_all_recipes(db: Session):
     """Retrieve all recipes."""

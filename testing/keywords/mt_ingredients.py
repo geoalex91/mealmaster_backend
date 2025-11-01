@@ -1,8 +1,9 @@
+from routers.schemas import IngredientsSummary
 from testing.keywords import DATA_PATH
 from testing.keywords.utilities import Utilities
 from fastapi.testclient import TestClient
 from main import app
-from mt_profile import MtProfile
+from testing.keywords.mt_profile import MtProfile
 import os, json
 
 LOCALHOST = "http://localhost:8000"
@@ -44,7 +45,7 @@ class MTIngredients:
             return response.json()
         return True
 
-    def get_all_ingredients(self):
+    def browse_ingredients(self):
         """Retrieve all ingredients."""
         if not self.mt_profile.login_user_json:
             self.utilities.log_error("Login JSON is None. Please login first.")
@@ -56,7 +57,7 @@ class MTIngredients:
             return False
         headers = {"Authorization": f"Bearer {token}"}
         self.utilities.log_info("Retrieving all ingredients")
-        response = self.client.get(f"{LOCALHOST}/ingredients/all", headers=headers)
+        response = self.client.get(f"{LOCALHOST}/ingredients/browse", headers=headers)
         self.utilities.log_info(f"Response status code: {response.status_code}")
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to retrieve ingredients: {response.json()}")
@@ -104,14 +105,22 @@ class MTIngredients:
     
     def get_ingredient_id(self, ingredient_name: str):
         """Get the ID of an ingredient by name."""
-        if not self.all_ingredients or not isinstance(self.all_ingredients, list):
-            self.utilities.log_error("No ingredients found or invalid response format.")
+        if not self.mt_profile.login_user_json:
+            self.utilities.log_error("Login JSON is None. Please login first.")
             return False
-        for ingredient in self.all_ingredients:
-            if ingredient.get("name") == ingredient_name:
-                return ingredient.get("id")
-        self.utilities.log_error(f"Ingredient with name {ingredient_name} not found.")
-        return False
+        try:
+            token = self.mt_profile.login_user_json.get("access_token")
+        except Exception as e:
+            self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
+            return False
+        headers = {"Authorization": f"Bearer {token}"}
+        self.utilities.log_info(f"Retrieving ingredient details for name: {ingredient_name}")
+        response = self.client.get(f"{LOCALHOST}/ingredients/id-by-name/{ingredient_name}", headers=headers)
+        self.utilities.log_info(f"Response status code: {response.status_code}")
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to retrieve ingredient details: {response.json()}")
+            return response.json()
+        return response.json().get("id")
     
     def load_ingredient_data_from_file(self):
         """Load ingredient data from a JSON file."""
@@ -156,7 +165,11 @@ class MTIngredients:
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to search ingredient: {response.json()}")
             return response.json()
-        return response.json()
+        for item in response.json():
+            if ingredient_name.lower() in item["name"].lower():
+                self.utilities.log_info(f"Found ingredient: {item['name']}")
+                return int(item["id"])
+        return False
     
     def get_ingredient_by_id(self, ingredient_dict: dict):
         """Get ingredient details by ID."""
@@ -178,5 +191,44 @@ class MTIngredients:
         self.utilities.log_info(f"Response status code: {response.status_code}")
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to retrieve ingredient: {response.json()}")
+            return response.json()
+        return response.json()
+
+    def get_ingredient_usage_count(self, ingredient_id: int):
+        """Get the usage count of an ingredient by name."""
+        if not self.mt_profile.login_user_json:
+            self.utilities.log_error("Login JSON is None. Please login first.")
+            return False
+        try:
+            token = self.mt_profile.login_user_json.get("access_token")
+        except Exception as e:
+            self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
+            return False
+        headers = {"Authorization": f"Bearer {token}"}
+        self.utilities.log_info(f"Retrieving usage count for ingredient: {ingredient_id}")
+        response = self.client.get(f"{LOCALHOST}/ingredients/{ingredient_id}", headers=headers)
+        self.utilities.log_info(f"Response status code: {response.status_code}")
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to retrieve ingredient usage count: {response.json()}")
+            return response.json()
+        usage_count = response.json().get("usage_count")
+        return usage_count
+    
+    def get_ingredient_details(self, ingredient_id: int):
+        """Get ingredient details by ID."""
+        if not self.mt_profile.login_user_json:
+            self.utilities.log_error("Login JSON is None. Please login first.")
+            return False
+        try:
+            token = self.mt_profile.login_user_json.get("access_token")
+        except Exception as e:
+            self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
+            return False
+        headers = {"Authorization": f"Bearer {token}"}
+        self.utilities.log_info(f"Retrieving ingredient details for ID: {ingredient_id}")
+        response = self.client.get(f"{LOCALHOST}/ingredients/{ingredient_id}", headers=headers)
+        self.utilities.log_info(f"Response status code: {response.status_code}")
+        if response.status_code != 200:
+            self.utilities.log_error(f"Failed to retrieve ingredient details: {response.json()}")
             return response.json()
         return response.json()

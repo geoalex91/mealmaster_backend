@@ -1,5 +1,5 @@
-from pydantic import BaseModel,ConfigDict
-from typing import Optional, List
+from pydantic import BaseModel,ConfigDict, field_validator
+from typing import Optional, List, Union
 
 # User Schemas
 class UserBase(BaseModel):
@@ -46,13 +46,14 @@ class IngredientsDisplay(BaseModel):
     saturated_fats: float
     category: str
     user: User
+    usage_count: int
     class Config:
         from_attributes = True
 
 class IngredientsSummary(BaseModel):
     id: int
     name: str
-    category: str | None = None
+    category: str = None
     calories: float
     protein: float
     carbs: float
@@ -73,12 +74,10 @@ class IngredientsUpdate(BaseModel):
     saturated_fats: Optional[float] = None
     category: Optional[str] = None
 
-
 class CursorIngredientsResponse(BaseModel):
     items: List[IngredientsSummary]
     next_cursor: Optional[int] = None
     has_more: bool
-
 
 class RecipeIngredientBase(BaseModel):
     model_config = ConfigDict(extra='forbid')
@@ -95,8 +94,19 @@ class RecipesBase(BaseModel):
     model_config = ConfigDict(extra='forbid')
     name: str
     description: str
+    portions: Optional[int] = None
     category: Optional[str] = None
+    season: Optional[Union[str, List[str]]] = None
+    cooking_time: Optional[int] = None  # in minutes
+    type: Optional[Union[str, List[str]]] = None
+    photograph_url: Optional[str] = None
     recipe_ingredients: List[RecipeIngredientBase] = None
+
+    @field_validator('season', 'type', mode='before')
+    def normalize_types(cls,v):
+        if isinstance(v, str):
+            return [v]
+        return v
 
 class RecipesDisplay(BaseModel):
     id: int
@@ -112,6 +122,45 @@ class RecipesDisplay(BaseModel):
     category: str
     user: User
     recipe_ingredients: List[RecipeIngredientDisplay]
+    portions: Optional[int] = None
+    season: Optional[List[str]] = None
+    type: Optional[List[str]] = None
+    cooking_time: Optional[int] = None  # in minutes
+    photograph_url: Optional[str] = None
+    usage_count: int
     class Config:
         from_attributes = True
 
+class RecipeUpdate(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    name: Optional[str] = None
+    description: Optional[str] = None
+    portions: Optional[int] = None
+    category: Optional[str] = None
+    season: Optional[Union[str, List[str]]] = None
+    type: Optional[Union[str, List[str]]] = None
+    cooking_time: Optional[int] = None  # in minutes
+    photograph_url: Optional[str] = None
+    recipe_ingredients: Optional[List[RecipeIngredientBase]] = None
+
+    @field_validator('season', 'type', mode='before')
+    def normalize_types(cls,v):
+        if v is None:
+            return v
+        return [v] if isinstance(v, str) else v
+
+class RecipeSummary(BaseModel):
+    id: int
+    name: str
+    calories: float
+    protein: float
+    carbs: float
+    fat: float
+    usage_count: int
+    class Config:
+        from_attributes = True
+
+class CursorRecipesResponse(BaseModel):
+    items: List[RecipeSummary]
+    next_cursor: Optional[int] = None
+    has_more: bool

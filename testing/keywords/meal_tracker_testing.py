@@ -1,4 +1,4 @@
-from mt_profile import MtProfile
+from testing.keywords.mt_profile import MtProfile
 from fastapi.testclient import TestClient
 from testing.keywords.mt_ingredients import MTIngredients
 from testing.keywords.mt_recipes import MTRecipes
@@ -74,6 +74,9 @@ class MealTracker:
     def get_ingredient_by_id(self, ingredient_dict: dict):
         return self.mt_ingredients.get_ingredient_by_id(ingredient_dict)
 
+    def get_ingredient_usage_count(self, ingredient_name: str):
+        return self.mt_ingredients.get_ingredient_usage_count(ingredient_name)
+    
     def create_recipe(self, recipe_data: dict):
         return self.mt_recipes.create_recipe(recipe_data)
     
@@ -83,5 +86,18 @@ class MealTracker:
     def delete_recipe(self, recipe_id: int):
         return self.mt_recipes.delete_recipe(recipe_id)
     
-    def get_recipe(self, recipe_id: int):
-        return self.mt_recipes.get_recipe(recipe_id)
+    def search_recipes(self, query: str, search_type: str = "normal"):
+        return self.mt_recipes.search_recipes(query, search_type)
+    
+    def get_recipe_details(self, recipe_id: int):
+        return self.mt_recipes.get_recipe_details_by_id(recipe_id)
+    
+    def get_recipe_usage_count(self, recipe_name: str):
+        return self.mt_recipes.get_recipe_usage_count(recipe_name)
+    
+    def create_recipes_from_file(self):
+        """Create recipes from a predefined JSON file."""
+        return self.mt_recipes.create_recipes_from_file()
+    
+    def get_recipe_id_by_name(self, recipe_name: str):
+        return self.mt_recipes.get_recipe_id_by_name(recipe_name)

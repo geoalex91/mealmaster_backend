@@ -1,10 +1,10 @@
-from typing import Optional, Type
+from typing import Optional, Type, List
 from sqlalchemy.orm.session import Session
 from sqlalchemy import select
 from sqlalchemy.ext.declarative import DeclarativeMeta
 
-def paginated_query(db: Session,model: Type[DeclarativeMeta], limit: int,cursor: Optional[int] = None,
-    filters: Optional[list] = None, order_by_field = None):
+def paginated_query(db: Session, model: Type[DeclarativeMeta], limit: int, cursor: Optional[int] = None,
+    filters: Optional[List] = None, order_by_field = None):
     """Executes a generic paginated query on a SQLAlchemy model.
         db (Session): SQLAlchemy database session.
         model (Type[DeclarativeMeta]): SQLAlchemy model class to query.
@@ -21,14 +21,14 @@ def paginated_query(db: Session,model: Type[DeclarativeMeta], limit: int,cursor:
         - Fetches one extra record to determine if there are more results. """
     filters = filters or []
     order_by_field = order_by_field or model.id
-    if cursor:
+    if cursor is not None:
         filters.append(order_by_field > cursor)
     stmt = select(model).where(*filters).order_by(order_by_field).limit(limit + 1)
-    results = db.scalar(stmt).all()
+    results = db.execute(stmt).scalars().all()
     has_more = len(results) > limit
     next_cursor = results[-1].id if has_more else None
     return {
-        "results": results[:limit],
+        "items": results[:limit],
         "next_cursor": next_cursor,
         "has_more": has_more
     }
@@ -53,7 +53,7 @@ def paginate_live_search(results: list, limit: int,cursor: Optional[int] = None)
     has_more = end < len(results)
     next_cursor = end if has_more else None
     return {
-        "results": paginated_results,
+        "items": paginated_results,
         "next_cursor": next_cursor,
         "has_more": has_more
     }

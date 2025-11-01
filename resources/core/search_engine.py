@@ -20,59 +20,68 @@ def normalize(text: str) -> str:
     normalized = unicodedata.normalize('NFD', text)
     # Filter out diacritical marks (category 'Mn')
     without_diacritics = ''.join(
-        c for c in normalized if unicodedata.category(c) != 'Mn'
-    )
+        c for c in normalized if unicodedata.category(c) != 'Mn')
     # Convert to lowercase
     return without_diacritics.lower()
 
 class GenericNode:
+    """Base node class for trie structures."""
     def __init__(self):
+        """Initializes a GenericNode with children, end-of-word flag, weight, and value."""
         self.children: Dict[str, GenericNode] = {}
         self.is_end_of_word: bool = False
         self.weight = 0
         self.value = None
 
 class TrieNode(GenericNode):
+    """Trie node structure for full ingredient names mapping to ingredient summaries."""
     def __init__(self):
+        super().__init__()
         self.children: Dict[str, TrieNode] = {}
-        self.is_end_of_word: bool = False
-
+        
 class TokenTrieNode(GenericNode):
     """Separate trie structure for individual tokens (words) mapping to ingredient summaries.
 
     Each terminal node keeps a set of ingredient references whose names contain that token.
     """
     def __init__(self):
+        super().__init__()
         self.children: Dict[str, TokenTrieNode] = {}
-        self.is_end_of_word: bool = False
         self.items: Set[int] = set()  # Store ingredient IDs (ints) for hashability
 
 class GenericTrieInterface(ABC):
+    """Abstract base class defining the interface for a generic trie structure."""
     def __init__(self):
         self.root = GenericNode()
         self._lock = threading.Lock()
 
     @abstractmethod
     def insert(self, item: object, weight: int = 1):
+        """Inserts an item into the trie with an optional weight."""
         raise NotImplementedError
 
     @abstractmethod
-    def delete(self, name: str):
+    def delete(self, item: object):
+        """Deletes an item from the trie by its name."""
         raise NotImplementedError
 
     @abstractmethod
-    def rename(self, old_name: str, new_ing: object):
+    def rename(self, old_item: object, new_item: object):
+        """Renames an item in the trie by removing the old name and inserting the new item."""
         raise NotImplementedError
 
     @abstractmethod
     def prefix_search(self, prefix: str, limit: int = 50) -> List[object]:
+        """Performs a prefix search in the trie and returns a list of matching items."""
         raise NotImplementedError
 
     @abstractmethod
     def fuzzy_search(self, word: str, max_distance: int = 1, limit: int = 50) -> List[object]:
+        """Performs a fuzzy search in the trie and returns a list of matching items."""
         raise NotImplementedError
     
     def print_tree_inlog_file(self, node = None, prefix: str = ''):
+        """Utility function to print the trie structure to the log file for debugging."""
         if node is None:
             node = self.root
         if node.is_end_of_word:
@@ -84,7 +93,7 @@ class GenericTrieInterface(ABC):
 
     def get_depth(self) -> int:
         """Get the maximum depth of the trie."""
-        def _depth(node: TrieNode, current_depth: int) -> int:
+        def _depth(node, current_depth: int) -> int:
             if not node.children:
                 return current_depth
             return max(_depth(child, current_depth + 1) for child in node.children.values())
@@ -92,6 +101,7 @@ class GenericTrieInterface(ABC):
             return _depth(self.root, 0)
     
     def increment_usage(self, item: object):
+        """Increments the usage count (weight) of an item in the trie."""
         node = self.root
         for ch in item.name.lower():
             if ch not in node.children:
@@ -102,12 +112,18 @@ class GenericTrieInterface(ABC):
             node.value.usage_count = node.weight
     
 class SearchTrie(GenericTrieInterface):
+    """Trie structure for full ingredient names mapping to ingredient summaries."""
     def __init__(self,max_trie_depth: int = 64, distance_weight: float = 1.0):
+        super().__init__()
         self.root = TrieNode()
         self.distance_weight = distance_weight  # multiplier for distance in ordering
         self.max_trie_depth = max_trie_depth   # Traversal guard
 
     def insert(self, item: object, weight: int = 1):
+        """Inserts an item into the trie with an optional weight.
+        Args:
+            item: The item to insert into the trie.
+            weight: The weight to assign to the item (default is 1)."""
         with self._lock:
             # Full-name trie insert
             node = self.root
@@ -117,11 +133,9 @@ class SearchTrie(GenericTrieInterface):
             node.is_end_of_word = True
             node.weight += weight
             node.value = item  # Store the whole object
-            #item.usage_count = node.weight
-            #self._by_id[item.id] = item
             return node
     
-    def delete(self, name: str):
+    def delete(self, item: object):
         """
         Deletes a word from the trie.
         Args:
@@ -133,8 +147,7 @@ class SearchTrie(GenericTrieInterface):
             - The deletion is performed in a thread-safe manner.
             - Internal nodes are removed only if they are no longer needed for other words.
         """
-
-        norm = normalize(name)
+        norm = normalize(item.name)
         with self._lock:
             def _delete(node: TrieNode, word: str, depth: int = 0) -> bool:
                 if depth == len(word):
@@ -158,20 +171,20 @@ class SearchTrie(GenericTrieInterface):
                     break
                 node = node.children[ch]
             _delete(self.root, norm)
-    
-    def rename(self, old_name: str, new_ing: object):
+
+    def rename(self, old_item: object, new_item: object):
         """Rename an ingredient by removing old name and inserting new summary.
 
         Args:
-            old_name: original ingredient name
-            new_ing: new ingredient summary (with updated name)
+            old_item: original ingredient name
+            new_item: new ingredient summary (with updated name)
         """
         with self._lock:
-            self.delete(old_name)
-            self.insert(new_ing)
+            self.delete(old_item)
+            self.insert(new_item)
 
     def prefix_search(self, prefix: str) -> List[object]:
-        """Return up to `limit` ingredients whose name starts with the normalized prefix."""
+        """Returns a list of ingredients whose name starts with the given prefix."""
         norm = normalize(prefix)
         if not norm:
             return []
@@ -269,6 +282,7 @@ class SearchTrie(GenericTrieInterface):
 
 class TokenSearchTrie(GenericTrieInterface):
     def __init__(self,max_trie_depth: int = 64, usage_weight: float = 0.8, distance_weight: float = 1.0):
+        super().__init__()
         self.root = TokenTrieNode()  # token-level index
         self._by_id: Dict[int, object] = {}  # Mapping id -> object for token lookup resolution
         self.usage_weight = usage_weight  # Scoring weights (can be tuned externally)
@@ -293,10 +307,10 @@ class TokenSearchTrie(GenericTrieInterface):
             #item.usage_count = node.weight
             return node
 
-    def delete(self, name: str):
-        """Recursively deletes all tokens of a given name from the token trie.
+    def delete(self, item: object):
+        """Recursively deletes all tokens of a given item from the token trie.
         Removes empty nodes to keep the structure clean."""
-        norm = normalize(name)
+        norm = normalize(item.name)
         with self._lock:
             # Find the ingredient ID (from main trie, optional)
             victim_id = None
@@ -342,18 +356,18 @@ class TokenSearchTrie(GenericTrieInterface):
 
         # Return True if this node is now also empty
         return not node.children and not node.items and not node.is_end_of_word
-    
-    def rename(self, old_name: str, new_ing: object):
-        """Rename an ingredient by removing old name and inserting new summary.
+
+    def rename(self, old_item: object, new_item: object):
+        """Rename an ingredient by removing old item and inserting new summary.
 
         Args:
-            old_name: original ingredient name
-            new_ing: new ingredient summary (with updated name)
+            old_item: original ingredient item
+            new_item: new ingredient summary (with updated name)
         """
         with self._lock:
-            self.delete(old_name)
-            self.insert(new_ing)
-    
+            self.delete(old_item)
+            self.insert(new_item)
+
     def _dfs(self, node: TokenTrieNode, prefix: str, results: List[Tuple[str, Set[int]]]):
         """Depth-first traversal from a given node, collecting tokens and associated ingredient IDs.
             Stops when limit is reached."""
@@ -492,16 +506,16 @@ class ObjectSearchTrie:
         token_node = self.token_trie.insert(item, weight)
         item.usage_count = max(prefix_node.weight,token_node.weight)
     
-    def delete(self, name: str):
-        self.prefix_trie.delete(name)
-        self.token_trie.delete(name)
-    
-    def rename(self, old_name: str, new_ing: object):
-        self.prefix_trie.rename(old_name, new_ing)
-        self.token_trie.rename(old_name, new_ing)
-    
+    def delete(self, item: object):
+        self.prefix_trie.delete(item)
+        self.token_trie.delete(item)
+
+    def rename(self, old_item: object, new_item: object):
+        self.prefix_trie.rename(old_item, new_item)
+        self.token_trie.rename(old_item, new_item)
+
     def prefix_search(self, prefix: str, limit: int = 50) -> List[object]:
-        results = self.prefix_trie.prefix_search(prefix, limit)
+        results = self.prefix_trie.prefix_search(prefix)
         ranked = self._rank_results(results, normalize(prefix))
         return ranked[:limit]
     
@@ -515,29 +529,24 @@ class ObjectSearchTrie:
     
     def fuzzy_search(self, word: str, max_distance: int = 1, limit: int = 50) -> List[object]:
         results = self.prefix_trie.fuzzy_search(word, max_distance)
-        #ranked = self._rank_results(results, normalize(word))
         return results[:limit]
     
     def multi_token_fuzzy_search(self, query: str, limit: int = 50, token_max_distance: int = 2) -> List[object]:
         query_tokens = [t for t in query.split() if t]
         if len(query_tokens) <= 1:
-            # Defer to existing fuzzy for single token
-            return self.prefix_trie.fuzzy_search(query_tokens[0] if query_tokens else query_tokens, max_distance=token_max_distance + 1)
+            return self.prefix_trie.fuzzy_search(query_tokens[0] if query_tokens else query_tokens,token_max_distance)[:limit]
         result = self.token_trie.fuzzy_search(query, token_max_distance)
-        #ranked = self._rank_results(result, normalize(query))
         return result[:limit]
     
     def smart_search(self, query, max_distance=2, limit=50):
         norm = normalize(query)
         prefix_results = self.multi_token_prefix_search(norm, limit)
-        fuzzy_results, token_results = [], []
+        token_results = []
 
         if len(prefix_results) < limit:
-            fuzzy_results = self.fuzzy_search(norm, max_distance=max_distance, limit=limit)
-        if ' ' in norm and len(prefix_results) + len(fuzzy_results) < limit:
-            token_results = self.multi_token_fuzzy_search(norm, limit=limit)
+            token_results = self.multi_token_fuzzy_search(norm, limit=limit, token_max_distance=max_distance)
 
-        combined = {r.id: r for r in (*prefix_results, *fuzzy_results, *token_results)}
+        combined = {r.id: r for r in (*prefix_results, *token_results)}
         ranked = self._rank_results(list(combined.values()), norm)
         return ranked[:limit]
 

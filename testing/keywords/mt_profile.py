@@ -148,7 +148,7 @@ class MtProfile:
             self.utilities.log_error(f"Failed to get access token from login JSON: {e}")
             return False
         headers = {"Authorization": f"Bearer {token}"}
-        response = self.client.delete(f"{LOCALHOST}/delete-account", params={"pasword": password},headers=headers)
+        response = self.client.delete(f"{LOCALHOST}/delete-account", params={"password": password},headers=headers)
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to delete account for user {username}: {response.json()}")
             return response.json()
