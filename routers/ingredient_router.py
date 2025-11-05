@@ -82,8 +82,6 @@ def live_tree_search(
             ingredient_list = ingredient_list[: limit + 1]  # keep one extra for has_more logic
 
         return paginate_live_search(ingredient_list, limit=limit, cursor=cursor)
-    except HTTPException:
-        raise
     except Exception as e:
         logger.error(f"Error during live search: {e}")
         raise HTTPException(status_code=500, detail=f"{e}")
@@ -138,7 +136,7 @@ def delete_ingredient(ingredient_id: int, db: Session = Depends(get_db), current
         logger.error(f"Error deleting ingredient: {e}")
         raise HTTPException(status_code=500, detail=f"{e}")
 
-@router.get('/id-by-name/{ingredient_name}', response_model=int, summary="Get ingredient ID by name")
+@router.get('/id-by-name/{ingredient_name}', response_model=dict, summary="Get ingredient ID by name")
 def get_ingredient_id_by_name(ingredient_name: str, db: Session = Depends(get_db),
                               current_user: UserDisplay = Depends(get_current_user)) -> int:
     """Get ingredient ID by name."""
@@ -147,7 +145,7 @@ def get_ingredient_id_by_name(ingredient_name: str, db: Session = Depends(get_db
         if not ingredient:
             logger.error(f"Ingredient not found: Name {ingredient_name}")
             raise HTTPException(status_code=404, detail="Ingredient not found")
-        return {"id": ingredient.id}
+        return {"id": int(ingredient.id)}
     except Exception as e:
         logger.error(f"Error getting ingredient by name: {e}")
         raise HTTPException(status_code=500, detail=f"{e}")

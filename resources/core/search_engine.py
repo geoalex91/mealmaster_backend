@@ -294,7 +294,6 @@ class TokenSearchTrie(GenericTrieInterface):
             # Full-name trie insert
             node = self.root
             word = normalize(item.name)
-            #node.value = item  # Store the whole object
             self._by_id[item.id] = item
             # Token trie insert
             for token in filter(None, word.split()):
@@ -304,7 +303,7 @@ class TokenSearchTrie(GenericTrieInterface):
                 node.is_end_of_word = True
                 node.items.add(item.id)
             node.weight += weight
-            #item.usage_count = node.weight
+            node.value = item  # Store the whole objec
             return node
 
     def delete(self, item: object):

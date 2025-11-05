@@ -92,15 +92,15 @@ class RecipeIngredientDisplay(BaseModel):
 # Recipe Schemas
 class RecipesBase(BaseModel):
     model_config = ConfigDict(extra='forbid')
-    name: str
-    description: str
+    name: Optional[str] = None
+    description: Optional[str] = None
     portions: Optional[int] = None
     category: Optional[str] = None
     season: Optional[Union[str, List[str]]] = None
     cooking_time: Optional[int] = None  # in minutes
     type: Optional[Union[str, List[str]]] = None
     photograph_url: Optional[str] = None
-    recipe_ingredients: List[RecipeIngredientBase] = None
+    recipe_ingredients: Optional[List[RecipeIngredientBase]] = None
 
     @field_validator('season', 'type', mode='before')
     def normalize_types(cls,v):

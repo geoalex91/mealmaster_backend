@@ -18,20 +18,22 @@ def create(db: Session, request: IngredientsBase, creator_id: int):
             - 422 if required fields are missing or invalid.
             Returns:
             Ingredients: The created ingredient instance."""
-    required_fields = [
+    required_fields = [request.name,
         request.calories, request.protein, request.carbs,
         request.fat, request.fibers, request.sugar, request.saturated_fats, request.category
     ]
-    if request.name is None:
+    if any(field is None for field in required_fields):
         logger.error("Missing required ingredient fields.")
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail="Missing or invalid ingredient data.")
-    if any(field < 0 for field in required_fields):
-        logger.error("Nutritional values must be non-negative.")
-        raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="Missing or invalid ingredient data.")
+    for field in required_fields:
+        if isinstance(field, (int, float)):
+            if field < 0:
+                logger.error("Nutritional values must be non-negative.")
+                raise HTTPException(
+                    status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                    detail="Nutritional values must be non-negative.")
     new_ingredient = Ingredients(
         name=request.name,
         calories=request.calories,
@@ -150,7 +152,7 @@ def get_ingredient_usage_count(db: Session, ingredient_name: str):
     Returns:
         int: Usage count
     """
-    count = db.query(func.count(RecipeIngredients.recipe_id)).filter(
-        RecipeIngredients.ingredient_name == ingredient_name
-    ).scalar()
-    return count
+    ingredient = get_ingredient_by_name(db, ingredient_name)
+    if not ingredient:
+        return 0
+    return ingredient.usage_count

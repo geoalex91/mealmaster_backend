@@ -24,7 +24,7 @@ class MTRecipes:
         recipes_json = {
             "name": recipe_data.get("name"),
             "description": recipe_data.get("description"),
-            "image": recipe_data.get("image"),
+            "photograph_url": recipe_data.get("image"),
             "type": recipe_data.get("type"),
             "portions": recipe_data.get("portions"),
             "cooking_time": recipe_data.get("cooking_time"),
@@ -48,13 +48,16 @@ class MTRecipes:
         recipes_json = {
             "name": recipe_data.get("name"),
             "description": recipe_data.get("description"),
-            "image": recipe_data.get("image"),
+            "photograph_url": recipe_data.get("image"),
             "type": recipe_data.get("type"),
             "portions": recipe_data.get("portions"),
             "cooking_time": recipe_data.get("cooking_time"),
             "season": recipe_data.get("season"),
             "category": recipe_data.get("category"),
             "recipe_ingredients": recipe_data.get("recipe_ingredients")}
+        for key, value in list(recipes_json.items()):
+            if value is None:
+                del recipes_json[key]
         if not self.mt_profile.login_user_json:
             self.utilities.log_error("Login JSON is None. Please login first.")
             return False
@@ -64,7 +67,7 @@ class MTRecipes:
             self.utilities.log_error(f"Failed to get access token from profile JSON: {e}")
             return False
         headers = {"Authorization": f"Bearer {token}"}
-        response = self.client.put(f"{LOCALHOST}/recipes/{recipe_id}", json=recipes_json, headers=headers)
+        response = self.client.put(f"{LOCALHOST}/recipes/{recipe_id}",json=recipes_json, headers=headers)
         if response.status_code != 200:
             self.utilities.log_error(f"Failed to update recipe: {response.json()}")
             return response.json()

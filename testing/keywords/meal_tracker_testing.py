@@ -71,8 +71,8 @@ class MealTracker:
     def search_ingredients(self, query: str, search_type: str = "normal", limit: int = 10):
         return self.mt_ingredients.search_ingredient_in_database(ingredient_name=query, type=search_type, limit=limit)
 
-    def get_ingredient_by_id(self, ingredient_dict: dict):
-        return self.mt_ingredients.get_ingredient_by_id(ingredient_dict)
+    def get_ingredient_by_id(self, ingredient_id: int):
+        return self.mt_ingredients.get_ingredient_by_id(ingredient_id)
 
     def get_ingredient_usage_count(self, ingredient_name: str):
         return self.mt_ingredients.get_ingredient_usage_count(ingredient_name)

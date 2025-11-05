@@ -7,9 +7,9 @@ from resources.core.entity_cache import ingredient_cache, recipe_cache
 
 _scheduler_started = False
 _stop_scheduler_event = threading.Event()
-UNVERIFIED_CLEAN_INTERVAL_HOURS = 5 * 3600
-INGREDIENT_CACHE_SYNC_INTERVAL_HOURS = 1 * 3600
-RECIEPE_CACHE_SYNC_INTERVAL_HOURS = 1 * 3600
+UNVERIFIED_CLEAN_INTERVAL_HOURS = 3 * 60
+INGREDIENT_CACHE_SYNC_INTERVAL_HOURS = 2 * 60
+RECIEPE_CACHE_SYNC_INTERVAL_HOURS = 2 * 60
 logger = Logger()
 
 class QueueNode:

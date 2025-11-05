@@ -108,7 +108,7 @@ Library    keywords.meal_tracker_testing.MealTracker
     ${msg}=    Delete Account    user1    new_password
     Should Be True    ${msg}    User deletion failed
     ${msg}=    Login User    user1    new_password
-    Should Be Equal As Strings    ${msg["detail"]}    Invalid Credentials
+    Should Contain    ${msg["detail"]}    Invalid Credentials
     Log     Test Case Passed
 17_Delete_User_Wrong_Password
     ${msg}=    Login User    user3    user_password

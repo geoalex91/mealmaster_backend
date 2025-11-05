@@ -35,8 +35,9 @@ class EntityCache:
             items = (db.query(self.model_cls).order_by(self.model_cls.usage_count.desc()).limit(TRIE_CACHE_LIMIT).all())
             for ingredient in items:
                 summary_ingredient = self.summary_cls.model_validate(ingredient)
-                self.search_index.insert(summary_ingredient)
                 self._cached_ids.add(summary_ingredient.id)
+                self.ingredient_usage_cache[summary_ingredient.id] = ingredient.usage_count
+                self.search_index.insert(summary_ingredient,self.ingredient_usage_cache[summary_ingredient.id])
             #self.print_tree_in_log_file()
             if self.summary_cls == IngredientsSummary:
                 self.logger.info(f"Ingredient cache built with {len(items)} items.")
@@ -53,21 +54,24 @@ class EntityCache:
             self.search_index.insert(ingredient)
             self.logger.info(f"element added to cache: {ingredient.name}")
             self._cached_ids.add(ingredient.id)
+            self.ingredient_usage_cache[ingredient.id] = 0
         except Exception as e:
             self.logger.error(f"Failed to add element to cache: {e}")
 
-    def remove_ingredient(self, ingredient_name: str):
+    def remove_ingredient(self, ingredient: object):
         try:
-            self.search_index.delete(ingredient_name)
-            self.logger.info(f"Element removed from cache: {ingredient_name}")
+            self.search_index.delete(ingredient)
+            self.ingredient_usage_cache.pop(ingredient.id, None)
+            self._cached_ids.discard(ingredient.id)
+            self.logger.info(f"Element removed from cache: {ingredient.name}")
             # Lazy cleanup of id set (full scan by name resolution skipped for simplicity)
         except Exception as e:
             self.logger.error(f"Failed to remove element from cache: {e}")
 
-    def rename_ingredient(self, old_name: str, new_name:object):
+    def rename_ingredient(self, old_name: object, new_name:object):
         try:
             self.search_index.rename(old_name, new_name)
-            self.logger.info(f"Element renamed in cache: {old_name} to {new_name}")
+            self.logger.info(f"Element renamed in cache: {old_name.name} to {new_name.name}")
         except Exception as e:
             self.logger.error(f"Failed to rename element in cache: {e}")
 
@@ -250,22 +254,20 @@ class EntityCache:
             return -1
 
     def sync_usage_to_db(self):
-        while True:
-            # 10 minutes
-            with self._usage_lock:
-                updates = dict(ingredient_cache.ingredient_usage_cache)
-                ingredient_cache.ingredient_usage_cache.clear()
+        # 10 minutes
+        with self._usage_lock:
+            updates = dict(self.ingredient_usage_cache)
 
-            db: Session = SessionLocal()
-            try:
-                for ing_id, count in updates.items():
-                    db.query(self.model_cls).filter(self.model_cls.id == ing_id).update(
-                        {"usage_count": self.model_cls.usage_count + count}
-                    )
-                db.commit()
-            finally:
-                db.close()
-                time.sleep(600) # 10 minutes
+        db: Session = SessionLocal()
+        try:
+            for ing_id, count in updates.items():
+                db.query(self.model_cls).filter(self.model_cls.id == ing_id).update(
+                    {"usage_count": count}
+                )
+            db.commit()
+        finally:
+            db.close()
+            
 
     def start_sync_thread(self):
         thread = threading.Thread(target=self.sync_usage_to_db, daemon=True)

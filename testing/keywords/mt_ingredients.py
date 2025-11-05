@@ -156,7 +156,7 @@ class MTIngredients:
         headers = {"Authorization": f"Bearer {token}"}
         self.utilities.log_info(f"Searching for ingredient: {ingredient_name}")
         params = {
-            "querry": ingredient_name,
+            "query": ingredient_name,
             "search_type": type,
             "limit": limit
         }
@@ -171,12 +171,8 @@ class MTIngredients:
                 return int(item["id"])
         return False
     
-    def get_ingredient_by_id(self, ingredient_dict: dict):
+    def get_ingredient_by_id(self, ingredient_id: int):
         """Get ingredient details by ID."""
-        ingredient_id = ingredient_dict.get("id")
-        if not ingredient_id:
-            self.utilities.log_error("Ingredient ID not provided in the dictionary.")
-            return False
         if not self.mt_profile.login_user_json:
             self.utilities.log_error("Login JSON is None. Please login first.")
             return False

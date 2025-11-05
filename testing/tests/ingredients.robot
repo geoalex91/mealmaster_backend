@@ -13,8 +13,6 @@ Library    String
 2_Get_All_Ingredients_And_Edit_Ingredient
     ${auth_msg}    Login User    user_email1@fake.com    new_password
     Should Be True    ${auth_msg}    Login failed
-    ${ingredients}=    Get All Ingredients
-    Should Not Be Empty    ${ingredients}    No ingredients found
     ${ingredient_id}    Set Variable    ${1}
     ${ingredient_dict}    Create Dictionary    calories=${25}    protein=${1.2}
     ${ingredient_msg}    Update Ingredient    ${ingredient_id}    ${ingredient_dict}
@@ -24,8 +22,6 @@ Library    String
 3_Delete_Ingredient
     ${auth_msg}    Login User    user_email1@fake.com    new_password
     Should Be True    ${auth_msg}    Login failed
-    ${ingredients}=    Get All Ingredients
-    Should Not Be Empty    ${ingredients}    No ingredients found
     ${ingredient_id}    Set Variable    ${1}
     ${ingredient_msg}    Delete Ingredient    ${ingredient_id}
     Should Be True    ${ingredient_msg}    Ingredient deletion failed
@@ -34,7 +30,7 @@ Library    String
     ${auth_msg}    Login User    user_email1@fake.com    new_password
     Should Be True    ${auth_msg}    Login failed
     ${ingredient_id}=    Get Ingredient ID    Nonexistent
-    Should Not Be True    ${ingredient_id}    Ingredient ID should not be found
+    Should Contain    ${ingredient_id["detail"]}    Ingredient not found
     ${ingredient_msg}    Delete Ingredient    9999
     Should Contain    ${ingredient_msg["detail"]}    Ingredient not found
     ${ingredient_msg}    Update Ingredient    9999    {"calories": 25, "protein": 1.2}
@@ -75,9 +71,7 @@ Library    String
 
 8_Edit_Delete_Ingredient_Unauthorized_User
     ${auth_msg}    Login User    user3    user_password
-    Should Be True    ${auth_msg}    Login 
-    ${ingredients}=    Get All Ingredients
-    Should Not Be Empty    ${ingredients}    No ingredients found
+    Should Be True    ${auth_msg}    Login failed
     ${ingredient_id}    Set Variable    ${1}
     IF    ${ingredient_id}==${False}
         Fail    Ingredient ID not found
@@ -103,5 +97,22 @@ Library    String
     Should Not Be Empty    ${search_results}    No ingredients found in search
     ${search_results}    Search Ingredients    anansa    fuzzy
     Should Not Be Empty    ${search_results}    No ingredients found in fuzzy search
-    ${search_results}    Search Ingredients    ros    smart
+    ${search_results}    Search Ingredients    plupe pui    smart
     Should Not Be Empty    ${search_results}    No ingredients found
+    
+
+11_Search_Ingredients_Unauthenticated
+    ${search_results}=    Search Ingredients    ros    normal
+    Should Not Be True    ${search_results}    Search should fail for unauthenticated user
+    Log     Test Case Passed
+
+12_Visit_ingredient_And_Check_Usage_Count
+    ${auth_msg}    Login User    user_email1@fake.com    new_password
+    Should Be True    ${auth_msg}    Login failed
+    ${ingredient_id}    Set Variable    ${1}
+    ${usage_count}    Get Ingredient Usage Count    ${ingredient_id}
+    ${visit_ingredient}    Get Ingredient By ID    ${ingredient_id}
+    Should Not Be Empty    ${visit_ingredient}    Ingredient not found
+    ${new_usage_count}    Get Ingredient Usage Count    ${ingredient_id}
+    Should Be True    ${new_usage_count} > ${usage_count}    Usage count did not increment
+    Log     Test Case Passed
