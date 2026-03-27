@@ -1,4 +1,4 @@
-from routers.schemas import UserBase
+from routers.schemas import UserBase, UserStatsBase
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 from db.models import User
@@ -26,3 +26,29 @@ def get_user_by_username(db: Session, username: str):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail = f"User with username {username} not found")
     return user
+
+def get_user_stats_by_username(db: Session, username: str):
+    user = get_user_by_username(db, username)
+    if not user.user_stats:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                            detail = f"Stats for user {username} not found")
+    return user.user_stats
+
+def update_user_stats(db: Session, user: User, stats: UserStatsBase):
+    user_stats = get_user_stats_by_username(db, user.username)
+    if stats.name is not None:
+        user_stats.name = stats.name
+    if stats.height is not None:
+        user_stats.height = stats.height
+    if stats.weight is not None:
+        user_stats.weight = stats.weight
+    if stats.birthdate is not None:
+        user_stats.birthdate = datetime.strptime(stats.birthdate, "%Y-%m-%d")
+    if stats.gender is not None:
+        user_stats.gender = stats.gender
+    if stats.activity_level is not None:
+        user_stats.activity_level = stats.activity_level
+    db.commit()
+    db.refresh(user_stats)
+    return user_stats
+

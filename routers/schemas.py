@@ -164,3 +164,22 @@ class CursorRecipesResponse(BaseModel):
     items: List[RecipeSummary]
     next_cursor: Optional[int] = None
     has_more: bool
+
+class UserStatsBase(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    name: Optional[str] = None
+    height: Optional[int] = None
+    weight: Optional[float] = None
+    birthdate: Optional[str] = None
+    gender: Optional[str] = None
+    activity_level: Optional[str] = None
+
+class UserStatsDisplay(BaseModel):
+    name: str
+    height: int
+    weight: float
+    birthdate: Optional[str] = None
+    gender: Optional[str] = None
+    activity_level: Optional[str] = None
+    class Config:
+        from_attributes = True

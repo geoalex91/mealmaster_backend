@@ -69,7 +69,7 @@ class EmailClient():
         self._initialized = True
 
     def _validate_email_domain(self,email: str):
-        domain = email.split("@")[-1]
+        domain = email.split(".")[-1]
         try:
             resolver.resolve(domain, "MX")
             return True

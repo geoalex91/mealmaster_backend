@@ -3,11 +3,11 @@ Library    keywords.meal_tracker_testing.MealTracker
 
 *** Test Cases ***
 1_Create_New_User
-    ${msg}=    Create New User    user1    user_email1@fake.com    user_password
+    ${msg}=    Create New User    user100    user_email100@fake.com    user_password
     Should Be True    ${msg}    User Creation failed
-    ${verification_code}    Get Verification Code    user_email1@fake.com
+    ${verification_code}    Get Verification Code    user_email100@fake.com
     Should Not Be Empty    ${verification_code}    Verification code not found
-    ${is_verified}    Verify User    user_email1@fake.com    ${verification_code}
+    ${is_verified}    Verify User    user_email100@fake.com    ${verification_code}
     Should Be True    ${is_verified}    User Verification failed
     Log     Test Case Passed
 

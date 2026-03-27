@@ -56,7 +56,7 @@ class GenericTrieInterface(ABC):
         self._lock = threading.Lock()
 
     @abstractmethod
-    def insert(self, item: object, weight: int = 1):
+    def insert(self, item: object, weight: int = 0):
         """Inserts an item into the trie with an optional weight."""
         raise NotImplementedError
 
@@ -119,7 +119,7 @@ class SearchTrie(GenericTrieInterface):
         self.distance_weight = distance_weight  # multiplier for distance in ordering
         self.max_trie_depth = max_trie_depth   # Traversal guard
 
-    def insert(self, item: object, weight: int = 1):
+    def insert(self, item: object, weight: int = 0):
         """Inserts an item into the trie with an optional weight.
         Args:
             item: The item to insert into the trie.
@@ -289,7 +289,7 @@ class TokenSearchTrie(GenericTrieInterface):
         self.distance_weight = distance_weight  # multiplier for distance in ordering
         self.max_trie_depth = max_trie_depth   # Traversal guard
 
-    def insert(self, item: object, weight: int = 1):
+    def insert(self, item: object, weight: int = 0):
         with self._lock:
             # Full-name trie insert
             node = self.root
@@ -500,7 +500,7 @@ class ObjectSearchTrie:
         self.prefix_boost_weight = prefix_boost_weight
         self.distance_weight = distance_weight  # multiplier for distance in ordering
 
-    def insert(self, item: object, weight = 1):
+    def insert(self, item: object, weight = 0):
         prefix_node = self.prefix_trie.insert(item, weight)
         token_node = self.token_trie.insert(item, weight)
         item.usage_count = max(prefix_node.weight,token_node.weight)

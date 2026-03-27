@@ -1,0 +1,1856 @@
+[
+  {
+    "name": "ompleta cu legume",
+    "description": "O omletă delicioasă cu legume proaspete și ierburi aromatice.",
+    "image": "omleta_cu_legume.jpg",
+    "type": ["mic dejun", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 15,
+    "season": ["primăvară", "vară"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 1, "quantity": 4},
+      {"ingredient_id": 2, "quantity": 1},
+      {"ingredient_id": 3, "quantity": 0.5}
+    ]
+  },
+  {
+    "name": "Salată de Quinoa cu Legume",
+    "description": "O salată sănătoasă și hrănitoare cu quinoa și legume proaspete.",
+    "image": "salata_quinoa.jpg",
+    "type": ["prânz", "vegetarian", "fără gluten"],
+    "portions": 4,
+    "cooking_time": 25,
+    "season": ["vară", "toamnă"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 4, "quantity": 1},
+      {"ingredient_id": 5, "quantity": 1},
+      {"ingredient_id": 6, "quantity": 0.5},
+      {"ingredient_id": 7, "quantity": 0.25}
+    ]
+  },
+  {
+    "name": "Supă Cremă de Dovleac",
+    "description": "O supă cremă catifelată și aromată, perfectă pentru zilele răcoroase.",
+    "image": "supa_dovleac.jpg",
+    "type": ["cină", "vegetarian", "fără gluten"],
+    "portions": 6,
+    "cooking_time": 40,
+    "season": ["toamnă", "iarnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 8, "quantity": 1},
+      {"ingredient_id": 9, "quantity": 1},
+      {"ingredient_id": 10, "quantity": 0.5},
+      {"ingredient_id": 11, "quantity": 0.25}
+    ]
+  },
+  {
+    "name": "Paste Carbonara",
+    "description": "Paste cremoase cu bacon, ou și parmezan, un clasic italian.",
+    "image": "paste_carbonara.jpg",
+    "type": ["cină", "italian"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["toamnă", "iarnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 12, "quantity": 400},
+      {"ingredient_id": 13, "quantity": 150},
+      {"ingredient_id": 1, "quantity": 2},
+      {"ingredient_id": 14, "quantity": 50}
+    ]
+    },
+    {
+    "name": "Ciorbă de burtă",
+    "description": "Ciorbă tradițională românească, bogată și aromată.",
+    "image": "ciorba_burta.jpg",
+    "type": ["prânz", "tradițional"],
+    "portions": 6,
+    "cooking_time": 120,
+    "season": ["toamnă", "iarnă"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 15, "quantity": 1},
+      {"ingredient_id": 16, "quantity": 2},
+      {"ingredient_id": 17, "quantity": 1},
+      {"ingredient_id": 18, "quantity": 0.5}
+    ]
+    },
+    {
+    "name": "Sarmale în foi de varză",
+    "description": "Sarmale umplute cu carne și orez, în foi de varză murată.",
+    "image": "sarmale.jpg",
+    "type": ["cină", "tradițional"],
+    "portions": 8,
+    "cooking_time": 180,
+    "season": ["iarnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 19, "quantity": 1},
+      {"ingredient_id": 20, "quantity": 0.5},
+      {"ingredient_id": 21, "quantity": 0.2},
+      {"ingredient_id": 22, "quantity": 1}
+    ]
+    },
+    {
+    "name": "Pizza Margherita",
+    "description": "Pizza clasică cu sos de roșii, mozzarella și busuioc.",
+    "image": "pizza_margherita.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["vară", "toamnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 23, "quantity": 1},
+      {"ingredient_id": 24, "quantity": 100},
+      {"ingredient_id": 25, "quantity": 50},
+      {"ingredient_id": 26, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Salată Caesar",
+    "description": "Salată crocantă cu piept de pui, crutoane și dressing Caesar.",
+    "image": "salata_caesar.jpg",
+    "type": ["prânz", "salată"],
+    "portions": 2,
+    "cooking_time": 25,
+    "season": ["primăvară", "vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 27, "quantity": 1},
+      {"ingredient_id": 28, "quantity": 0.5},
+      {"ingredient_id": 29, "quantity": 0.2},
+      {"ingredient_id": 30, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Tocăniță de vită cu legume",
+    "description": "Tocăniță consistentă cu carne de vită și legume de sezon.",
+    "image": "tocanita_vita.jpg",
+    "type": ["cină", "tradițional"],
+    "portions": 4,
+    "cooking_time": 90,
+    "season": ["toamnă", "iarnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 31, "quantity": 0.5},
+      {"ingredient_id": 32, "quantity": 1},
+      {"ingredient_id": 33, "quantity": 0.5},
+      {"ingredient_id": 34, "quantity": 0.2}
+    ]
+    },
+    {
+    "name": "Clătite cu gem",
+    "description": "Clătite pufoase umplute cu gem de fructe.",
+    "image": "clatite_gem.jpg",
+    "type": ["desert", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 35, "quantity": 2},
+      {"ingredient_id": 36, "quantity": 0.5},
+      {"ingredient_id": 37, "quantity": 0.3},
+      {"ingredient_id": 38, "quantity": 0.2}
+    ]
+    },
+    {
+    "name": "Supă de pui cu tăiței",
+    "description": "Supă clară de pui cu tăiței de casă și legume.",
+    "image": "supa_pui_taitei.jpg",
+    "type": ["prânz", "tradițional"],
+    "portions": 6,
+    "cooking_time": 60,
+    "season": ["toamnă", "iarnă"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 39, "quantity": 1},
+      {"ingredient_id": 40, "quantity": 1},
+      {"ingredient_id": 41, "quantity": 0.5},
+      {"ingredient_id": 42, "quantity": 0.2}
+    ]
+    },
+    {
+    "name": "Mămăligă cu brânză și smântână",
+    "description": "Mămăligă tradițională servită cu brânză și smântână.",
+    "image": "mamaliga_branza.jpg",
+    "type": ["mic dejun", "tradițional", "vegetarian"],
+    "portions": 3,
+    "cooking_time": 20,
+    "season": ["oricând"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 43, "quantity": 0.3},
+      {"ingredient_id": 44, "quantity": 0.2},
+      {"ingredient_id": 45, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chiftele de dovlecei",
+    "description": "Chiftele crocante din dovlecei, perfecte ca aperitiv.",
+    "image": "chiftele_dovlecei.jpg",
+    "type": ["aperitiv", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 35,
+    "season": ["vară"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 46, "quantity": 2},
+      {"ingredient_id": 47, "quantity": 0.5},
+      {"ingredient_id": 48, "quantity": 0.2},
+      {"ingredient_id": 49, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Lasagna",
+    "description": "Lasagna tradițională cu straturi de paste, carne tocată și sos bechamel.",
+    "image": "lasagna.jpg",
+    "type": ["cină", "italian"],
+    "portions": 6,
+    "cooking_time": 90,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 50, "quantity": 12},
+      {"ingredient_id": 51, "quantity": 500},
+      {"ingredient_id": 52, "quantity": 400},
+      {"ingredient_id": 53, "quantity": 100}
+    ]
+    },
+    {
+    "name": "Burger de vită",
+    "description": "Burger suculent din carne de vită, servit cu salată și sos.",
+    "image": "burger_vita.jpg",
+    "type": ["cină", "american"],
+    "portions": 2,
+    "cooking_time": 30,
+    "season": ["vară", "oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 54, "quantity": 2},
+      {"ingredient_id": 55, "quantity": 200},
+      {"ingredient_id": 56, "quantity": 2},
+      {"ingredient_id": 57, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Shakshuka",
+    "description": "Ouă poșate în sos de roșii cu ardei și condimente.",
+    "image": "shakshuka.jpg",
+    "type": ["mic dejun", "vegetarian", "oriental"],
+    "portions": 3,
+    "cooking_time": 25,
+    "season": ["primăvară", "vară"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 1, "quantity": 3},
+      {"ingredient_id": 58, "quantity": 2},
+      {"ingredient_id": 59, "quantity": 1},
+      {"ingredient_id": 60, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Tiramisu",
+    "description": "Desert italian cu pișcoturi, cafea și cremă mascarpone.",
+    "image": "tiramisu.jpg",
+    "type": ["desert", "italian"],
+    "portions": 6,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 61, "quantity": 200},
+      {"ingredient_id": 62, "quantity": 250},
+      {"ingredient_id": 63, "quantity": 3},
+      {"ingredient_id": 64, "quantity": 100}
+    ]
+    },
+    {
+    "name": "Guacamole",
+    "description": "Pastă mexicană de avocado cu roșii, ceapă și lime.",
+    "image": "guacamole.jpg",
+    "type": ["aperitiv", "vegetarian", "mexican"],
+    "portions": 4,
+    "cooking_time": 10,
+    "season": ["vară", "oricând"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 65, "quantity": 2},
+      {"ingredient_id": 66, "quantity": 1},
+      {"ingredient_id": 67, "quantity": 0.5},
+      {"ingredient_id": 68, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pui la cuptor cu cartofi",
+    "description": "Pui fraged la cuptor servit cu cartofi rumeniți.",
+    "image": "pui_cuptor_cartofi.jpg",
+    "type": ["cină", "tradițional"],
+    "portions": 4,
+    "cooking_time": 80,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 69, "quantity": 1},
+      {"ingredient_id": 70, "quantity": 1},
+      {"ingredient_id": 71, "quantity": 0.1},
+      {"ingredient_id": 72, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Cheesecake",
+    "description": "Prăjitură cremoasă cu brânză și blat crocant.",
+    "image": "cheesecake.jpg",
+    "type": ["desert", "american"],
+    "portions": 8,
+    "cooking_time": 60,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 73, "quantity": 200},
+      {"ingredient_id": 74, "quantity": 500},
+      {"ingredient_id": 75, "quantity": 3},
+      {"ingredient_id": 76, "quantity": 100}
+    ]
+    },
+    {
+    "name": "Ciorbă de legume",
+    "description": "Ciorbă ușoară și sănătoasă cu multe legume.",
+    "image": "ciorba_legume.jpg",
+    "type": ["prânz", "vegetarian", "fără gluten"],
+    "portions": 6,
+    "cooking_time": 40,
+    "season": ["primăvară", "vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 77, "quantity": 1},
+      {"ingredient_id": 78, "quantity": 1},
+      {"ingredient_id": 79, "quantity": 0.5},
+      {"ingredient_id": 80, "quantity": 0.2}
+    ]
+    },
+    {
+    "name": "Sushi",
+    "description": "Rulouri japoneze cu orez, pește și legume.",
+    "image": "sushi.jpg",
+    "type": ["cină", "japonez"],
+    "portions": 4,
+    "cooking_time": 50,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 81, "quantity": 200},
+      {"ingredient_id": 82, "quantity": 100},
+      {"ingredient_id": 83, "quantity": 1},
+      {"ingredient_id": 84, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Falafel",
+    "description": "Chifteluțe crocante din năut, servite cu sos tahini.",
+    "image": "falafel.jpg",
+    "type": ["prânz", "vegetarian", "oriental"],
+    "portions": 4,
+    "cooking_time": 40,
+    "season": ["primăvară", "vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 85, "quantity": 300},
+      {"ingredient_id": 86, "quantity": 1},
+      {"ingredient_id": 87, "quantity": 0.2},
+      {"ingredient_id": 88, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Papanași",
+    "description": "Desert tradițional românesc cu brânză dulce și smântână.",
+    "image": "papanasi.jpg",
+    "type": ["desert", "tradițional"],
+    "portions": 4,
+    "cooking_time": 35,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 89, "quantity": 250},
+      {"ingredient_id": 90, "quantity": 2},
+      {"ingredient_id": 91, "quantity": 0.2},
+      {"ingredient_id": 92, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chili con carne",
+    "description": "Mâncare picantă cu carne tocată, fasole și roșii.",
+    "image": "chili_con_carne.jpg",
+    "type": ["cină", "mexican"],
+    "portions": 4,
+    "cooking_time": 60,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 93, "quantity": 500},
+      {"ingredient_id": 94, "quantity": 400},
+      {"ingredient_id": 95, "quantity": 1},
+      {"ingredient_id": 96, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Minestrone",
+    "description": "Supă italiană bogată cu legume și paste.",
+    "image": "minestrone.jpg",
+    "type": ["prânz", "italian", "vegetarian"],
+    "portions": 6,
+    "cooking_time": 45,
+    "season": ["primăvară", "vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 97, "quantity": 1},
+      {"ingredient_id": 98, "quantity": 1},
+      {"ingredient_id": 99, "quantity": 0.5},
+      {"ingredient_id": 100, "quantity": 50}
+    ]
+    },
+    {
+    "name": "Ratatouille",
+    "description": "Tocană franțuzească de legume coapte.",
+    "image": "ratatouille.jpg",
+    "type": ["cină", "francez", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 60,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 1, "quantity": 1},
+      {"ingredient_id": 2, "quantity": 1},
+      {"ingredient_id": 3, "quantity": 1},
+      {"ingredient_id": 4, "quantity": 0.5}
+    ]
+    },
+    {
+    "name": "Paella",
+    "description": "Preparat spaniol cu orez, fructe de mare și legume.",
+    "image": "paella.jpg",
+    "type": ["cină", "spaniol"],
+    "portions": 6,
+    "cooking_time": 70,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 5, "quantity": 400},
+      {"ingredient_id": 6, "quantity": 300},
+      {"ingredient_id": 7, "quantity": 1},
+      {"ingredient_id": 8, "quantity": 0.2}
+    ]
+    },
+    {
+    "name": "Shawarma de pui",
+    "description": "Pui condimentat servit în lipie cu legume și sos.",
+    "image": "shawarma_pui.jpg",
+    "type": ["cină", "oriental"],
+    "portions": 4,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 9, "quantity": 400},
+      {"ingredient_id": 10, "quantity": 4},
+      {"ingredient_id": 11, "quantity": 1},
+      {"ingredient_id": 12, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Quesadilla",
+    "description": "Lipii mexicane umplute cu brânză și legume.",
+    "image": "quesadilla.jpg",
+    "type": ["cină", "mexican", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 13, "quantity": 2},
+      {"ingredient_id": 14, "quantity": 100},
+      {"ingredient_id": 15, "quantity": 0.5},
+      {"ingredient_id": 16, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Curry de pui",
+    "description": "Pui fraged în sos curry aromat cu orez.",
+    "image": "curry_pui.jpg",
+    "type": ["cină", "indian"],
+    "portions": 4,
+    "cooking_time": 50,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 17, "quantity": 500},
+      {"ingredient_id": 18, "quantity": 1},
+      {"ingredient_id": 19, "quantity": 0.2},
+      {"ingredient_id": 20, "quantity": 200}
+    ]
+    },
+    {
+    "name": "Crepes Suzette",
+    "description": "Clătite franțuzești flambate cu sos de portocale.",
+    "image": "crepes_suzette.jpg",
+    "type": ["desert", "francez"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 21, "quantity": 4},
+      {"ingredient_id": 22, "quantity": 2},
+      {"ingredient_id": 23, "quantity": 0.2},
+      {"ingredient_id": 24, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pavlova",
+    "description": "Desert cu bezea crocantă, frișcă și fructe proaspete.",
+    "image": "pavlova.jpg",
+    "type": ["desert", "australian"],
+    "portions": 8,
+    "cooking_time": 90,
+    "season": ["vară"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 25, "quantity": 4},
+      {"ingredient_id": 26, "quantity": 200},
+      {"ingredient_id": 27, "quantity": 300},
+      {"ingredient_id": 28, "quantity": 0.5}
+    ]
+    },
+    {
+    "name": "Gulaș unguresc",
+    "description": "Tocană tradițională cu carne de vită și paprika.",
+    "image": "gulas.jpg",
+    "type": ["cină", "tradițional", "unguresc"],
+    "portions": 6,
+    "cooking_time": 120,
+    "season": ["toamnă", "iarnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 29, "quantity": 600},
+      {"ingredient_id": 30, "quantity": 2},
+      {"ingredient_id": 31, "quantity": 1},
+      {"ingredient_id": 32, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Moussaka",
+    "description": "Preparat balcanic cu vinete, carne și sos bechamel.",
+    "image": "moussaka.jpg",
+    "type": ["cină", "balcanic"],
+    "portions": 6,
+    "cooking_time": 90,
+    "season": ["vară", "toamnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 33, "quantity": 2},
+      {"ingredient_id": 34, "quantity": 500},
+      {"ingredient_id": 35, "quantity": 1},
+      {"ingredient_id": 36, "quantity": 0.5}
+    ]
+    },
+    {
+    "name": "Pasta Pesto",
+    "description": "Paste italiene cu sos pesto de busuioc.",
+    "image": "pasta_pesto.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 20,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 37, "quantity": 400},
+      {"ingredient_id": 38, "quantity": 100},
+      {"ingredient_id": 39, "quantity": 50},
+      {"ingredient_id": 40, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Gazpacho",
+    "description": "Supă rece spaniolă din legume proaspete.",
+    "image": "gazpacho.jpg",
+    "type": ["prânz", "spaniol", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 15,
+    "season": ["vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 41, "quantity": 4},
+      {"ingredient_id": 42, "quantity": 2},
+      {"ingredient_id": 43, "quantity": 1},
+      {"ingredient_id": 44, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Fish and Chips",
+    "description": "Pește pane cu cartofi prăjiți, clasic britanic.",
+    "image": "fish_and_chips.jpg",
+    "type": ["cină", "britanic"],
+    "portions": 2,
+    "cooking_time": 35,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 45, "quantity": 2},
+      {"ingredient_id": 46, "quantity": 300},
+      {"ingredient_id": 47, "quantity": 1},
+      {"ingredient_id": 48, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pui Kung Pao",
+    "description": "Pui chinezesc picant cu arahide și legume.",
+    "image": "kung_pao.jpg",
+    "type": ["cină", "chinezesc"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 49, "quantity": 400},
+      {"ingredient_id": 50, "quantity": 1},
+      {"ingredient_id": 51, "quantity": 0.2},
+      {"ingredient_id": 52, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Baklava",
+    "description": "Desert oriental cu foi de plăcintă, nuci și sirop.",
+    "image": "baklava.jpg",
+    "type": ["desert", "oriental"],
+    "portions": 12,
+    "cooking_time": 60,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 53, "quantity": 400},
+      {"ingredient_id": 54, "quantity": 200},
+      {"ingredient_id": 55, "quantity": 100},
+      {"ingredient_id": 56, "quantity": 0.2}
+    ]
+    },
+    {
+    "name": "Ramen",
+    "description": "Supă japoneză cu tăiței, carne și ou.",
+    "image": "ramen.jpg",
+    "type": ["cină", "japonez"],
+    "portions": 2,
+    "cooking_time": 50,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 57, "quantity": 2},
+      {"ingredient_id": 58, "quantity": 200},
+      {"ingredient_id": 59, "quantity": 1},
+      {"ingredient_id": 60, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Tacos",
+    "description": "Tortilla mexicană umplută cu carne, legume și sos.",
+    "image": "tacos.jpg",
+    "type": ["cină", "mexican"],
+    "portions": 4,
+    "cooking_time": 25,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 61, "quantity": 4},
+      {"ingredient_id": 62, "quantity": 300},
+      {"ingredient_id": 63, "quantity": 1},
+      {"ingredient_id": 64, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Brownie",
+    "description": "Prăjitură americană cu ciocolată, densă și umedă.",
+    "image": "brownie.jpg",
+    "type": ["desert", "american"],
+    "portions": 8,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 65, "quantity": 200},
+      {"ingredient_id": 66, "quantity": 150},
+      {"ingredient_id": 67, "quantity": 3},
+      {"ingredient_id": 68, "quantity": 100}
+    ]
+    },
+    {
+    "name": "Tabbouleh",
+    "description": "Salată orientală cu pătrunjel, roșii și bulgur.",
+    "image": "tabbouleh.jpg",
+    "type": ["salată", "oriental", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 20,
+    "season": ["vară"],
+    "category": "Salată",
+    "recipe_ingredients": [
+      {"ingredient_id": 69, "quantity": 100},
+      {"ingredient_id": 70, "quantity": 2},
+      {"ingredient_id": 71, "quantity": 1},
+      {"ingredient_id": 72, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pancakes americane",
+    "description": "Clătite pufoase servite cu sirop de arțar.",
+    "image": "pancakes.jpg",
+    "type": ["mic dejun", "american", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 25,
+    "season": ["oricând"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 73, "quantity": 2},
+      {"ingredient_id": 74, "quantity": 200},
+      {"ingredient_id": 75, "quantity": 0.5},
+      {"ingredient_id": 76, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Eggs Benedict",
+    "description": "Ouă poșate pe chifle englezești cu șuncă și sos hollandaise.",
+    "image": "eggs_benedict.jpg",
+    "type": ["mic dejun", "american"],
+    "portions": 2,
+    "cooking_time": 25,
+    "season": ["oricând"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 77, "quantity": 2},
+      {"ingredient_id": 78, "quantity": 2},
+      {"ingredient_id": 79, "quantity": 2},
+      {"ingredient_id": 80, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Croque Monsieur",
+    "description": "Sandviș franțuzesc cu șuncă, brânză și sos bechamel.",
+    "image": "croque_monsieur.jpg",
+    "type": ["mic dejun", "francez"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["oricând"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 81, "quantity": 4},
+      {"ingredient_id": 82, "quantity": 2},
+      {"ingredient_id": 83, "quantity": 2},
+      {"ingredient_id": 84, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Shakshuka Verde",
+    "description": "Ouă poșate în sos de spanac și verdețuri.",
+    "image": "shakshuka_verde.jpg",
+    "type": ["mic dejun", "vegetarian", "oriental"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["primăvară"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 85, "quantity": 2},
+      {"ingredient_id": 86, "quantity": 200},
+      {"ingredient_id": 87, "quantity": 1},
+      {"ingredient_id": 88, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Huevos Rancheros",
+    "description": "Ouă prăjite pe tortilla cu sos de roșii picant.",
+    "image": "huevos_rancheros.jpg",
+    "type": ["mic dejun", "mexican"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["vară"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 89, "quantity": 2},
+      {"ingredient_id": 90, "quantity": 2},
+      {"ingredient_id": 91, "quantity": 1},
+      {"ingredient_id": 92, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Granola cu iaurt și fructe",
+    "description": "Mic dejun sănătos cu granola, iaurt și fructe proaspete.",
+    "image": "granola_iaurt.jpg",
+    "type": ["mic dejun", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 10,
+    "season": ["vară"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 93, "quantity": 100},
+      {"ingredient_id": 94, "quantity": 200},
+      {"ingredient_id": 95, "quantity": 100},
+      {"ingredient_id": 96, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Supă de roșii",
+    "description": "Supă clasică de roșii cu busuioc proaspăt.",
+    "image": "supa_rosii.jpg",
+    "type": ["prânz", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 97, "quantity": 1},
+      {"ingredient_id": 98, "quantity": 1},
+      {"ingredient_id": 99, "quantity": 0.5},
+      {"ingredient_id": 100, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Supă de linte",
+    "description": "Supă consistentă cu linte și legume.",
+    "image": "supa_linte.jpg",
+    "type": ["prânz", "vegetarian", "fără gluten"],
+    "portions": 4,
+    "cooking_time": 40,
+    "season": ["toamnă", "iarnă"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 45, "quantity": 200},
+      {"ingredient_id": 46, "quantity": 1},
+      {"ingredient_id": 47, "quantity": 0.5},
+      {"ingredient_id": 48, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Supă de pește",
+    "description": "Supă aromată cu pește și legume.",
+    "image": "supa_peste.jpg",
+    "type": ["prânz", "pescăresc"],
+    "portions": 4,
+    "cooking_time": 50,
+    "season": ["vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 49, "quantity": 400},
+      {"ingredient_id": 50, "quantity": 1},
+      {"ingredient_id": 51, "quantity": 0.5},
+      {"ingredient_id": 52, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Salată grecească",
+    "description": "Salată proaspătă cu roșii, castraveți, brânză feta și măsline.",
+    "image": "salata_greceasca.jpg",
+    "type": ["salată", "vegetarian", "grecesc"],
+    "portions": 2,
+    "cooking_time": 15,
+    "season": ["vară"],
+    "category": "Salată",
+    "recipe_ingredients": [
+      {"ingredient_id": 53, "quantity": 2},
+      {"ingredient_id": 54, "quantity": 1},
+      {"ingredient_id": 55, "quantity": 100},
+      {"ingredient_id": 56, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Salată Nicoise",
+    "description": "Salată franțuzească cu ton, ouă, cartofi și fasole verde.",
+    "image": "salata_nicoise.jpg",
+    "type": ["salată", "francez"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["vară"],
+    "category": "Salată",
+    "recipe_ingredients": [
+      {"ingredient_id": 57, "quantity": 100},
+      {"ingredient_id": 58, "quantity": 2},
+      {"ingredient_id": 59, "quantity": 100},
+      {"ingredient_id": 60, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Salată Caprese",
+    "description": "Salată italiană cu roșii, mozzarella și busuioc.",
+    "image": "salata_caprese.jpg",
+    "type": ["salată", "italian", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 10,
+    "season": ["vară"],
+    "category": "Salată",
+    "recipe_ingredients": [
+      {"ingredient_id": 61, "quantity": 2},
+      {"ingredient_id": 62, "quantity": 100},
+      {"ingredient_id": 63, "quantity": 0.1},
+      {"ingredient_id": 64, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Frittata cu spanac",
+    "description": "Omletă italiană cu spanac și brânză.",
+    "image": "frittata_spanac.jpg",
+    "type": ["mic dejun", "italian", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 25,
+    "season": ["primăvară"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 65, "quantity": 4},
+      {"ingredient_id": 66, "quantity": 200},
+      {"ingredient_id": 67, "quantity": 100},
+      {"ingredient_id": 68, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Couscous cu legume",
+    "description": "Couscous pufos cu legume coapte.",
+    "image": "couscous_legume.jpg",
+    "type": ["prânz", "oriental", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 69, "quantity": 200},
+      {"ingredient_id": 70, "quantity": 1},
+      {"ingredient_id": 71, "quantity": 0.5},
+      {"ingredient_id": 72, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Tortilla spaniolă",
+    "description": "Omletă spaniolă cu cartofi și ceapă.",
+    "image": "tortilla_spaniola.jpg",
+    "type": ["mic dejun", "spaniol", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 73, "quantity": 4},
+      {"ingredient_id": 74, "quantity": 300},
+      {"ingredient_id": 75, "quantity": 1},
+      {"ingredient_id": 76, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pasta Arrabbiata",
+    "description": "Paste italiene picante cu sos de roșii și ardei iute.",
+    "image": "pasta_arrabbiata.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 77, "quantity": 200},
+      {"ingredient_id": 78, "quantity": 1},
+      {"ingredient_id": 79, "quantity": 0.1},
+      {"ingredient_id": 80, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Pizza Quattro Stagioni",
+    "description": "Pizza italiană cu patru toppinguri diferite.",
+    "image": "pizza_quattro_stagioni.jpg",
+    "type": ["cină", "italian"],
+    "portions": 2,
+    "cooking_time": 25,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 81, "quantity": 1},
+      {"ingredient_id": 82, "quantity": 100},
+      {"ingredient_id": 83, "quantity": 50},
+      {"ingredient_id": 84, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Risotto cu ciuperci",
+    "description": "Orez cremos cu ciuperci și parmezan.",
+    "image": "risotto_ciuperci.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 40,
+    "season": ["toamnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 85, "quantity": 300},
+      {"ingredient_id": 86, "quantity": 200},
+      {"ingredient_id": 87, "quantity": 50},
+      {"ingredient_id": 88, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Polenta cu ciuperci",
+    "description": "Mămăligă cremoasă cu ciuperci sotate.",
+    "image": "polenta_ciuperci.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 30,
+    "season": ["toamnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 89, "quantity": 200},
+      {"ingredient_id": 90, "quantity": 200},
+      {"ingredient_id": 91, "quantity": 50},
+      {"ingredient_id": 92, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Coq au vin",
+    "description": "Pui gătit lent în vin roșu cu legume.",
+    "image": "coq_au_vin.jpg",
+    "type": ["cină", "francez"],
+    "portions": 4,
+    "cooking_time": 120,
+    "season": ["toamnă", "iarnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 93, "quantity": 1},
+      {"ingredient_id": 94, "quantity": 500},
+      {"ingredient_id": 95, "quantity": 200},
+      {"ingredient_id": 96, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Bouillabaisse",
+    "description": "Supă franțuzească de pește cu arome mediteraneene.",
+    "image": "bouillabaisse.jpg",
+    "type": ["cină", "francez", "pescăresc"],
+    "portions": 4,
+    "cooking_time": 90,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 97, "quantity": 500},
+      {"ingredient_id": 98, "quantity": 1},
+      {"ingredient_id": 99, "quantity": 0.5},
+      {"ingredient_id": 100, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Ceviche",
+    "description": "Pește marinat în suc de lămâie cu ceapă și coriandru.",
+    "image": "ceviche.jpg",
+    "type": ["aperitiv", "peruvian", "pescăresc"],
+    "portions": 2,
+    "cooking_time": 30,
+    "season": ["vară"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 1, "quantity": 200},
+      {"ingredient_id": 2, "quantity": 1},
+      {"ingredient_id": 3, "quantity": 0.1},
+      {"ingredient_id": 4, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Empanadas",
+    "description": "Pateuri argentiniene umplute cu carne sau legume.",
+    "image": "empanadas.jpg",
+    "type": ["aperitiv", "argentinian"],
+    "portions": 6,
+    "cooking_time": 45,
+    "season": ["oricând"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 5, "quantity": 6},
+      {"ingredient_id": 6, "quantity": 300},
+      {"ingredient_id": 7, "quantity": 1},
+      {"ingredient_id": 8, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Gyoza",
+    "description": "Colțunași japonezi cu carne și legume.",
+    "image": "gyoza.jpg",
+    "type": ["aperitiv", "japonez"],
+    "portions": 4,
+    "cooking_time": 35,
+    "season": ["oricând"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 9, "quantity": 20},
+      {"ingredient_id": 10, "quantity": 200},
+      {"ingredient_id": 11, "quantity": 1},
+      {"ingredient_id": 12, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Onigiri",
+    "description": "Biluțe de orez japoneze cu umplutură.",
+    "image": "onigiri.jpg",
+    "type": ["aperitiv", "japonez", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 20,
+    "season": ["oricând"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 13, "quantity": 200},
+      {"ingredient_id": 14, "quantity": 1},
+      {"ingredient_id": 15, "quantity": 0.1},
+      {"ingredient_id": 16, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Kimchi",
+    "description": "Varză fermentată coreeană picantă.",
+    "image": "kimchi.jpg",
+    "type": ["aperitiv", "coreean", "vegetarian"],
+    "portions": 6,
+    "cooking_time": 1440,
+    "season": ["oricând"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 17, "quantity": 1},
+      {"ingredient_id": 18, "quantity": 0.2},
+      {"ingredient_id": 19, "quantity": 0.1},
+      {"ingredient_id": 20, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Pho",
+    "description": "Supă vietnameză cu tăiței de orez și carne de vită.",
+    "image": "pho.jpg",
+    "type": ["cină", "vietnamez"],
+    "portions": 4,
+    "cooking_time": 120,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 21, "quantity": 400},
+      {"ingredient_id": 22, "quantity": 200},
+      {"ingredient_id": 23, "quantity": 1},
+      {"ingredient_id": 24, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pad Thai",
+    "description": "Tăiței thailandezi prăjiți cu creveți și arahide.",
+    "image": "pad_thai.jpg",
+    "type": ["cină", "thailandez"],
+    "portions": 2,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 25, "quantity": 200},
+      {"ingredient_id": 26, "quantity": 100},
+      {"ingredient_id": 27, "quantity": 1},
+      {"ingredient_id": 28, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Tom Yum",
+    "description": "Supă thailandeză picantă cu creveți și ciuperci.",
+    "image": "tom_yum.jpg",
+    "type": ["cină", "thailandez", "pescăresc"],
+    "portions": 2,
+    "cooking_time": 25,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 29, "quantity": 200},
+      {"ingredient_id": 30, "quantity": 100},
+      {"ingredient_id": 31, "quantity": 1},
+      {"ingredient_id": 32, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pav Bhaji",
+    "description": "Preparat indian cu legume tocate și chifle.",
+    "image": "pav_bhaji.jpg",
+    "type": ["cină", "indian", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 33, "quantity": 1},
+      {"ingredient_id": 34, "quantity": 200},
+      {"ingredient_id": 35, "quantity": 100},
+      {"ingredient_id": 36, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Dal Tadka",
+    "description": "Linte indiană cu condimente și unt clarificat.",
+    "image": "dal_tadka.jpg",
+    "type": ["cină", "indian", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 35,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 37, "quantity": 200},
+      {"ingredient_id": 38, "quantity": 1},
+      {"ingredient_id": 39, "quantity": 0.1},
+      {"ingredient_id": 40, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Gulab Jamun",
+    "description": "Desert indian cu biluțe dulci în sirop.",
+    "image": "gulab_jamun.jpg",
+    "type": ["desert", "indian"],
+    "portions": 6,
+    "cooking_time": 45,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 41, "quantity": 12},
+      {"ingredient_id": 42, "quantity": 200},
+      {"ingredient_id": 43, "quantity": 100},
+      {"ingredient_id": 44, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Profiterol",
+    "description": "Choux franțuzești umplute cu cremă și glazură de ciocolată.",
+    "image": "profiterol.jpg",
+    "type": ["desert", "francez"],
+    "portions": 8,
+    "cooking_time": 60,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 45, "quantity": 16},
+      {"ingredient_id": 46, "quantity": 200},
+      {"ingredient_id": 47, "quantity": 100},
+      {"ingredient_id": 48, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Panna Cotta",
+    "description": "Desert italian cu smântână și sos de fructe.",
+    "image": "panna_cotta.jpg",
+    "type": ["desert", "italian"],
+    "portions": 4,
+    "cooking_time": 20,
+    "season": ["vară"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 49, "quantity": 200},
+      {"ingredient_id": 50, "quantity": 100},
+      {"ingredient_id": 51, "quantity": 0.1},
+      {"ingredient_id": 52, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Cannoli",
+    "description": "Rulouri italiene cu cremă de ricotta.",
+    "image": "cannoli.jpg",
+    "type": ["desert", "italian"],
+    "portions": 6,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 53, "quantity": 6},
+      {"ingredient_id": 54, "quantity": 200},
+      {"ingredient_id": 55, "quantity": 100},
+      {"ingredient_id": 56, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Churros",
+    "description": "Gogoși spaniole servite cu sos de ciocolată.",
+    "image": "churros.jpg",
+    "type": ["desert", "spaniol"],
+    "portions": 8,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 57, "quantity": 8},
+      {"ingredient_id": 58, "quantity": 200},
+      {"ingredient_id": 59, "quantity": 100},
+      {"ingredient_id": 60, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Banoffee Pie",
+    "description": "Tartă britanică cu banane, caramel și frișcă.",
+    "image": "banoffee_pie.jpg",
+    "type": ["desert", "britanic"],
+    "portions": 8,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 61, "quantity": 1},
+      {"ingredient_id": 62, "quantity": 200},
+      {"ingredient_id": 63, "quantity": 100},
+      {"ingredient_id": 64, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Mac and Cheese",
+    "description": "Paste cu sos cremos de brânză, un clasic american.",
+    "image": "mac_and_cheese.jpg",
+    "type": ["cină", "american", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 65, "quantity": 400},
+      {"ingredient_id": 66, "quantity": 200},
+      {"ingredient_id": 67, "quantity": 100},
+      {"ingredient_id": 68, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chicken Tikka Masala",
+    "description": "Pui fraged în sos de roșii și condimente indiene.",
+    "image": "chicken_tikka_masala.jpg",
+    "type": ["cină", "indian"],
+    "portions": 4,
+    "cooking_time": 50,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 69, "quantity": 500},
+      {"ingredient_id": 70, "quantity": 1},
+      {"ingredient_id": 71, "quantity": 0.2},
+      {"ingredient_id": 72, "quantity": 200}
+    ]
+    },
+    {
+    "name": "Burrito",
+    "description": "Lipie mexicană umplută cu carne, fasole și orez.",
+    "image": "burrito.jpg",
+    "type": ["cină", "mexican"],
+    "portions": 2,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 73, "quantity": 2},
+      {"ingredient_id": 74, "quantity": 200},
+      {"ingredient_id": 75, "quantity": 100},
+      {"ingredient_id": 76, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Hot Dog",
+    "description": "Crenvurști în chiflă cu sosuri și toppinguri.",
+    "image": "hot_dog.jpg",
+    "type": ["aperitiv", "american"],
+    "portions": 2,
+    "cooking_time": 15,
+    "season": ["oricând"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 77, "quantity": 2},
+      {"ingredient_id": 78, "quantity": 2},
+      {"ingredient_id": 79, "quantity": 0.1},
+      {"ingredient_id": 80, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Cobb Salad",
+    "description": "Salată americană cu pui, ou, bacon și avocado.",
+    "image": "cobb_salad.jpg",
+    "type": ["salată", "american"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["vară"],
+    "category": "Salată",
+    "recipe_ingredients": [
+      {"ingredient_id": 81, "quantity": 1},
+      {"ingredient_id": 82, "quantity": 2},
+      {"ingredient_id": 83, "quantity": 50},
+      {"ingredient_id": 84, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Shish Kebab",
+    "description": "Frigărui orientale cu carne și legume.",
+    "image": "shish_kebab.jpg",
+    "type": ["cină", "oriental"],
+    "portions": 4,
+    "cooking_time": 40,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 85, "quantity": 400},
+      {"ingredient_id": 86, "quantity": 2},
+      {"ingredient_id": 87, "quantity": 1},
+      {"ingredient_id": 88, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Egg Fried Rice",
+    "description": "Orez prăjit cu ou și legume, stil asiatic.",
+    "image": "egg_fried_rice.jpg",
+    "type": ["cină", "chinezesc", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 89, "quantity": 200},
+      {"ingredient_id": 90, "quantity": 2},
+      {"ingredient_id": 91, "quantity": 100},
+      {"ingredient_id": 92, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "French Toast",
+    "description": "Felii de pâine înmuiate în ou și prăjite, servite cu sirop.",
+    "image": "french_toast.jpg",
+    "type": ["mic dejun", "francez", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 15,
+    "season": ["oricând"],
+    "category": "Mic Dejun",
+    "recipe_ingredients": [
+      {"ingredient_id": 49, "quantity": 4},
+      {"ingredient_id": 50, "quantity": 2},
+      {"ingredient_id": 51, "quantity": 0.1},
+      {"ingredient_id": 52, "quantity": 0.05}
+    ]
+    },
+    {
+    "name": "Caesar Wrap",
+    "description": "Lipie umplută cu salată Caesar și pui.",
+    "image": "caesar_wrap.jpg",
+    "type": ["prânz", "american"],
+    "portions": 2,
+    "cooking_time": 15,
+    "season": ["vară"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 53, "quantity": 2},
+      {"ingredient_id": 54, "quantity": 1},
+      {"ingredient_id": 55, "quantity": 50},
+      {"ingredient_id": 56, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pulled Pork Sandwich",
+    "description": "Sandviș cu carne de porc fragedă și sos BBQ.",
+    "image": "pulled_pork_sandwich.jpg",
+    "type": ["prânz", "american"],
+    "portions": 2,
+    "cooking_time": 180,
+    "season": ["oricând"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 57, "quantity": 300},
+      {"ingredient_id": 58, "quantity": 2},
+      {"ingredient_id": 59, "quantity": 50},
+      {"ingredient_id": 60, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pho Bo",
+    "description": "Supă vietnameză cu tăiței de orez și carne de vită.",
+    "image": "pho_bo.jpg",
+    "type": ["cină", "vietnamez"],
+    "portions": 4,
+    "cooking_time": 120,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 61, "quantity": 400},
+      {"ingredient_id": 62, "quantity": 200},
+      {"ingredient_id": 63, "quantity": 1},
+      {"ingredient_id": 64, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Boeuf Bourguignon",
+    "description": "Tocană franțuzească cu carne de vită și vin roșu.",
+    "image": "boeuf_bourguignon.jpg",
+    "type": ["cină", "francez"],
+    "portions": 4,
+    "cooking_time": 180,
+    "season": ["toamnă", "iarnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 65, "quantity": 600},
+      {"ingredient_id": 66, "quantity": 2},
+      {"ingredient_id": 67, "quantity": 200},
+      {"ingredient_id": 68, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chicken Noodle Soup",
+    "description": "Supă americană cu pui, tăiței și legume.",
+    "image": "chicken_noodle_soup.jpg",
+    "type": ["prânz", "american"],
+    "portions": 4,
+    "cooking_time": 60,
+    "season": ["toamnă", "iarnă"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 69, "quantity": 1},
+      {"ingredient_id": 70, "quantity": 200},
+      {"ingredient_id": 71, "quantity": 100},
+      {"ingredient_id": 72, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Eggplant Parmesan",
+    "description": "Vinete pane cu sos de roșii și parmezan.",
+    "image": "eggplant_parmesan.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 60,
+    "season": ["vară", "toamnă"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 73, "quantity": 2},
+      {"ingredient_id": 74, "quantity": 200},
+      {"ingredient_id": 75, "quantity": 100},
+      {"ingredient_id": 76, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chicken Qorma",
+    "description": "Pui indian în sos cremos cu condimente.",
+    "image": "chicken_qorma.jpg",
+    "type": ["cină", "indian"],
+    "portions": 4,
+    "cooking_time": 60,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 77, "quantity": 500},
+      {"ingredient_id": 78, "quantity": 1},
+      {"ingredient_id": 79, "quantity": 0.2},
+      {"ingredient_id": 80, "quantity": 100}
+    ]
+    },
+    {
+    "name": "Fish Tacos",
+    "description": "Tacos mexicane cu pește prăjit și salată.",
+    "image": "fish_tacos.jpg",
+    "type": ["cină", "mexican", "pescăresc"],
+    "portions": 2,
+    "cooking_time": 25,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 81, "quantity": 2},
+      {"ingredient_id": 82, "quantity": 200},
+      {"ingredient_id": 83, "quantity": 50},
+      {"ingredient_id": 84, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chicken Satay",
+    "description": "Frigărui asiatice de pui cu sos de arahide.",
+    "image": "chicken_satay.jpg",
+    "type": ["aperitiv", "thailandez"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["vară"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 85, "quantity": 400},
+      {"ingredient_id": 86, "quantity": 2},
+      {"ingredient_id": 87, "quantity": 50},
+      {"ingredient_id": 88, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Beef Stroganoff",
+    "description": "Carne de vită cu sos de smântână și ciuperci.",
+    "image": "beef_stroganoff.jpg",
+    "type": ["cină", "rusesc"],
+    "portions": 4,
+    "cooking_time": 45,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 89, "quantity": 500},
+      {"ingredient_id": 90, "quantity": 200},
+      {"ingredient_id": 91, "quantity": 100},
+      {"ingredient_id": 92, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Peking Duck",
+    "description": "Rață crocantă chinezească cu clătite și sos hoisin.",
+    "image": "peking_duck.jpg",
+    "type": ["cină", "chinezesc"],
+    "portions": 4,
+    "cooking_time": 120,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 93, "quantity": 1},
+      {"ingredient_id": 94, "quantity": 8},
+      {"ingredient_id": 95, "quantity": 100},
+      {"ingredient_id": 96, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Lobster Bisque",
+    "description": "Supă cremoasă franțuzească cu homar.",
+    "image": "lobster_bisque.jpg",
+    "type": ["cină", "francez", "pescăresc"],
+    "portions": 4,
+    "cooking_time": 60,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 97, "quantity": 2},
+      {"ingredient_id": 98, "quantity": 200},
+      {"ingredient_id": 99, "quantity": 100},
+      {"ingredient_id": 100, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chicken Enchiladas",
+    "description": "Rulouri mexicane cu pui, sos de roșii și brânză.",
+    "image": "chicken_enchiladas.jpg",
+    "type": ["cină", "mexican"],
+    "portions": 4,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 1, "quantity": 4},
+      {"ingredient_id": 2, "quantity": 300},
+      {"ingredient_id": 3, "quantity": 100},
+      {"ingredient_id": 4, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Gnocchi cu sos de roșii",
+    "description": "Găluște italiene din cartofi cu sos de roșii.",
+    "image": "gnocchi_rosii.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 25,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 5, "quantity": 400},
+      {"ingredient_id": 6, "quantity": 200},
+      {"ingredient_id": 7, "quantity": 50},
+      {"ingredient_id": 8, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pastrami Sandwich",
+    "description": "Sandviș american cu pastramă, muștar și castraveți murați.",
+    "image": "pastrami_sandwich.jpg",
+    "type": ["prânz", "american"],
+    "portions": 2,
+    "cooking_time": 10,
+    "season": ["oricând"],
+    "category": "Prânz",
+    "recipe_ingredients": [
+      {"ingredient_id": 9, "quantity": 200},
+      {"ingredient_id": 10, "quantity": 2},
+      {"ingredient_id": 11, "quantity": 50},
+      {"ingredient_id": 12, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Miso Soup",
+    "description": "Supă japoneză cu pastă miso, tofu și alge.",
+    "image": "miso_soup.jpg",
+    "type": ["aperitiv", "japonez", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 15,
+    "season": ["oricând"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 13, "quantity": 500},
+      {"ingredient_id": 14, "quantity": 100},
+      {"ingredient_id": 15, "quantity": 50},
+      {"ingredient_id": 16, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Cacciucco",
+    "description": "Tocană italiană de pește și fructe de mare.",
+    "image": "cacciucco.jpg",
+    "type": ["cină", "italian", "pescăresc"],
+    "portions": 4,
+    "cooking_time": 60,
+    "season": ["vară"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 17, "quantity": 500},
+      {"ingredient_id": 18, "quantity": 200},
+      {"ingredient_id": 19, "quantity": 100},
+      {"ingredient_id": 20, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Okonomiyaki",
+    "description": "Clătită japoneză cu varză și toppinguri variate.",
+    "image": "okonomiyaki.jpg",
+    "type": ["cină", "japonez", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 30,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 21, "quantity": 2},
+      {"ingredient_id": 22, "quantity": 200},
+      {"ingredient_id": 23, "quantity": 50},
+      {"ingredient_id": 24, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Katsu Curry",
+    "description": "Cotlet japonez pane cu sos curry și orez.",
+    "image": "katsu_curry.jpg",
+    "type": ["cină", "japonez"],
+    "portions": 2,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 25, "quantity": 2},
+      {"ingredient_id": 26, "quantity": 200},
+      {"ingredient_id": 27, "quantity": 100},
+      {"ingredient_id": 28, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Baba Ganoush",
+    "description": "Pastă orientală de vinete coapte cu tahini.",
+    "image": "baba_ganoush.jpg",
+    "type": ["aperitiv", "oriental", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 30,
+    "season": ["vară"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 29, "quantity": 2},
+      {"ingredient_id": 30, "quantity": 50},
+      {"ingredient_id": 31, "quantity": 1},
+      {"ingredient_id": 32, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pasta Alfredo",
+    "description": "Paste italiene cu sos cremos de smântână și parmezan.",
+    "image": "pasta_alfredo.jpg",
+    "type": ["cină", "italian", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 20,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 33, "quantity": 200},
+      {"ingredient_id": 34, "quantity": 100},
+      {"ingredient_id": 35, "quantity": 50},
+      {"ingredient_id": 36, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Chicken Kiev",
+    "description": "Piept de pui umplut cu unt aromat și pane.",
+    "image": "chicken_kiev.jpg",
+    "type": ["cină", "ucrainean"],
+    "portions": 2,
+    "cooking_time": 40,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 37, "quantity": 2},
+      {"ingredient_id": 38, "quantity": 50},
+      {"ingredient_id": 39, "quantity": 100},
+      {"ingredient_id": 40, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Spanakopita",
+    "description": "Plăcintă grecească cu spanac și brânză feta.",
+    "image": "spanakopita.jpg",
+    "type": ["aperitiv", "grecesc", "vegetarian"],
+    "portions": 4,
+    "cooking_time": 50,
+    "season": ["primăvară"],
+    "category": "Aperitiv",
+    "recipe_ingredients": [
+      {"ingredient_id": 41, "quantity": 400},
+      {"ingredient_id": 42, "quantity": 200},
+      {"ingredient_id": 43, "quantity": 100},
+      {"ingredient_id": 44, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pav Bhaji Dosa",
+    "description": "Clătită indiană umplută cu amestec de legume picante.",
+    "image": "pav_bhaji_dosa.jpg",
+    "type": ["cină", "indian", "vegetarian"],
+    "portions": 2,
+    "cooking_time": 35,
+    "season": ["oricând"],
+    "category": "Cină",
+    "recipe_ingredients": [
+      {"ingredient_id": 45, "quantity": 2},
+      {"ingredient_id": 46, "quantity": 200},
+      {"ingredient_id": 47, "quantity": 100},
+      {"ingredient_id": 48, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Pumpkin Pie",
+    "description": "Tartă americană cu dovleac, desert clasic de toamnă.",
+    "image": "pumpkin_pie.jpg",
+    "type": ["desert", "american"],
+    "portions": 8,
+    "cooking_time": 60,
+    "season": ["toamnă"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 49, "quantity": 1},
+      {"ingredient_id": 50, "quantity": 200},
+      {"ingredient_id": 51, "quantity": 100},
+      {"ingredient_id": 52, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Apple Crumble",
+    "description": "Desert britanic cu mere coapte și crustă crocantă.",
+    "image": "apple_crumble.jpg",
+    "type": ["desert", "britanic"],
+    "portions": 6,
+    "cooking_time": 45,
+    "season": ["toamnă"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 53, "quantity": 4},
+      {"ingredient_id": 54, "quantity": 200},
+      {"ingredient_id": 55, "quantity": 100},
+      {"ingredient_id": 56, "quantity": 0.1}
+    ]
+    },
+    {
+    "name": "Lemon Tart",
+    "description": "Tartă franțuzească cu cremă de lămâie.",
+    "image": "lemon_tart.jpg",
+    "type": ["desert", "francez"],
+    "portions": 8,
+    "cooking_time": 50,
+    "season": ["vară"],
+    "category": "Desert",
+    "recipe_ingredients": [
+      {"ingredient_id": 57, "quantity": 1},
+      {"ingredient_id": 58, "quantity": 200},
+      {"ingredient_id": 59, "quantity": 100},
+      {"ingredient_id": 60, "quantity": 0.1}
+    ]
+    }
+]

@@ -2,6 +2,7 @@ from .database import Base
 from sqlalchemy import Column, Integer, String, DateTime, Boolean, Float, JSON
 from sqlalchemy.sql.schema import ForeignKey
 from sqlalchemy.orm import relationship
+from datetime import datetime, timezone
 
 class ReprMixin:
     __repr_fields__ = ("id",)
@@ -26,7 +27,30 @@ class User(Base):
     is_verified = Column(Boolean, default=False)
     ingredients = relationship("Ingredients", back_populates="user")
     recipes = relationship("Recipes", back_populates="user")
+    user_stats = relationship("UserStats", back_populates="user", uselist=False)
 
+class UserStats(Base):
+    """SQLAlchemy model for the UserStats table."""
+    __tablename__ = "user_stats"
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("user.id"))
+    name = Column(String, default = User.username)
+    height = Column(Integer, default=0)  # in cm
+    weight = Column(Float, default=0.0)  # in kg
+    birthdate = Column(DateTime, nullable=True)
+    gender = Column(String(10), nullable=True)
+    activity_level = Column(String(20), nullable=True)
+    user = relationship("User", backref="stats", uselist=False)
+
+class RefreshTokens(Base):
+    """SQLAlchemy model for the RefreshTokens table."""
+    __tablename__ = "refresh_tokens"
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("user.id"))
+    token = Column(String, unique=True, index=True)
+    expires_at = Column(DateTime)
+    is_revoked = Column(Boolean, default=False)
+    created_at = Column(DateTime, default=datetime.now(tz = timezone.utc))
 
 class Ingredients(Base):
     """SQLAlchemy model for the Ingredient table."""
