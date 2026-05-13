@@ -1,0 +1,18 @@
+[2025-09-30 19:22:05] [INFO] --- New logging session started: logs\app_20250930.log ---
+[2025-09-30 19:22:40] [INFO] --- New logging session started: logs\app_20250930.log ---
+[2025-09-30 19:22:41] [INFO] User created: user1
+[2025-09-30 19:22:42] [ERROR] Attempt to create a user that already exists: user1 or user_email@fake.com
+[2025-09-30 19:22:42] [ERROR] Attempt to create a user that already exists: user2 or user_email1@fake.com
+[2025-09-30 19:22:43] [INFO] User created: user3
+[2025-09-30 19:22:45] [ERROR] Failed to send verification email to invalid_email@email.c2m Reaseon Invalid email domain
+[2025-09-30 19:22:45] [ERROR] Failed to send verification email to invalid_email@email.c2m: 422: Failed to send verification email
+[2025-09-30 19:22:46] [INFO] User created: user4
+[2025-09-30 19:23:32] [INFO] --- New logging session started: logs\app_20250930.log ---
+[2025-09-30 19:23:51] [ERROR] Invalid Credentials: user_not_existent
+[2025-09-30 19:23:51] [ERROR] Incorrect password for user: user1
+[2025-09-30 19:23:52] [ERROR] User not verified: user_4@fake.com
+[2025-09-30 19:23:54] [INFO] Password changed successfully for user: user1
+[2025-09-30 19:23:54] [ERROR] Incorrect password for user: user1
+[2025-09-30 19:24:54] [INFO] --- New logging session started: logs\app_20250930.log ---
+[2025-09-30 19:24:57] [INFO] --- New logging session started: logs\app_20250930.log ---
+[2025-09-30 20:18:27] [INFO] --- New logging session started: logs\app_20250930.log ---

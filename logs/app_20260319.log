@@ -1,0 +1,291 @@
+[2026-03-19 14:20:41] [INFO] --- New logging session started: logs\app_20260319.log ---
+[2026-03-19 14:20:43] [INFO] Ingredient cache built with 168 items.
+[2026-03-19 14:20:43] [INFO] Trie depth: 24
+[2026-03-19 14:20:43] [INFO] Recipe cache built with 117 items.
+[2026-03-19 14:20:43] [INFO] Trie depth: 30
+[2026-03-19 14:20:43] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:20:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:20:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:20:43] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-19 14:20:43] [INFO] No unverified users to delete.
+[2026-03-19 14:22:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:22:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:23:43] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:23:43] [INFO] No unverified users to delete.
+[2026-03-19 14:24:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:24:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:26:43] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:26:43] [INFO] No unverified users to delete.
+[2026-03-19 14:26:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:26:43] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:31:43] [INFO] --- New logging session started: logs\app_20260319.log ---
+[2026-03-19 14:31:45] [INFO] Ingredient cache built with 168 items.
+[2026-03-19 14:31:45] [INFO] Trie depth: 24
+[2026-03-19 14:31:45] [INFO] Recipe cache built with 117 items.
+[2026-03-19 14:31:45] [INFO] Trie depth: 30
+[2026-03-19 14:31:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:31:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:31:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:31:45] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-19 14:31:45] [INFO] No unverified users to delete.
+[2026-03-19 14:33:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:33:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:34:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:34:45] [INFO] No unverified users to delete.
+[2026-03-19 14:35:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:35:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:37:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:37:45] [INFO] No unverified users to delete.
+[2026-03-19 14:37:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:37:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:39:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:39:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:40:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:40:45] [INFO] No unverified users to delete.
+[2026-03-19 14:41:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:41:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:43:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:43:45] [INFO] No unverified users to delete.
+[2026-03-19 14:43:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:43:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:45:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:45:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:46:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:46:45] [INFO] No unverified users to delete.
+[2026-03-19 14:47:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:47:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:49:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:49:45] [INFO] No unverified users to delete.
+[2026-03-19 14:49:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:49:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:51:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:51:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:52:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:52:45] [INFO] No unverified users to delete.
+[2026-03-19 14:53:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:53:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:55:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:55:45] [INFO] No unverified users to delete.
+[2026-03-19 14:55:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:55:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:57:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:57:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:58:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 14:58:45] [INFO] No unverified users to delete.
+[2026-03-19 14:59:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 14:59:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:01:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:01:45] [INFO] No unverified users to delete.
+[2026-03-19 15:01:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:01:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:03:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:03:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:04:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:04:45] [INFO] No unverified users to delete.
+[2026-03-19 15:05:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:05:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:07:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:07:45] [INFO] No unverified users to delete.
+[2026-03-19 15:07:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:07:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:09:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:09:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:10:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:10:45] [INFO] No unverified users to delete.
+[2026-03-19 15:11:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:11:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:13:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:13:45] [INFO] No unverified users to delete.
+[2026-03-19 15:13:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:13:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:15:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:15:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:16:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:16:45] [INFO] No unverified users to delete.
+[2026-03-19 15:17:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:17:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:19:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:19:45] [INFO] No unverified users to delete.
+[2026-03-19 15:19:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:19:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:21:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:21:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:22:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:22:45] [INFO] No unverified users to delete.
+[2026-03-19 15:23:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:23:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:25:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:25:45] [INFO] No unverified users to delete.
+[2026-03-19 15:25:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:25:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:27:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:27:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:28:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:28:45] [INFO] No unverified users to delete.
+[2026-03-19 15:29:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:29:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:31:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:31:45] [INFO] No unverified users to delete.
+[2026-03-19 15:31:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:31:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:33:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:33:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:34:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:34:45] [INFO] No unverified users to delete.
+[2026-03-19 15:35:45] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:35:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:37:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:37:45] [INFO] No unverified users to delete.
+[2026-03-19 15:37:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:37:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:39:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:39:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:40:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:40:45] [INFO] No unverified users to delete.
+[2026-03-19 15:41:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:41:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:43:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:43:45] [INFO] No unverified users to delete.
+[2026-03-19 15:43:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:43:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:45:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:45:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:46:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:46:45] [INFO] No unverified users to delete.
+[2026-03-19 15:47:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:47:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:49:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:49:45] [INFO] No unverified users to delete.
+[2026-03-19 15:49:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:49:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:51:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:51:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:52:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:52:45] [INFO] No unverified users to delete.
+[2026-03-19 15:53:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:53:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:55:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:55:45] [INFO] No unverified users to delete.
+[2026-03-19 15:55:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:55:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:57:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:57:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:58:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 15:58:45] [INFO] No unverified users to delete.
+[2026-03-19 15:59:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 15:59:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:01:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:01:45] [INFO] No unverified users to delete.
+[2026-03-19 16:01:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:01:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:03:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:03:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:04:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:04:45] [INFO] No unverified users to delete.
+[2026-03-19 16:05:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:05:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:07:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:07:45] [INFO] No unverified users to delete.
+[2026-03-19 16:07:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:07:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:09:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:09:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:10:45] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:10:45] [INFO] No unverified users to delete.
+[2026-03-19 16:11:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:11:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:13:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:13:46] [INFO] No unverified users to delete.
+[2026-03-19 16:13:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:13:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:15:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:15:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:16:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:16:46] [INFO] No unverified users to delete.
+[2026-03-19 16:17:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:17:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:19:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:19:46] [INFO] No unverified users to delete.
+[2026-03-19 16:19:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:19:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:21:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:21:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:22:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:22:46] [INFO] No unverified users to delete.
+[2026-03-19 16:23:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:23:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:25:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:25:46] [INFO] No unverified users to delete.
+[2026-03-19 16:25:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:25:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:27:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:27:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:28:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:28:46] [INFO] No unverified users to delete.
+[2026-03-19 16:29:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:29:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:31:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:31:46] [INFO] No unverified users to delete.
+[2026-03-19 16:31:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:31:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:33:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:33:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:34:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:34:46] [INFO] No unverified users to delete.
+[2026-03-19 16:35:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:35:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:37:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:37:46] [INFO] No unverified users to delete.
+[2026-03-19 16:37:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:37:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:39:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:39:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:40:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:40:46] [INFO] No unverified users to delete.
+[2026-03-19 16:41:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:41:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:43:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:43:46] [INFO] No unverified users to delete.
+[2026-03-19 16:43:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:43:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:45:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:45:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:46:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:46:46] [INFO] No unverified users to delete.
+[2026-03-19 16:47:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:47:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:49:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:49:46] [INFO] No unverified users to delete.
+[2026-03-19 16:49:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:49:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:51:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:51:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:52:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:52:46] [INFO] No unverified users to delete.
+[2026-03-19 16:53:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:53:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:55:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:55:46] [INFO] No unverified users to delete.
+[2026-03-19 16:55:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:55:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:57:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:57:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:58:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 16:58:46] [INFO] No unverified users to delete.
+[2026-03-19 16:59:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 16:59:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:01:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 17:01:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:01:46] [INFO] No unverified users to delete.
+[2026-03-19 17:01:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:03:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:03:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:04:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 17:04:46] [INFO] No unverified users to delete.
+[2026-03-19 17:05:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:05:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:07:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:07:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-19 17:07:46] [INFO] No unverified users to delete.
+[2026-03-19 17:07:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-19 17:09:11] [INFO] Application shutting down. Signaling scheduler to stop.

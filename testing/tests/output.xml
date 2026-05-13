@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.1 on win32)" generated="2025-09-25T16:13:36.670723" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="E:\repos\mealmaster_backend\testing\tests">
+<suite id="s1-s1" name="Users" source="E:\repos\mealmaster_backend\testing\tests\users.robot">
+<test id="s1-s1-t1" name="1_Create_New_User" line="5">
+<kw name="Create New User">
+<msg time="2025-09-25T16:13:36.707660" level="FAIL">No keyword with name 'Create New User' found.</msg>
+<var>${msg}</var>
+<arg>new_user</arg>
+<arg>user_email@fake.com</arg>
+<arg>user_password</arg>
+<status status="FAIL" start="2025-09-25T16:13:36.707660" elapsed="0.000000">No keyword with name 'Create New User' found.</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>User Creation failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.707660" elapsed="0.000000"/>
+</kw>
+<kw name="Get Verification Code">
+<var>${verification_code}</var>
+<arg>user_email@fake.com</arg>
+<status status="NOT RUN" start="2025-09-25T16:13:36.707660" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${verification_code}</arg>
+<arg>Verification code not found</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.708661" elapsed="0.000000"/>
+</kw>
+<kw name="Verify User">
+<var>${is_verified}</var>
+<arg>user_email@fake.com</arg>
+<arg>${verification_code}</arg>
+<status status="NOT RUN" start="2025-09-25T16:13:36.708661" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_verified}</arg>
+<arg>User Verification failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.708661" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Test Case Passed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.708661" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-25T16:13:36.704661" elapsed="0.005000">No keyword with name 'Create New User' found.</status>
+</test>
+<test id="s1-s1-t2" name="2_Create_New_Existing_User" line="14">
+<kw name="Create New User">
+<msg time="2025-09-25T16:13:36.711419" level="FAIL">No keyword with name 'Create New User' found.</msg>
+<var>${msg}</var>
+<arg>new_user</arg>
+<arg>user_email@fake.com</arg>
+<arg>user_password</arg>
+<status status="FAIL" start="2025-09-25T16:13:36.711419" elapsed="0.000000">No keyword with name 'Create New User' found.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${msg["detail"]}</arg>
+<arg>User already exists</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.712420" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Test Case Passed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.712420" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-25T16:13:36.710416" elapsed="0.002004">No keyword with name 'Create New User' found.</status>
+</test>
+<test id="s1-s1-t3" name="3_Verify_User_Invalid_Code" line="19">
+<kw name="Create New User">
+<msg time="2025-09-25T16:13:36.714417" level="FAIL">No keyword with name 'Create New User' found.</msg>
+<var>${msg}</var>
+<arg>user_second</arg>
+<arg>user_2@fake.com</arg>
+<arg>user_password</arg>
+<status status="FAIL" start="2025-09-25T16:13:36.714417" elapsed="0.000000">No keyword with name 'Create New User' found.</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>User Creation failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.715418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${verification_code}</var>
+<arg>fake_code</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.715418" elapsed="0.000000"/>
+</kw>
+<kw name="Verify User">
+<var>${is_verified}</var>
+<arg>user_2@fake.com</arg>
+<arg>${verification_code}</arg>
+<status status="NOT RUN" start="2025-09-25T16:13:36.715418" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be True" owner="BuiltIn">
+<arg>${is_verified}</arg>
+<arg>User Verification failed</arg>
+<doc>Fails if the given condition is true.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.715418" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Test Case Passed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.715418" elapsed="0.000999"/>
+</kw>
+<status status="FAIL" start="2025-09-25T16:13:36.713418" elapsed="0.002999">No keyword with name 'Create New User' found.</status>
+</test>
+<test id="s1-s1-t4" name="4_Resend_Verification_Code_and_Verify_User" line="27">
+<kw name="Resend Verification">
+<msg time="2025-09-25T16:13:36.719430" level="FAIL">No keyword with name 'Resend Verification' found.</msg>
+<var>${msg}</var>
+<arg>user_2@fake.com</arg>
+<status status="FAIL" start="2025-09-25T16:13:36.719430" elapsed="0.000000">No keyword with name 'Resend Verification' found.</status>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>Resend Verification failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.719430" elapsed="0.000000"/>
+</kw>
+<kw name="Get Verification Code">
+<var>${verification_code}</var>
+<arg>user_2@fake.com</arg>
+<status status="NOT RUN" start="2025-09-25T16:13:36.719430" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${verification_code}</arg>
+<arg>Verification code not found</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.720418" elapsed="0.000000"/>
+</kw>
+<kw name="Verify User">
+<var>${is_verified}</var>
+<arg>user_2@fake.com</arg>
+<arg>${verification_code}</arg>
+<status status="NOT RUN" start="2025-09-25T16:13:36.720418" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_verified}</arg>
+<arg>User Verification failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.720418" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Test Case Passed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.720418" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-25T16:13:36.717417" elapsed="0.004001">No keyword with name 'Resend Verification' found.</status>
+</test>
+<test id="s1-s1-t5" name="5_Resend_Verification_Code_Invalid_User" line="36">
+<kw name="Resend Verification">
+<msg time="2025-09-25T16:13:36.723434" level="FAIL">No keyword with name 'Resend Verification' found.</msg>
+<var>${msg}</var>
+<arg>1@email.com</arg>
+<status status="FAIL" start="2025-09-25T16:13:36.723434" elapsed="0.000000">No keyword with name 'Resend Verification' found.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${msg["detail"]}</arg>
+<arg>User not found</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.723434" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Test Case Passed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.723434" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-09-25T16:13:36.721418" elapsed="0.003000">No keyword with name 'Resend Verification' found.</status>
+</test>
+<test id="s1-s1-t6" name="6_Resend_Verification_Code_Already_Verified_User" line="40">
+<kw name="Resend Verification">
+<msg time="2025-09-25T16:13:36.726420" level="FAIL">No keyword with name 'Resend Verification' found.</msg>
+<var>${msg}</var>
+<arg>user_2@fake.com</arg>
+<status status="FAIL" start="2025-09-25T16:13:36.726420" elapsed="0.000000">No keyword with name 'Resend Verification' found.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${msg["detail"]}</arg>
+<arg>User already verified</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.726420" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Test Case Passed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-09-25T16:13:36.727419" elapsed="0.000285"/>
+</kw>
+<status status="FAIL" start="2025-09-25T16:13:36.724418" elapsed="0.003318">No keyword with name 'Resend Verification' found.</status>
+</test>
+<status status="FAIL" start="2025-09-25T16:13:36.698728" elapsed="0.030011"/>
+</suite>
+<status status="FAIL" start="2025-09-25T16:13:36.672661" elapsed="0.057077"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="6" skip="0">Tests</stat>
+<stat name="Users" id="s1-s1" pass="0" fail="6" skip="0">Tests.Users</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-09-25T16:13:36.702715" level="ERROR">Error in file 'E:\repos\mealmaster_backend\testing\tests\users.robot' on line 2: Importing library 'keywords.meal_tracker_testing.MealTracker' failed: ModuleNotFoundError: No module named 'keywords'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  E:\repos\mealmaster_backend\pyvenv\Scripts\robot.exe
+  E:\repos\mealmaster_backend
+  C:\Users\george\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\george\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\george\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\george\AppData\Local\Programs\Python\Python312
+  E:\repos\mealmaster_backend\pyvenv
+  E:\repos\mealmaster_backend\pyvenv\Lib\site-packages</msg>
+</errors>
+</robot>

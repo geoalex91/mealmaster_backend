@@ -1,0 +1,55 @@
+[2026-03-06 15:58:53] [INFO] --- New logging session started: logs\app_20260306.log ---
+[2026-03-06 15:58:55] [INFO] Ingredient cache built with 168 items.
+[2026-03-06 15:58:55] [INFO] Trie depth: 24
+[2026-03-06 15:58:55] [INFO] Recipe cache built with 117 items.
+[2026-03-06 15:58:55] [INFO] Trie depth: 30
+[2026-03-06 15:58:55] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 15:58:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 15:58:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 15:58:55] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-06 15:58:55] [INFO] No unverified users to delete.
+[2026-03-06 16:00:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:00:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:01:55] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 16:01:55] [INFO] No unverified users to delete.
+[2026-03-06 16:02:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:02:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:04:55] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 16:04:55] [INFO] No unverified users to delete.
+[2026-03-06 16:04:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:04:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:06:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:06:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:07:55] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 16:07:55] [INFO] No unverified users to delete.
+[2026-03-06 16:08:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:08:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:10:55] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 16:10:55] [INFO] No unverified users to delete.
+[2026-03-06 16:10:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:10:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:12:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:12:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:13:55] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 16:13:55] [INFO] No unverified users to delete.
+[2026-03-06 16:14:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:14:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:16:55] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 16:16:55] [INFO] No unverified users to delete.
+[2026-03-06 16:16:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:16:55] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:18:00] [INFO] Application shutting down. Signaling scheduler to stop.
+[2026-03-06 16:18:27] [INFO] --- New logging session started: logs\app_20260306.log ---
+[2026-03-06 16:18:28] [INFO] Ingredient cache built with 168 items.
+[2026-03-06 16:18:28] [INFO] Trie depth: 24
+[2026-03-06 16:18:28] [INFO] Recipe cache built with 117 items.
+[2026-03-06 16:18:28] [INFO] Trie depth: 30
+[2026-03-06 16:18:28] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-06 16:18:28] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:18:28] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-06 16:18:28] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-06 16:18:28] [INFO] No unverified users to delete.
+[2026-03-06 16:18:33] [ERROR] Invalid email address: abd123
+[2026-03-06 16:18:56] [INFO] Generated verification code for abd123@ym.cd: 370256
+[2026-03-06 16:18:56] [ERROR] Failed to send verification email to abd123@ym.cd Reaseon Invalid email domain
+[2026-03-06 16:18:56] [ERROR] Failed to send verification email to abd123@ym.cd: 422: Failed to send verification email

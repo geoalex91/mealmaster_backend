@@ -1,0 +1,1061 @@
+[2025-11-05 15:03:33] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:03:34] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 15:03:34] [INFO] Trie depth: 24
+[2025-11-05 15:03:34] [INFO] Recipe cache built with 118 items.
+[2025-11-05 15:03:34] [INFO] Trie depth: 30
+[2025-11-05 15:03:34] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:03:34] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:03:34] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:03:34] [INFO] No unverified users to delete.
+[2025-11-05 15:04:09] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:04:09] [ERROR] Attempt to create a user that already exists: user1 or user_email1@fake.com
+[2025-11-05 15:04:09] [ERROR] Attempt to create a user that already exists: user1 or user_email@fake.com
+[2025-11-05 15:04:09] [ERROR] Attempt to create a user that already exists: user2 or user_email1@fake.com
+[2025-11-05 15:04:09] [ERROR] Attempt to create a user that already exists: user3 or user_3@fake.com
+[2025-11-05 15:04:10] [ERROR] Failed to send verification email to invalid_email@email.c2m Reaseon Invalid email domain
+[2025-11-05 15:04:10] [ERROR] Failed to send verification email to invalid_email@email.c2m: 422: Failed to send verification email
+[2025-11-05 15:04:11] [INFO] User created: user4
+[2025-11-05 15:04:54] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 15:05:11] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:05:15] [INFO] Ingredient cache built with 0 items.
+[2025-11-05 15:05:15] [INFO] Trie depth: 0
+[2025-11-05 15:05:15] [INFO] Recipe cache built with 0 items.
+[2025-11-05 15:05:15] [INFO] Trie depth: 0
+[2025-11-05 15:05:15] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:05:15] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:05:15] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:05:15] [INFO] No unverified users to delete.
+[2025-11-05 15:05:23] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:05:24] [INFO] User created: user1
+[2025-11-05 15:05:25] [ERROR] Attempt to create a user that already exists: user1 or user_email@fake.com
+[2025-11-05 15:05:25] [ERROR] Attempt to create a user that already exists: user2 or user_email1@fake.com
+[2025-11-05 15:05:26] [INFO] User created: user3
+[2025-11-05 15:05:28] [ERROR] Failed to send verification email to invalid_email@email.c2m Reaseon Invalid email domain
+[2025-11-05 15:05:28] [ERROR] Failed to send verification email to invalid_email@email.c2m: 422: Failed to send verification email
+[2025-11-05 15:05:29] [INFO] User created: user4
+[2025-11-05 15:06:34] [ERROR] Invalid Credentials: user_not_existent
+[2025-11-05 15:06:34] [ERROR] Incorrect password for user: user1
+[2025-11-05 15:06:35] [ERROR] User not verified: user_4@fake.com
+[2025-11-05 15:06:37] [INFO] Password changed successfully for user: user1
+[2025-11-05 15:06:37] [ERROR] Incorrect password for user: user1
+[2025-11-05 15:06:39] [INFO] user1 Account deleted successfully for user: user1
+[2025-11-05 15:06:39] [ERROR] Invalid Credentials: user1
+[2025-11-05 15:06:41] [INFO] user3 Account deleted successfully for user: user3
+[2025-11-05 15:10:02] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:10:02] [ERROR] Invalid Credentials: user_email1@fake.com
+[2025-11-05 15:11:14] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 15:12:17] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:12:17] [INFO] Ingredient cache built with 0 items.
+[2025-11-05 15:12:17] [INFO] Trie depth: 0
+[2025-11-05 15:12:17] [INFO] Recipe cache built with 0 items.
+[2025-11-05 15:12:17] [INFO] Trie depth: 0
+[2025-11-05 15:12:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:12:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:12:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:12:17] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:12:17] [INFO] No unverified users to delete.
+[2025-11-05 15:12:49] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:12:50] [INFO] User created: user1
+[2025-11-05 15:13:19] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:13:21] [INFO] Password changed successfully for user: user1
+[2025-11-05 15:13:21] [ERROR] Incorrect password for user: user1
+[2025-11-05 15:13:53] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:13:55] [INFO] Ingredient created: Tomato for user ID: 4
+[2025-11-05 15:13:55] [INFO] element added to cache: Tomato
+[2025-11-05 15:14:01] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:14:02] [INFO] Ingredient updated: id=1 by user 4
+[2025-11-05 15:14:02] [ERROR] Error editing ingredient: EntityCache.rename_ingredient() got an unexpected keyword argument 'old_item'
+[2025-11-05 15:14:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:14:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:14:32] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:14:33] [INFO] Ingredient deleted: id=1 by user 4
+[2025-11-05 15:14:33] [INFO] Element removed from cache: Tomato
+[2025-11-05 15:14:41] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:14:41] [ERROR] Ingredient not found: Name Nonexistent
+[2025-11-05 15:14:41] [ERROR] Error getting ingredient by name: 404: Ingredient not found
+[2025-11-05 15:14:41] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-11-05 15:14:41] [ERROR] Error editing ingredient: 404: Ingredient not found
+[2025-11-05 15:15:12] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:15:12] [ERROR] Missing required ingredient fields.
+[2025-11-05 15:15:12] [ERROR] Error creating ingredient: 422: Missing or invalid ingredient data.
+[2025-11-05 15:15:12] [ERROR] Nutritional values must be non-negative.
+[2025-11-05 15:15:12] [ERROR] Error creating ingredient: 422: Nutritional values must be non-negative.
+[2025-11-05 15:15:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:15:17] [INFO] No unverified users to delete.
+[2025-11-05 15:15:37] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:15:43] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:15:44] [INFO] Ingredient created: Tomato for user ID: 4
+[2025-11-05 15:15:44] [INFO] element added to cache: Tomato
+[2025-11-05 15:15:44] [ERROR] Ingredient with name Tomato already exists
+[2025-11-05 15:15:44] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:15:48] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:15:49] [ERROR] Invalid Credentials: user3
+[2025-11-05 15:15:49] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:15:49] [ERROR] Invalid Credentials: user3
+[2025-11-05 15:16:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:16:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:18:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:18:17] [INFO] Deleting unverified user: user_4@fake.com
+[2025-11-05 15:18:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:18:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:20:06] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:20:07] [INFO] User created: user3
+[2025-11-05 15:20:14] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:20:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:20:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:20:26] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:20:27] [ERROR] Error editing ingredient: 404: Ingredient not found
+[2025-11-05 15:20:27] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-11-05 15:21:01] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:21:02] [INFO] Ingredient created: Morcov for user ID: 4
+[2025-11-05 15:21:02] [INFO] element added to cache: Morcov
+[2025-11-05 15:21:02] [INFO] Ingredient created: Cartofi for user ID: 4
+[2025-11-05 15:21:02] [INFO] element added to cache: Cartofi
+[2025-11-05 15:21:02] [INFO] Ingredient created: Rosii for user ID: 4
+[2025-11-05 15:21:02] [INFO] element added to cache: Rosii
+[2025-11-05 15:21:03] [INFO] Ingredient created: Salata iceberg for user ID: 4
+[2025-11-05 15:21:03] [INFO] element added to cache: Salata iceberg
+[2025-11-05 15:21:03] [INFO] Ingredient created: Ceapa verde for user ID: 4
+[2025-11-05 15:21:03] [INFO] element added to cache: Ceapa verde
+[2025-11-05 15:21:03] [INFO] Ingredient created: Ridiche for user ID: 4
+[2025-11-05 15:21:03] [INFO] element added to cache: Ridiche
+[2025-11-05 15:21:04] [INFO] Ingredient created: Capsuni for user ID: 4
+[2025-11-05 15:21:04] [INFO] element added to cache: Capsuni
+[2025-11-05 15:21:04] [INFO] Ingredient created: Cirese for user ID: 4
+[2025-11-05 15:21:04] [INFO] element added to cache: Cirese
+[2025-11-05 15:21:04] [INFO] Ingredient created: Cartofi noi for user ID: 4
+[2025-11-05 15:21:04] [INFO] element added to cache: Cartofi noi
+[2025-11-05 15:21:04] [INFO] Ingredient created: Ceapa galbena for user ID: 4
+[2025-11-05 15:21:04] [INFO] element added to cache: Ceapa galbena
+[2025-11-05 15:21:05] [INFO] Ingredient created: Dovlecei for user ID: 4
+[2025-11-05 15:21:05] [INFO] element added to cache: Dovlecei
+[2025-11-05 15:21:05] [INFO] Ingredient created: Varza for user ID: 4
+[2025-11-05 15:21:05] [INFO] element added to cache: Varza
+[2025-11-05 15:21:05] [INFO] Ingredient created: Linte for user ID: 4
+[2025-11-05 15:21:05] [INFO] element added to cache: Linte
+[2025-11-05 15:21:05] [INFO] Ingredient created: Linte rosii for user ID: 4
+[2025-11-05 15:21:05] [INFO] element added to cache: Linte rosii
+[2025-11-05 15:21:06] [INFO] Ingredient created: Pulpe de pui for user ID: 4
+[2025-11-05 15:21:06] [INFO] element added to cache: Pulpe de pui
+[2025-11-05 15:21:06] [INFO] Ingredient created: Pulpe de pui dezosate for user ID: 4
+[2025-11-05 15:21:06] [INFO] element added to cache: Pulpe de pui dezosate
+[2025-11-05 15:21:06] [INFO] Ingredient created: Rosii Cherry for user ID: 4
+[2025-11-05 15:21:06] [INFO] element added to cache: Rosii Cherry
+[2025-11-05 15:21:07] [INFO] Ingredient created: Avocado for user ID: 4
+[2025-11-05 15:21:07] [INFO] element added to cache: Avocado
+[2025-11-05 15:21:07] [INFO] Ingredient created: Costita afumata for user ID: 4
+[2025-11-05 15:21:07] [INFO] element added to cache: Costita afumata
+[2025-11-05 15:21:07] [INFO] Ingredient created: Ulei de masline for user ID: 4
+[2025-11-05 15:21:07] [INFO] element added to cache: Ulei de masline
+[2025-11-05 15:21:08] [INFO] Ingredient created: Praf de copt for user ID: 4
+[2025-11-05 15:21:08] [INFO] element added to cache: Praf de copt
+[2025-11-05 15:21:08] [INFO] Ingredient created: Zahar for user ID: 4
+[2025-11-05 15:21:08] [INFO] element added to cache: Zahar
+[2025-11-05 15:21:08] [INFO] Ingredient created: Pecorino for user ID: 4
+[2025-11-05 15:21:08] [INFO] element added to cache: Pecorino
+[2025-11-05 15:21:09] [INFO] Ingredient created: Oua for user ID: 4
+[2025-11-05 15:21:09] [INFO] element added to cache: Oua
+[2025-11-05 15:21:09] [INFO] Ingredient created: Albus de ou for user ID: 4
+[2025-11-05 15:21:09] [INFO] element added to cache: Albus de ou
+[2025-11-05 15:21:09] [INFO] Ingredient created: Galbenus de ou for user ID: 4
+[2025-11-05 15:21:09] [INFO] element added to cache: Galbenus de ou
+[2025-11-05 15:21:09] [INFO] Ingredient created: Bacon for user ID: 4
+[2025-11-05 15:21:09] [INFO] element added to cache: Bacon
+[2025-11-05 15:21:10] [INFO] Ingredient created: Guanciale for user ID: 4
+[2025-11-05 15:21:10] [INFO] element added to cache: Guanciale
+[2025-11-05 15:21:10] [INFO] Ingredient created: Spaghete for user ID: 4
+[2025-11-05 15:21:10] [INFO] element added to cache: Spaghete
+[2025-11-05 15:21:10] [INFO] Ingredient created: Spaghete integrale for user ID: 4
+[2025-11-05 15:21:10] [INFO] element added to cache: Spaghete integrale
+[2025-11-05 15:21:11] [INFO] Ingredient created: Malai for user ID: 4
+[2025-11-05 15:21:11] [INFO] element added to cache: Malai
+[2025-11-05 15:21:11] [INFO] Ingredient created: Telemea de vaca for user ID: 4
+[2025-11-05 15:21:11] [INFO] element added to cache: Telemea de vaca
+[2025-11-05 15:21:11] [INFO] Ingredient created: Smantana 12% for user ID: 4
+[2025-11-05 15:21:11] [INFO] element added to cache: Smantana 12%
+[2025-11-05 15:21:12] [INFO] Ingredient created: Carne gulas vita for user ID: 4
+[2025-11-05 15:21:12] [INFO] element added to cache: Carne gulas vita
+[2025-11-05 15:21:12] [INFO] Ingredient created: Usturoi for user ID: 4
+[2025-11-05 15:21:12] [INFO] element added to cache: Usturoi
+[2025-11-05 15:21:12] [INFO] Ingredient created: Ardei kapia for user ID: 4
+[2025-11-05 15:21:12] [INFO] element added to cache: Ardei kapia
+[2025-11-05 15:21:12] [INFO] Ingredient created: Chimen for user ID: 4
+[2025-11-05 15:21:12] [INFO] element added to cache: Chimen
+[2025-11-05 15:21:13] [INFO] Ingredient created: Piper for user ID: 4
+[2025-11-05 15:21:13] [INFO] element added to cache: Piper
+[2025-11-05 15:21:13] [INFO] Ingredient created: Paprika for user ID: 4
+[2025-11-05 15:21:13] [INFO] element added to cache: Paprika
+[2025-11-05 15:21:13] [INFO] Ingredient created: Gulii for user ID: 4
+[2025-11-05 15:21:13] [INFO] element added to cache: Gulii
+[2025-11-05 15:21:14] [INFO] Ingredient created: Pulpa de porc for user ID: 4
+[2025-11-05 15:21:14] [INFO] element added to cache: Pulpa de porc
+[2025-11-05 15:21:14] [INFO] Ingredient created: Orez for user ID: 4
+[2025-11-05 15:21:14] [INFO] element added to cache: Orez
+[2025-11-05 15:21:14] [INFO] Ingredient created: Patrunjel for user ID: 4
+[2025-11-05 15:21:14] [INFO] element added to cache: Patrunjel
+[2025-11-05 15:21:15] [INFO] Ingredient created: Cimbru uscat for user ID: 4
+[2025-11-05 15:21:15] [INFO] element added to cache: Cimbru uscat
+[2025-11-05 15:21:15] [INFO] Ingredient created: Vinete for user ID: 4
+[2025-11-05 15:21:15] [INFO] element added to cache: Vinete
+[2025-11-05 15:21:15] [INFO] Ingredient created: Lamaie for user ID: 4
+[2025-11-05 15:21:15] [INFO] element added to cache: Lamaie
+[2025-11-05 15:21:15] [INFO] Ingredient created: Cardamon for user ID: 4
+[2025-11-05 15:21:15] [INFO] element added to cache: Cardamon
+[2025-11-05 15:21:16] [INFO] Ingredient created: Chimion for user ID: 4
+[2025-11-05 15:21:16] [INFO] element added to cache: Chimion
+[2025-11-05 15:21:16] [INFO] Ingredient created: Ceapa rosie for user ID: 4
+[2025-11-05 15:21:16] [INFO] element added to cache: Ceapa rosie
+[2025-11-05 15:21:16] [INFO] Ingredient created: Pezmet for user ID: 4
+[2025-11-05 15:21:16] [INFO] element added to cache: Pezmet
+[2025-11-05 15:21:17] [INFO] Ingredient created: Marar for user ID: 4
+[2025-11-05 15:21:17] [INFO] element added to cache: Marar
+[2025-11-05 15:21:17] [INFO] Ingredient created: Coriandru seminte for user ID: 4
+[2025-11-05 15:21:17] [INFO] element added to cache: Coriandru seminte
+[2025-11-05 15:21:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:21:17] [INFO] Ingredient created: Vin for user ID: 4
+[2025-11-05 15:21:17] [INFO] element added to cache: Vin
+[2025-11-05 15:21:17] [INFO] No unverified users to delete.
+[2025-11-05 15:21:18] [INFO] Ingredient created: Telemea de oaie for user ID: 4
+[2025-11-05 15:21:18] [INFO] element added to cache: Telemea de oaie
+[2025-11-05 15:21:18] [INFO] Ingredient created: Naut for user ID: 4
+[2025-11-05 15:21:18] [INFO] element added to cache: Naut
+[2025-11-05 15:21:18] [INFO] Ingredient created: Pastarnac for user ID: 4
+[2025-11-05 15:21:18] [INFO] element added to cache: Pastarnac
+[2025-11-05 15:21:19] [INFO] Ingredient created: Telina for user ID: 4
+[2025-11-05 15:21:19] [INFO] element added to cache: Telina
+[2025-11-05 15:21:19] [INFO] Ingredient created: Caracatita for user ID: 4
+[2025-11-05 15:21:19] [INFO] element added to cache: Caracatita
+[2025-11-05 15:21:19] [INFO] Ingredient created: Apio for user ID: 4
+[2025-11-05 15:21:19] [INFO] element added to cache: Apio
+[2025-11-05 15:21:20] [INFO] Ingredient created: Antricot vita for user ID: 4
+[2025-11-05 15:21:20] [INFO] element added to cache: Antricot vita
+[2025-11-05 15:21:20] [INFO] Ingredient created: Oase de vita for user ID: 4
+[2025-11-05 15:21:20] [INFO] element added to cache: Oase de vita
+[2025-11-05 15:21:20] [INFO] Ingredient created: Salau for user ID: 4
+[2025-11-05 15:21:20] [INFO] element added to cache: Salau
+[2025-11-05 15:21:21] [INFO] Ingredient created: Banane for user ID: 4
+[2025-11-05 15:21:21] [INFO] element added to cache: Banane
+[2025-11-05 15:21:21] [INFO] Ingredient created: Ananas for user ID: 4
+[2025-11-05 15:21:21] [INFO] element added to cache: Ananas
+[2025-11-05 15:21:21] [INFO] Ingredient created: Muschi de porc afumat for user ID: 4
+[2025-11-05 15:21:21] [INFO] element added to cache: Muschi de porc afumat
+[2025-11-05 15:21:22] [INFO] Ingredient created: Faina alba 000 for user ID: 4
+[2025-11-05 15:21:22] [INFO] element added to cache: Faina alba 000
+[2025-11-05 15:21:22] [INFO] Ingredient created: File de somon for user ID: 4
+[2025-11-05 15:21:22] [INFO] element added to cache: File de somon
+[2025-11-05 15:21:22] [INFO] Ingredient created: Iaurt 3.5% for user ID: 4
+[2025-11-05 15:21:22] [INFO] element added to cache: Iaurt 3.5%
+[2025-11-05 15:21:23] [INFO] Ingredient created: Homar for user ID: 4
+[2025-11-05 15:21:23] [INFO] element added to cache: Homar
+[2025-11-05 15:21:23] [INFO] Ingredient created: Creveti for user ID: 4
+[2025-11-05 15:21:23] [INFO] element added to cache: Creveti
+[2025-11-05 15:21:23] [INFO] Ingredient created: Ton afumat for user ID: 4
+[2025-11-05 15:21:23] [INFO] element added to cache: Ton afumat
+[2025-11-05 15:21:24] [INFO] Ingredient created: Tortelini for user ID: 4
+[2025-11-05 15:21:24] [INFO] element added to cache: Tortelini
+[2025-11-05 15:21:24] [INFO] Ingredient created: Capere for user ID: 4
+[2025-11-05 15:21:24] [INFO] element added to cache: Capere
+[2025-11-05 15:21:24] [INFO] Ingredient created: Masline negre for user ID: 4
+[2025-11-05 15:21:24] [INFO] element added to cache: Masline negre
+[2025-11-05 15:21:25] [INFO] Ingredient created: Branza de vaci for user ID: 4
+[2025-11-05 15:21:25] [INFO] element added to cache: Branza de vaci
+[2025-11-05 15:21:26] [INFO] Ingredient created: Urda for user ID: 4
+[2025-11-05 15:21:26] [INFO] element added to cache: Urda
+[2025-11-05 15:21:26] [INFO] Ingredient created: Branza de burduf for user ID: 4
+[2025-11-05 15:21:26] [INFO] element added to cache: Branza de burduf
+[2025-11-05 15:21:27] [INFO] Ingredient created: Pipet de pui for user ID: 4
+[2025-11-05 15:21:27] [INFO] element added to cache: Pipet de pui
+[2025-11-05 15:21:27] [INFO] Ingredient created: Pipt de rata for user ID: 4
+[2025-11-05 15:21:27] [INFO] element added to cache: Pipt de rata
+[2025-11-05 15:21:27] [INFO] Ingredient created: Portocale for user ID: 4
+[2025-11-05 15:21:27] [INFO] element added to cache: Portocale
+[2025-11-05 15:21:27] [INFO] Ingredient created: Miere de albine for user ID: 4
+[2025-11-05 15:21:27] [INFO] element added to cache: Miere de albine
+[2025-11-05 15:21:28] [INFO] Ingredient created: Boia dulce for user ID: 4
+[2025-11-05 15:21:28] [INFO] element added to cache: Boia dulce
+[2025-11-05 15:21:28] [INFO] Ingredient created: Rozmarin for user ID: 4
+[2025-11-05 15:21:28] [INFO] element added to cache: Rozmarin
+[2025-11-05 15:21:28] [INFO] Ingredient created: Unt 82% for user ID: 4
+[2025-11-05 15:21:28] [INFO] element added to cache: Unt 82%
+[2025-11-05 15:21:29] [INFO] Ingredient created: Sare for user ID: 4
+[2025-11-05 15:21:29] [INFO] element added to cache: Sare
+[2025-11-05 15:21:29] [INFO] Ingredient created: Ulei de floarea soarelui for user ID: 4
+[2025-11-05 15:21:29] [INFO] element added to cache: Ulei de floarea soarelui
+[2025-11-05 15:21:29] [INFO] Ingredient created: Urzici for user ID: 4
+[2025-11-05 15:21:29] [INFO] element added to cache: Urzici
+[2025-11-05 15:21:29] [ERROR] Ingredient with name Ceapa rosie already exists
+[2025-11-05 15:21:29] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:29] [ERROR] Ingredient with name Pezmet already exists
+[2025-11-05 15:21:29] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:29] [ERROR] Ingredient with name Marar already exists
+[2025-11-05 15:21:29] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:29] [ERROR] Ingredient with name Coriandru seminte already exists
+[2025-11-05 15:21:29] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Vin already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Telemea de oaie already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Naut already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Pastarnac already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Telina already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Caracatita already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Apio already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Antricot vita already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Oase de vita already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Salau already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Banane already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Ananas already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Muschi de porc afumat already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Faina alba 000 already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name File de somon already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Iaurt 3.5% already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Homar already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Creveti already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Ton afumat already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Tortelini already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Capere already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Masline negre already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Branza de vaci already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Urda already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Branza de burduf already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Pipet de pui already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Pipt de rata already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Portocale already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Miere de albine already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Boia dulce already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Rozmarin already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Unt 82% already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Sare already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Ulei de floarea soarelui already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [ERROR] Ingredient with name Urzici already exists
+[2025-11-05 15:21:30] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-11-05 15:21:30] [INFO] Ingredient created: Ardei gras for user ID: 4
+[2025-11-05 15:21:30] [INFO] element added to cache: Ardei gras
+[2025-11-05 15:21:31] [INFO] Ingredient created: Castravete for user ID: 4
+[2025-11-05 15:21:31] [INFO] element added to cache: Castravete
+[2025-11-05 15:21:31] [INFO] Ingredient created: Spanac for user ID: 4
+[2025-11-05 15:21:31] [INFO] element added to cache: Spanac
+[2025-11-05 15:21:32] [INFO] Ingredient created: Broccoli for user ID: 4
+[2025-11-05 15:21:32] [INFO] element added to cache: Broccoli
+[2025-11-05 15:21:32] [INFO] Ingredient created: Conopida for user ID: 4
+[2025-11-05 15:21:32] [INFO] element added to cache: Conopida
+[2025-11-05 15:21:32] [INFO] Ingredient created: Mar for user ID: 4
+[2025-11-05 15:21:32] [INFO] element added to cache: Mar
+[2025-11-05 15:21:33] [INFO] Ingredient created: Pere for user ID: 4
+[2025-11-05 15:21:33] [INFO] element added to cache: Pere
+[2025-11-05 15:21:33] [INFO] Ingredient created: Struguri for user ID: 4
+[2025-11-05 15:21:33] [INFO] element added to cache: Struguri
+[2025-11-05 15:21:33] [INFO] Ingredient created: Pepene galben for user ID: 4
+[2025-11-05 15:21:33] [INFO] element added to cache: Pepene galben
+[2025-11-05 15:21:34] [INFO] Ingredient created: Pepene verde for user ID: 4
+[2025-11-05 15:21:34] [INFO] element added to cache: Pepene verde
+[2025-11-05 15:21:34] [INFO] Ingredient created: Prune for user ID: 4
+[2025-11-05 15:21:34] [INFO] element added to cache: Prune
+[2025-11-05 15:21:34] [INFO] Ingredient created: Caise for user ID: 4
+[2025-11-05 15:21:34] [INFO] element added to cache: Caise
+[2025-11-05 15:21:35] [INFO] Ingredient created: Piersici for user ID: 4
+[2025-11-05 15:21:35] [INFO] element added to cache: Piersici
+[2025-11-05 15:21:35] [INFO] Ingredient created: Mandarine for user ID: 4
+[2025-11-05 15:21:35] [INFO] element added to cache: Mandarine
+[2025-11-05 15:21:35] [INFO] Ingredient created: Kiwi for user ID: 4
+[2025-11-05 15:21:35] [INFO] element added to cache: Kiwi
+[2025-11-05 15:21:36] [INFO] Ingredient created: Mango for user ID: 4
+[2025-11-05 15:21:36] [INFO] element added to cache: Mango
+[2025-11-05 15:21:36] [INFO] Ingredient created: Leurda for user ID: 4
+[2025-11-05 15:21:36] [INFO] element added to cache: Leurda
+[2025-11-05 15:21:37] [INFO] Ingredient created: Andive for user ID: 4
+[2025-11-05 15:21:37] [INFO] element added to cache: Andive
+[2025-11-05 15:21:37] [INFO] Ingredient created: Rucola for user ID: 4
+[2025-11-05 15:21:37] [INFO] element added to cache: Rucola
+[2025-11-05 15:21:37] [INFO] Ingredient created: Ardei iute for user ID: 4
+[2025-11-05 15:21:37] [INFO] element added to cache: Ardei iute
+[2025-11-05 15:21:38] [INFO] Ingredient created: Cicoare for user ID: 4
+[2025-11-05 15:21:38] [INFO] element added to cache: Cicoare
+[2025-11-05 15:21:38] [INFO] Ingredient created: Fenicul for user ID: 4
+[2025-11-05 15:21:38] [INFO] element added to cache: Fenicul
+[2025-11-05 15:21:38] [INFO] Ingredient created: Dovleac for user ID: 4
+[2025-11-05 15:21:38] [INFO] element added to cache: Dovleac
+[2025-11-05 15:21:39] [INFO] Ingredient created: Sfecla rosie for user ID: 4
+[2025-11-05 15:21:39] [INFO] element added to cache: Sfecla rosie
+[2025-11-05 15:21:39] [INFO] Ingredient created: Porumb for user ID: 4
+[2025-11-05 15:21:39] [INFO] element added to cache: Porumb
+[2025-11-05 15:21:39] [INFO] Ingredient created: Fasole verde for user ID: 4
+[2025-11-05 15:21:39] [INFO] element added to cache: Fasole verde
+[2025-11-05 15:21:40] [INFO] Ingredient created: Mazare for user ID: 4
+[2025-11-05 15:21:40] [INFO] element added to cache: Mazare
+[2025-11-05 15:21:40] [INFO] Ingredient created: Varza de Bruxelles for user ID: 4
+[2025-11-05 15:21:40] [INFO] element added to cache: Varza de Bruxelles
+[2025-11-05 15:21:40] [INFO] Ingredient created: Topinambur for user ID: 4
+[2025-11-05 15:21:40] [INFO] element added to cache: Topinambur
+[2025-11-05 15:21:41] [INFO] Ingredient created: Radacina de patrunjel for user ID: 4
+[2025-11-05 15:21:41] [INFO] element added to cache: Radacina de patrunjel
+[2025-11-05 15:21:41] [INFO] Ingredient created: Radacina de telina for user ID: 4
+[2025-11-05 15:21:41] [INFO] element added to cache: Radacina de telina
+[2025-11-05 15:21:42] [INFO] Ingredient created: Radacina de pastarnac for user ID: 4
+[2025-11-05 15:21:42] [INFO] element added to cache: Radacina de pastarnac
+[2025-11-05 15:21:43] [INFO] Ingredient created: Radacina de sfecla for user ID: 4
+[2025-11-05 15:21:43] [INFO] element added to cache: Radacina de sfecla
+[2025-11-05 15:21:43] [INFO] Ingredient created: Radacina de morcov for user ID: 4
+[2025-11-05 15:21:43] [INFO] element added to cache: Radacina de morcov
+[2025-11-05 15:21:44] [INFO] Ingredient created: Radacina de ridiche for user ID: 4
+[2025-11-05 15:21:44] [INFO] element added to cache: Radacina de ridiche
+[2025-11-05 15:21:44] [INFO] Ingredient created: Radacina de hrean for user ID: 4
+[2025-11-05 15:21:44] [INFO] element added to cache: Radacina de hrean
+[2025-11-05 15:21:44] [INFO] Ingredient created: Radacina de nap for user ID: 4
+[2025-11-05 15:21:44] [INFO] element added to cache: Radacina de nap
+[2025-11-05 15:21:45] [INFO] Ingredient created: Sparanghel for user ID: 4
+[2025-11-05 15:21:45] [INFO] element added to cache: Sparanghel
+[2025-11-05 15:21:45] [INFO] Ingredient created: Loboda for user ID: 4
+[2025-11-05 15:21:45] [INFO] element added to cache: Loboda
+[2025-11-05 15:21:45] [INFO] Ingredient created: Stevie for user ID: 4
+[2025-11-05 15:21:45] [INFO] element added to cache: Stevie
+[2025-11-05 15:21:46] [INFO] Ingredient created: Tarhon for user ID: 4
+[2025-11-05 15:21:46] [INFO] element added to cache: Tarhon
+[2025-11-05 15:21:46] [INFO] Ingredient created: Papadie for user ID: 4
+[2025-11-05 15:21:46] [INFO] element added to cache: Papadie
+[2025-11-05 15:21:47] [INFO] Ingredient created: Leustean for user ID: 4
+[2025-11-05 15:21:47] [INFO] element added to cache: Leustean
+[2025-11-05 15:21:47] [INFO] Ingredient created: Cicoare rosie for user ID: 4
+[2025-11-05 15:21:47] [INFO] element added to cache: Cicoare rosie
+[2025-11-05 15:21:48] [INFO] Ingredient created: Menta for user ID: 4
+[2025-11-05 15:21:48] [INFO] element added to cache: Menta
+[2025-11-05 15:21:48] [INFO] Ingredient created: Busuioc for user ID: 4
+[2025-11-05 15:21:48] [INFO] element added to cache: Busuioc
+[2025-11-05 15:21:48] [INFO] Ingredient created: Creson for user ID: 4
+[2025-11-05 15:21:48] [INFO] element added to cache: Creson
+[2025-11-05 15:21:49] [INFO] Ingredient created: Arpagic for user ID: 4
+[2025-11-05 15:21:49] [INFO] element added to cache: Arpagic
+[2025-11-05 15:21:49] [INFO] Ingredient created: Topinambur mov for user ID: 4
+[2025-11-05 15:21:49] [INFO] element added to cache: Topinambur mov
+[2025-11-05 15:21:50] [INFO] Ingredient created: Macris for user ID: 4
+[2025-11-05 15:21:50] [INFO] element added to cache: Macris
+[2025-11-05 15:21:50] [INFO] Ingredient created: Castravete murat for user ID: 4
+[2025-11-05 15:21:50] [INFO] element added to cache: Castravete murat
+[2025-11-05 15:21:50] [INFO] Ingredient created: Mure for user ID: 4
+[2025-11-05 15:21:50] [INFO] element added to cache: Mure
+[2025-11-05 15:21:51] [INFO] Ingredient created: Afine for user ID: 4
+[2025-11-05 15:21:51] [INFO] element added to cache: Afine
+[2025-11-05 15:21:51] [INFO] Ingredient created: Zmeura for user ID: 4
+[2025-11-05 15:21:51] [INFO] element added to cache: Zmeura
+[2025-11-05 15:21:51] [INFO] Ingredient created: Coacaze for user ID: 4
+[2025-11-05 15:21:51] [INFO] element added to cache: Coacaze
+[2025-11-05 15:21:51] [INFO] Ingredient created: Ardei copt for user ID: 4
+[2025-11-05 15:21:51] [INFO] element added to cache: Ardei copt
+[2025-11-05 15:21:52] [INFO] Ingredient created: Papaya for user ID: 4
+[2025-11-05 15:21:52] [INFO] element added to cache: Papaya
+[2025-11-05 15:21:52] [INFO] Ingredient created: Topinambur alb for user ID: 4
+[2025-11-05 15:21:52] [INFO] element added to cache: Topinambur alb
+[2025-11-05 15:21:53] [INFO] Ingredient created: Castravete cornichon for user ID: 4
+[2025-11-05 15:21:53] [INFO] element added to cache: Castravete cornichon
+[2025-11-05 15:21:53] [INFO] Ingredient created: Afine de padure for user ID: 4
+[2025-11-05 15:21:53] [INFO] element added to cache: Afine de padure
+[2025-11-05 15:21:53] [INFO] Ingredient created: Tarhon proaspat for user ID: 4
+[2025-11-05 15:21:53] [INFO] element added to cache: Tarhon proaspat
+[2025-11-05 15:21:54] [INFO] Ingredient created: Leustean uscat for user ID: 4
+[2025-11-05 15:21:54] [INFO] element added to cache: Leustean uscat
+[2025-11-05 15:21:54] [INFO] Ingredient created: Căpșună for user ID: 4
+[2025-11-05 15:21:54] [INFO] element added to cache: Căpșună
+[2025-11-05 15:21:55] [INFO] Ingredient created: Gutuie for user ID: 4
+[2025-11-05 15:21:55] [INFO] element added to cache: Gutuie
+[2025-11-05 15:21:55] [INFO] Ingredient created: Curmal for user ID: 4
+[2025-11-05 15:21:55] [INFO] element added to cache: Curmal
+[2025-11-05 15:21:55] [INFO] Ingredient created: Cătină for user ID: 4
+[2025-11-05 15:21:55] [INFO] element added to cache: Cătină
+[2025-11-05 15:21:56] [INFO] Ingredient created: Smochină for user ID: 4
+[2025-11-05 15:21:56] [INFO] element added to cache: Smochină
+[2025-11-05 15:21:56] [INFO] Ingredient created: Corcodușe for user ID: 4
+[2025-11-05 15:21:56] [INFO] element added to cache: Corcodușe
+[2025-11-05 15:21:56] [INFO] Ingredient created: Fructul pasiunii for user ID: 4
+[2025-11-05 15:21:56] [INFO] element added to cache: Fructul pasiunii
+[2025-11-05 15:21:57] [INFO] Ingredient created: Kaki for user ID: 4
+[2025-11-05 15:21:57] [INFO] element added to cache: Kaki
+[2025-11-05 15:21:57] [INFO] Ingredient created: Pomelo for user ID: 4
+[2025-11-05 15:21:57] [INFO] element added to cache: Pomelo
+[2025-11-05 15:21:57] [INFO] Ingredient created: Guava for user ID: 4
+[2025-11-05 15:21:57] [INFO] element added to cache: Guava
+[2025-11-05 15:21:59] [INFO] Ingredient created: Physalis for user ID: 4
+[2025-11-05 15:21:59] [INFO] element added to cache: Physalis
+[2025-11-05 15:21:59] [INFO] Ingredient created: Litchi for user ID: 4
+[2025-11-05 15:21:59] [INFO] element added to cache: Litchi
+[2025-11-05 15:21:59] [INFO] Ingredient created: Rodie for user ID: 4
+[2025-11-05 15:21:59] [INFO] element added to cache: Rodie
+[2025-11-05 15:22:00] [INFO] Ingredient created: Cirese amare for user ID: 4
+[2025-11-05 15:22:00] [INFO] element added to cache: Cirese amare
+[2025-11-05 15:22:00] [INFO] Ingredient created: Nectarine for user ID: 4
+[2025-11-05 15:22:00] [INFO] element added to cache: Nectarine
+[2025-11-05 15:22:01] [INFO] Ingredient created: Prună uscată for user ID: 4
+[2025-11-05 15:22:01] [INFO] element added to cache: Prună uscată
+[2025-11-05 15:22:01] [INFO] Ingredient created: Coarne for user ID: 4
+[2025-11-05 15:22:01] [INFO] element added to cache: Coarne
+[2025-11-05 15:22:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:22:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:23:44] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:24:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:24:17] [INFO] No unverified users to delete.
+[2025-11-05 15:24:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:24:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:25:11] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:25:55] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:26:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:26:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:27:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:27:17] [INFO] No unverified users to delete.
+[2025-11-05 15:27:31] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:27:55] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:28:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:28:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:28:55] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:28:56] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 15:28:56] [INFO] Trie depth: 24
+[2025-11-05 15:28:56] [INFO] Recipe cache built with 0 items.
+[2025-11-05 15:28:56] [INFO] Trie depth: 0
+[2025-11-05 15:28:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:28:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:28:56] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:28:56] [INFO] No unverified users to delete.
+[2025-11-05 15:28:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:29:08] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:29:36] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:30:14] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:30:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:30:17] [INFO] No unverified users to delete.
+[2025-11-05 15:30:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:30:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:30:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:30:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:31:12] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:31:20] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:31:54] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:31:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:31:56] [INFO] No unverified users to delete.
+[2025-11-05 15:32:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:32:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:32:31] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:32:52] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:32:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:32:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:33:00] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:33:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:33:17] [INFO] No unverified users to delete.
+[2025-11-05 15:34:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:34:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:34:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:34:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:34:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:34:56] [INFO] No unverified users to delete.
+[2025-11-05 15:35:29] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:35:43] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:36:00] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:36:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:36:17] [INFO] No unverified users to delete.
+[2025-11-05 15:36:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:36:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:36:33] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:36:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:36:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:37:22] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:37:23] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:37:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:37:56] [INFO] No unverified users to delete.
+[2025-11-05 15:38:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:38:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:38:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:38:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:39:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:39:17] [INFO] No unverified users to delete.
+[2025-11-05 15:40:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:40:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:40:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:40:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:40:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:40:56] [INFO] No unverified users to delete.
+[2025-11-05 15:41:05] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:42:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:42:17] [INFO] No unverified users to delete.
+[2025-11-05 15:42:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:42:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:42:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:42:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:43:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:43:56] [INFO] No unverified users to delete.
+[2025-11-05 15:44:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:44:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:44:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:44:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:45:17] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:45:17] [INFO] No unverified users to delete.
+[2025-11-05 15:46:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:46:17] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:46:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:46:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:46:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:46:56] [INFO] No unverified users to delete.
+[2025-11-05 15:47:20] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:47:58] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 15:47:59] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 15:47:59] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:48:00] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 15:48:00] [INFO] Trie depth: 24
+[2025-11-05 15:48:00] [INFO] Recipe cache built with 0 items.
+[2025-11-05 15:48:00] [INFO] Trie depth: 0
+[2025-11-05 15:48:00] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:48:00] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:48:00] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:48:00] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:48:00] [INFO] No unverified users to delete.
+[2025-11-05 15:48:06] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:48:11] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:48:12] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 15:48:12] [INFO] Trie depth: 24
+[2025-11-05 15:48:12] [INFO] Recipe cache built with 0 items.
+[2025-11-05 15:48:12] [INFO] Trie depth: 0
+[2025-11-05 15:48:12] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:48:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:48:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:48:12] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:48:12] [INFO] No unverified users to delete.
+[2025-11-05 15:48:42] [ERROR] Error in prefix_search traversal: 'bool' object is not callable
+[2025-11-05 15:50:06] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:50:07] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 15:50:07] [INFO] Trie depth: 24
+[2025-11-05 15:50:07] [INFO] Recipe cache built with 0 items.
+[2025-11-05 15:50:07] [INFO] Trie depth: 0
+[2025-11-05 15:50:07] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:50:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:50:07] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:50:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:50:07] [INFO] No unverified users to delete.
+[2025-11-05 15:52:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:52:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:53:07] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:53:07] [INFO] No unverified users to delete.
+[2025-11-05 15:53:10] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:53:59] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:54:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:54:08] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:56:07] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:56:07] [INFO] No unverified users to delete.
+[2025-11-05 15:56:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:56:08] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:56:15] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:58:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:58:08] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:58:59] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:59:07] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:59:07] [INFO] No unverified users to delete.
+[2025-11-05 15:59:33] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 15:59:45] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 15:59:46] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 15:59:46] [INFO] Trie depth: 24
+[2025-11-05 15:59:46] [INFO] Recipe cache built with 0 items.
+[2025-11-05 15:59:46] [INFO] Trie depth: 0
+[2025-11-05 15:59:46] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 15:59:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:59:46] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 15:59:46] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 15:59:46] [INFO] No unverified users to delete.
+[2025-11-05 15:59:46] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 15:59:59] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:00:00] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 16:00:00] [INFO] Trie depth: 24
+[2025-11-05 16:00:00] [INFO] Recipe cache built with 0 items.
+[2025-11-05 16:00:00] [INFO] Trie depth: 0
+[2025-11-05 16:00:00] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:00:00] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:00:00] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:00:00] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:00:00] [INFO] No unverified users to delete.
+[2025-11-05 16:00:00] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:00:12] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:00:13] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 16:00:13] [INFO] Trie depth: 24
+[2025-11-05 16:00:13] [INFO] Recipe cache built with 0 items.
+[2025-11-05 16:00:13] [INFO] Trie depth: 0
+[2025-11-05 16:00:13] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:00:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:00:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:00:13] [INFO] No unverified users to delete.
+[2025-11-05 16:00:13] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:02:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:02:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:02:34] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:02:46] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:02:47] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 16:02:47] [INFO] Trie depth: 24
+[2025-11-05 16:02:47] [INFO] Recipe cache built with 0 items.
+[2025-11-05 16:02:47] [INFO] Trie depth: 0
+[2025-11-05 16:02:47] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:02:47] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:02:47] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:02:47] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:02:47] [INFO] No unverified users to delete.
+[2025-11-05 16:04:47] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:04:47] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:05:47] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:05:47] [INFO] No unverified users to delete.
+[2025-11-05 16:06:45] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:06:51] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:06:57] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:06:58] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 16:06:58] [INFO] Trie depth: 24
+[2025-11-05 16:06:58] [INFO] Recipe cache built with 0 items.
+[2025-11-05 16:06:58] [INFO] Trie depth: 0
+[2025-11-05 16:06:58] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:06:58] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:06:58] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:06:58] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:06:58] [INFO] No unverified users to delete.
+[2025-11-05 16:08:58] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:08:58] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:09:58] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:09:58] [INFO] No unverified users to delete.
+[2025-11-05 16:10:29] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:10:41] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:10:42] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 16:10:42] [INFO] Trie depth: 24
+[2025-11-05 16:10:42] [INFO] Recipe cache built with 0 items.
+[2025-11-05 16:10:42] [INFO] Trie depth: 0
+[2025-11-05 16:10:42] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:10:42] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:10:42] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:10:42] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:10:42] [INFO] No unverified users to delete.
+[2025-11-05 16:12:42] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:12:42] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:13:42] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:13:42] [INFO] No unverified users to delete.
+[2025-11-05 16:14:09] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:14:22] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:14:23] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 16:14:23] [INFO] Trie depth: 24
+[2025-11-05 16:14:23] [INFO] Recipe cache built with 0 items.
+[2025-11-05 16:14:23] [INFO] Trie depth: 0
+[2025-11-05 16:14:23] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:14:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:14:23] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:14:23] [INFO] No unverified users to delete.
+[2025-11-05 16:14:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:16:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:16:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:16:54] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:16:55] [INFO] element added to cache: Tomato and cheese salad
+[2025-11-05 16:17:17] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:17:18] [INFO] element added to cache: Tomato and carrot salad
+[2025-11-05 16:17:23] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:17:23] [INFO] No unverified users to delete.
+[2025-11-05 16:17:24] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:17:24] [ERROR] Cooking time and portions cannot be negative.
+[2025-11-05 16:17:29] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:17:30] [ERROR] Missing required recipe fields.
+[2025-11-05 16:17:36] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:17:36] [ERROR] Attempted to create recipe without ingredients.
+[2025-11-05 16:17:41] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:17:42] [ERROR] Recipe with name Tomato and cheese salad already exists
+[2025-11-05 16:17:47] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:17:48] [INFO] Fetching recipes with name: Tomato and cheese salad
+[2025-11-05 16:17:48] [INFO] Fetching recipe with ID: 1
+[2025-11-05 16:17:48] [WARNING] Attempted to update recipe without ingredients.
+[2025-11-05 16:17:48] [ERROR] Error updating recipe ID 1: 400: Recipe must have at least one ingredient
+[2025-11-05 16:17:48] [ERROR] Error editing recipe 1: 400: 1 validation error for RecipeSummary
+  Input should be a valid dictionary or object to extract fields from [type=model_attributes_type, input_value=False, input_type=bool]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_attributes_type
+[2025-11-05 16:18:13] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:18:13] [INFO] Fetching recipes with name: Tomato and cheese salad
+[2025-11-05 16:18:13] [INFO] Fetching recipe with ID: 1
+[2025-11-05 16:18:13] [INFO] Cleared existing ingredients for recipe ID: 1
+[2025-11-05 16:18:14] [ERROR] Error editing recipe 1: EntityCache.rename_ingredient() got an unexpected keyword argument 'old_item'
+[2025-11-05 16:18:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:18:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:18:26] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:18:27] [INFO] Fetching recipes with name: Cirese si cartofi
+[2025-11-05 16:18:27] [INFO] Fetching recipe with ID: 1
+[2025-11-05 16:18:27] [ERROR] User 5 is not authorized to edit recipe 1.
+[2025-11-05 16:18:27] [ERROR] Error editing recipe 1: 403: Not authorized to edit this recipe
+[2025-11-05 16:19:01] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:19:01] [INFO] Fetching recipes with name: Cirese si cartofi
+[2025-11-05 16:19:01] [INFO] Fetching recipe with ID: 1
+[2025-11-05 16:19:01] [ERROR] User 5 is not authorized to edit recipe 1.
+[2025-11-05 16:19:01] [ERROR] Error editing recipe 1: 403: Not authorized to edit this recipe
+[2025-11-05 16:19:15] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:19:16] [INFO] Fetching recipes with name: Cirese si cartofi
+[2025-11-05 16:19:16] [INFO] Fetching recipe with ID: 1
+[2025-11-05 16:19:16] [ERROR] User 5 is not authorized to delete recipe 1.
+[2025-11-05 16:19:16] [ERROR] Error deleting recipe 1: 403: Not authorized to delete this recipe
+[2025-11-05 16:19:36] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:19:36] [INFO] Fetching recipes with name: Cirese si cartofi
+[2025-11-05 16:19:36] [INFO] Fetching recipe with ID: 1
+[2025-11-05 16:19:36] [ERROR] User 5 is not authorized to delete recipe 1.
+[2025-11-05 16:19:36] [ERROR] Error deleting recipe 1: 403: Not authorized to delete this recipe
+[2025-11-05 16:19:54] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:19:54] [INFO] Fetching recipes with name: Cirese si cartofi
+[2025-11-05 16:19:54] [INFO] Fetching recipe with ID: 1
+[2025-11-05 16:19:55] [INFO] Deleted recipe with ID: 1
+[2025-11-05 16:19:55] [INFO] Element removed from cache: Cirese si cartofi
+[2025-11-05 16:19:55] [INFO] Recipe 1 deleted by user 4.
+[2025-11-05 16:20:23] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:20:23] [INFO] No unverified users to delete.
+[2025-11-05 16:20:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:20:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:21:09] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:21:10] [INFO] Fetching recipe with ID: 999
+[2025-11-05 16:21:10] [ERROR] Recipe with ID 999 not found for deletion.
+[2025-11-05 16:21:10] [ERROR] Error deleting recipe 999: 404: Recipe not found
+[2025-11-05 16:21:20] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:21:21] [INFO] element added to cache: ompleta cu legume
+[2025-11-05 16:21:21] [INFO] element added to cache: Salată de Quinoa cu Legume
+[2025-11-05 16:21:21] [INFO] element added to cache: Supă Cremă de Dovleac
+[2025-11-05 16:21:21] [INFO] element added to cache: Paste Carbonara
+[2025-11-05 16:21:22] [INFO] element added to cache: Ciorbă de burtă
+[2025-11-05 16:21:22] [INFO] element added to cache: Sarmale în foi de varză
+[2025-11-05 16:21:22] [INFO] element added to cache: Pizza Margherita
+[2025-11-05 16:21:23] [INFO] element added to cache: Salată Caesar
+[2025-11-05 16:21:23] [INFO] element added to cache: Tocăniță de vită cu legume
+[2025-11-05 16:21:23] [INFO] element added to cache: Clătite cu gem
+[2025-11-05 16:21:23] [INFO] element added to cache: Supă de pui cu tăiței
+[2025-11-05 16:21:24] [INFO] element added to cache: Mămăligă cu brânză și smântână
+[2025-11-05 16:21:24] [INFO] element added to cache: Chiftele de dovlecei
+[2025-11-05 16:21:24] [INFO] element added to cache: Lasagna
+[2025-11-05 16:21:25] [INFO] element added to cache: Burger de vită
+[2025-11-05 16:21:25] [INFO] element added to cache: Shakshuka
+[2025-11-05 16:21:25] [INFO] element added to cache: Tiramisu
+[2025-11-05 16:21:26] [INFO] element added to cache: Guacamole
+[2025-11-05 16:21:26] [INFO] element added to cache: Pui la cuptor cu cartofi
+[2025-11-05 16:21:26] [INFO] element added to cache: Cheesecake
+[2025-11-05 16:21:27] [INFO] element added to cache: Ciorbă de legume
+[2025-11-05 16:21:27] [INFO] element added to cache: Sushi
+[2025-11-05 16:21:27] [INFO] element added to cache: Falafel
+[2025-11-05 16:21:27] [INFO] element added to cache: Papanași
+[2025-11-05 16:21:28] [INFO] element added to cache: Chili con carne
+[2025-11-05 16:21:28] [INFO] element added to cache: Minestrone
+[2025-11-05 16:21:28] [INFO] element added to cache: Ratatouille
+[2025-11-05 16:21:29] [INFO] element added to cache: Paella
+[2025-11-05 16:21:30] [INFO] element added to cache: Shawarma de pui
+[2025-11-05 16:21:30] [INFO] element added to cache: Quesadilla
+[2025-11-05 16:21:31] [INFO] element added to cache: Curry de pui
+[2025-11-05 16:21:31] [INFO] element added to cache: Crepes Suzette
+[2025-11-05 16:21:31] [INFO] element added to cache: Pavlova
+[2025-11-05 16:21:32] [INFO] element added to cache: Gulaș unguresc
+[2025-11-05 16:21:32] [INFO] element added to cache: Moussaka
+[2025-11-05 16:21:32] [INFO] element added to cache: Pasta Pesto
+[2025-11-05 16:21:33] [INFO] element added to cache: Gazpacho
+[2025-11-05 16:21:33] [INFO] element added to cache: Fish and Chips
+[2025-11-05 16:21:33] [INFO] element added to cache: Pui Kung Pao
+[2025-11-05 16:21:34] [INFO] element added to cache: Baklava
+[2025-11-05 16:21:34] [INFO] element added to cache: Ramen
+[2025-11-05 16:21:34] [INFO] element added to cache: Tacos
+[2025-11-05 16:21:35] [INFO] element added to cache: Brownie
+[2025-11-05 16:21:35] [INFO] element added to cache: Tabbouleh
+[2025-11-05 16:21:35] [INFO] element added to cache: Pancakes americane
+[2025-11-05 16:21:36] [INFO] element added to cache: Eggs Benedict
+[2025-11-05 16:21:36] [INFO] element added to cache: Croque Monsieur
+[2025-11-05 16:21:36] [INFO] element added to cache: Shakshuka Verde
+[2025-11-05 16:21:37] [INFO] element added to cache: Huevos Rancheros
+[2025-11-05 16:21:37] [INFO] element added to cache: Granola cu iaurt și fructe
+[2025-11-05 16:21:37] [INFO] element added to cache: Supă de roșii
+[2025-11-05 16:21:38] [INFO] element added to cache: Supă de linte
+[2025-11-05 16:21:38] [INFO] element added to cache: Supă de pește
+[2025-11-05 16:21:38] [INFO] element added to cache: Salată grecească
+[2025-11-05 16:21:39] [INFO] element added to cache: Salată Nicoise
+[2025-11-05 16:21:39] [INFO] element added to cache: Salată Caprese
+[2025-11-05 16:21:39] [INFO] element added to cache: Frittata cu spanac
+[2025-11-05 16:21:40] [INFO] element added to cache: Couscous cu legume
+[2025-11-05 16:21:40] [INFO] element added to cache: Tortilla spaniolă
+[2025-11-05 16:21:40] [INFO] element added to cache: Pasta Arrabbiata
+[2025-11-05 16:21:40] [INFO] element added to cache: Pizza Quattro Stagioni
+[2025-11-05 16:21:41] [INFO] element added to cache: Risotto cu ciuperci
+[2025-11-05 16:21:41] [INFO] element added to cache: Polenta cu ciuperci
+[2025-11-05 16:21:41] [INFO] element added to cache: Coq au vin
+[2025-11-05 16:21:42] [INFO] element added to cache: Bouillabaisse
+[2025-11-05 16:21:42] [INFO] element added to cache: Ceviche
+[2025-11-05 16:21:42] [INFO] element added to cache: Empanadas
+[2025-11-05 16:21:43] [INFO] element added to cache: Gyoza
+[2025-11-05 16:21:43] [INFO] element added to cache: Onigiri
+[2025-11-05 16:21:43] [INFO] element added to cache: Kimchi
+[2025-11-05 16:21:44] [INFO] element added to cache: Pho
+[2025-11-05 16:21:44] [INFO] element added to cache: Pad Thai
+[2025-11-05 16:21:45] [INFO] element added to cache: Tom Yum
+[2025-11-05 16:21:45] [INFO] element added to cache: Pav Bhaji
+[2025-11-05 16:21:46] [INFO] element added to cache: Dal Tadka
+[2025-11-05 16:21:47] [INFO] element added to cache: Gulab Jamun
+[2025-11-05 16:21:47] [INFO] element added to cache: Profiterol
+[2025-11-05 16:21:48] [INFO] element added to cache: Panna Cotta
+[2025-11-05 16:21:48] [INFO] element added to cache: Cannoli
+[2025-11-05 16:21:48] [INFO] element added to cache: Churros
+[2025-11-05 16:21:49] [INFO] element added to cache: Banoffee Pie
+[2025-11-05 16:21:49] [INFO] element added to cache: Mac and Cheese
+[2025-11-05 16:21:50] [INFO] element added to cache: Chicken Tikka Masala
+[2025-11-05 16:21:50] [INFO] element added to cache: Burrito
+[2025-11-05 16:21:50] [INFO] element added to cache: Hot Dog
+[2025-11-05 16:21:51] [INFO] element added to cache: Cobb Salad
+[2025-11-05 16:21:51] [INFO] element added to cache: Shish Kebab
+[2025-11-05 16:21:51] [INFO] element added to cache: Egg Fried Rice
+[2025-11-05 16:21:52] [INFO] element added to cache: French Toast
+[2025-11-05 16:21:52] [INFO] element added to cache: Caesar Wrap
+[2025-11-05 16:21:52] [INFO] element added to cache: Pulled Pork Sandwich
+[2025-11-05 16:21:53] [INFO] element added to cache: Pho Bo
+[2025-11-05 16:21:53] [INFO] element added to cache: Boeuf Bourguignon
+[2025-11-05 16:21:54] [INFO] element added to cache: Chicken Noodle Soup
+[2025-11-05 16:21:54] [INFO] element added to cache: Eggplant Parmesan
+[2025-11-05 16:21:54] [INFO] element added to cache: Chicken Qorma
+[2025-11-05 16:21:55] [INFO] element added to cache: Fish Tacos
+[2025-11-05 16:21:55] [INFO] element added to cache: Chicken Satay
+[2025-11-05 16:21:55] [INFO] element added to cache: Beef Stroganoff
+[2025-11-05 16:21:56] [INFO] element added to cache: Peking Duck
+[2025-11-05 16:21:56] [INFO] element added to cache: Lobster Bisque
+[2025-11-05 16:21:57] [INFO] element added to cache: Chicken Enchiladas
+[2025-11-05 16:21:57] [INFO] element added to cache: Gnocchi cu sos de roșii
+[2025-11-05 16:21:57] [INFO] element added to cache: Pastrami Sandwich
+[2025-11-05 16:21:58] [INFO] element added to cache: Miso Soup
+[2025-11-05 16:21:58] [INFO] element added to cache: Cacciucco
+[2025-11-05 16:21:59] [INFO] element added to cache: Okonomiyaki
+[2025-11-05 16:21:59] [INFO] element added to cache: Katsu Curry
+[2025-11-05 16:21:59] [INFO] element added to cache: Baba Ganoush
+[2025-11-05 16:22:00] [INFO] element added to cache: Pasta Alfredo
+[2025-11-05 16:22:00] [INFO] element added to cache: Chicken Kiev
+[2025-11-05 16:22:01] [INFO] element added to cache: Spanakopita
+[2025-11-05 16:22:01] [INFO] element added to cache: Pav Bhaji Dosa
+[2025-11-05 16:22:02] [INFO] element added to cache: Pumpkin Pie
+[2025-11-05 16:22:02] [INFO] element added to cache: Apple Crumble
+[2025-11-05 16:22:02] [INFO] element added to cache: Lemon Tart
+[2025-11-05 16:22:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:22:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:22:25] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:23:17] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:23:23] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:23:23] [INFO] No unverified users to delete.
+[2025-11-05 16:24:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:24:23] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:25:27] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:33:28] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:33:29] [INFO] Ingredient cache built with 167 items.
+[2025-11-05 16:33:29] [INFO] Trie depth: 24
+[2025-11-05 16:33:29] [INFO] Recipe cache built with 117 items.
+[2025-11-05 16:33:29] [INFO] Trie depth: 30
+[2025-11-05 16:33:29] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:33:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:33:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:33:29] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:33:29] [INFO] No unverified users to delete.
+[2025-11-05 16:33:44] [INFO] Fetched 4 recipes with specified ingredients.
+[2025-11-05 16:35:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:35:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:36:29] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:36:29] [INFO] No unverified users to delete.
+[2025-11-05 16:37:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:37:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:39:29] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:39:29] [INFO] No unverified users to delete.
+[2025-11-05 16:39:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:39:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:41:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:41:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:42:29] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:42:29] [INFO] No unverified users to delete.
+[2025-11-05 16:43:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:43:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:45:29] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:45:29] [INFO] No unverified users to delete.
+[2025-11-05 16:45:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:45:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:47:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:47:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:47:46] [INFO] Ingredient created: string for user ID: 4
+[2025-11-05 16:47:46] [INFO] element added to cache: string
+[2025-11-05 16:48:29] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:48:29] [INFO] No unverified users to delete.
+[2025-11-05 16:49:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:49:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:51:29] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:51:29] [INFO] No unverified users to delete.
+[2025-11-05 16:51:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:51:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:53:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:53:29] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:54:13] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:54:26] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:54:27] [INFO] Ingredient cache built with 168 items.
+[2025-11-05 16:54:27] [INFO] Trie depth: 24
+[2025-11-05 16:54:27] [INFO] Recipe cache built with 117 items.
+[2025-11-05 16:54:27] [INFO] Trie depth: 30
+[2025-11-05 16:54:27] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:54:27] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:54:27] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:54:27] [INFO] No unverified users to delete.
+[2025-11-05 16:54:27] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:54:27] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:54:40] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:54:41] [INFO] Ingredient cache built with 168 items.
+[2025-11-05 16:54:41] [INFO] Trie depth: 24
+[2025-11-05 16:54:41] [INFO] Recipe cache built with 117 items.
+[2025-11-05 16:54:41] [INFO] Trie depth: 30
+[2025-11-05 16:54:41] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:54:41] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:54:41] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:54:41] [INFO] No unverified users to delete.
+[2025-11-05 16:54:41] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:54:41] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:54:53] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:54:54] [INFO] Ingredient cache built with 168 items.
+[2025-11-05 16:54:54] [INFO] Trie depth: 24
+[2025-11-05 16:54:54] [INFO] Recipe cache built with 117 items.
+[2025-11-05 16:54:54] [INFO] Trie depth: 30
+[2025-11-05 16:54:54] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:54:54] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:54:54] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:54:54] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:54:54] [INFO] No unverified users to delete.
+[2025-11-05 16:54:54] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-11-05 16:55:06] [INFO] --- New logging session started: logs\app_20251105.log ---
+[2025-11-05 16:55:07] [INFO] Ingredient cache built with 168 items.
+[2025-11-05 16:55:07] [INFO] Trie depth: 24
+[2025-11-05 16:55:07] [INFO] Recipe cache built with 117 items.
+[2025-11-05 16:55:07] [INFO] Trie depth: 30
+[2025-11-05 16:55:07] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:55:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:55:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:55:07] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-11-05 16:55:07] [INFO] No unverified users to delete.
+[2025-11-05 16:57:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:57:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:58:07] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 16:58:07] [INFO] No unverified users to delete.
+[2025-11-05 16:59:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 16:59:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 17:01:07] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2025-11-05 17:01:07] [INFO] No unverified users to delete.
+[2025-11-05 17:01:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 17:01:07] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2025-11-05 17:02:17] [INFO] Fetching recipes with ingredient ID: 2
+[2025-11-05 17:02:41] [INFO] Application shutting down. Signaling scheduler to stop.

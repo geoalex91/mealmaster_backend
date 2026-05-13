@@ -1,0 +1,94 @@
+[2026-03-27 16:11:24] [INFO] --- New logging session started: logs\app_20260327.log ---
+[2026-03-27 16:12:10] [INFO] --- New logging session started: logs\app_20260327.log ---
+[2026-03-27 16:12:12] [INFO] Ingredient cache built with 168 items.
+[2026-03-27 16:12:12] [INFO] Trie depth: 24
+[2026-03-27 16:12:12] [INFO] Recipe cache built with 117 items.
+[2026-03-27 16:12:12] [INFO] Trie depth: 30
+[2026-03-27 16:12:12] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:12:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:12:12] [INFO] No unverified users to delete.
+[2026-03-27 16:12:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:12:12] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-27 16:14:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:14:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:15:12] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:15:12] [INFO] No unverified users to delete.
+[2026-03-27 16:16:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:16:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:18:12] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:18:12] [INFO] No unverified users to delete.
+[2026-03-27 16:18:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:18:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:20:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:20:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:21:12] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:21:12] [INFO] No unverified users to delete.
+[2026-03-27 16:22:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:22:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:24:12] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:24:12] [INFO] No unverified users to delete.
+[2026-03-27 16:24:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:24:12] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:25:35] [INFO] Application shutting down. Signaling scheduler to stop.
+[2026-03-27 16:25:37] [INFO] --- New logging session started: logs\app_20260327.log ---
+[2026-03-27 16:25:37] [INFO] Ingredient cache built with 168 items.
+[2026-03-27 16:25:37] [INFO] Trie depth: 24
+[2026-03-27 16:25:37] [INFO] Recipe cache built with 117 items.
+[2026-03-27 16:25:37] [INFO] Trie depth: 30
+[2026-03-27 16:25:37] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:25:37] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:25:37] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:25:37] [INFO] No unverified users to delete.
+[2026-03-27 16:25:37] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-27 16:25:54] [INFO] Application shutting down. Signaling scheduler to stop.
+[2026-03-27 16:25:56] [INFO] --- New logging session started: logs\app_20260327.log ---
+[2026-03-27 16:25:56] [INFO] Ingredient cache built with 168 items.
+[2026-03-27 16:25:56] [INFO] Trie depth: 24
+[2026-03-27 16:25:56] [INFO] Recipe cache built with 117 items.
+[2026-03-27 16:25:56] [INFO] Trie depth: 30
+[2026-03-27 16:25:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:25:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:25:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:25:56] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-27 16:25:56] [INFO] No unverified users to delete.
+[2026-03-27 16:27:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:27:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:28:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:28:56] [INFO] No unverified users to delete.
+[2026-03-27 16:29:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:29:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:31:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:31:56] [INFO] No unverified users to delete.
+[2026-03-27 16:31:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:31:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:33:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:33:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:34:56] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:34:56] [INFO] No unverified users to delete.
+[2026-03-27 16:35:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:35:56] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:37:12] [INFO] Application shutting down. Signaling scheduler to stop.
+[2026-03-27 16:37:13] [INFO] --- New logging session started: logs\app_20260327.log ---
+[2026-03-27 16:37:13] [INFO] Ingredient cache built with 168 items.
+[2026-03-27 16:37:13] [INFO] Trie depth: 24
+[2026-03-27 16:37:13] [INFO] Recipe cache built with 117 items.
+[2026-03-27 16:37:13] [INFO] Trie depth: 30
+[2026-03-27 16:37:13] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:37:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:37:13] [INFO] No unverified users to delete.
+[2026-03-27 16:37:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:37:13] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-27 16:39:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:39:13] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:39:57] [INFO] Application shutting down. Signaling scheduler to stop.
+[2026-03-27 16:39:59] [INFO] --- New logging session started: logs\app_20260327.log ---
+[2026-03-27 16:42:53] [INFO] --- New logging session started: logs\app_20260327.log ---
+[2026-03-27 16:42:54] [INFO] Ingredient cache built with 168 items.
+[2026-03-27 16:42:54] [INFO] Trie depth: 24
+[2026-03-27 16:42:54] [INFO] Recipe cache built with 117 items.
+[2026-03-27 16:42:54] [INFO] Trie depth: 30
+[2026-03-27 16:42:54] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-27 16:42:54] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:42:54] [INFO] No unverified users to delete.
+[2026-03-27 16:42:54] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-27 16:42:54] [INFO] Background scheduler for deleting unverified users has been started.

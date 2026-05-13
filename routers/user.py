@@ -1,6 +1,10 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from typing import Optional
+
+from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile, status
+from fastapi.responses import FileResponse
 from auth.auth2 import get_current_user
-from routers.schemas import User, UserDisplay, UserBase, UserStatsDisplay, UserStatsBase
+from routers.schemas import MeasurementsResponse, User, UserDisplay, UserBase, UserMeasurementsBase, UserStatsDisplay, UserStatsBase
+from resources.core.upload_images import *
 from sqlalchemy.orm.session import Session
 from db.database import get_db
 from db import db_user
@@ -9,10 +13,13 @@ from datetime import datetime, timedelta, timezone
 from resources.logger import Logger
 import random
 from resources.email_client import EmailClient, get_email_client, get_fake_email_client
+import os
 
 router = APIRouter(prefix="/users", tags=["users"])
 logger = Logger()
-
+BASE_URL = "http://10.0.2.2:8000/"
+UPLOAD_BASE_URL = f"{BASE_URL}uploads/"
+MAX_LIMIT = 50
 @router.post('/register', response_model=UserDisplay, summary="Create a new user", 
              description="This endpoint allows the creation of a new user. It checks if a user with the same username or email already exists before creating a new user.",
              response_description="The created user data.")
@@ -115,24 +122,25 @@ def verify_user(email: str, code: str, db: Session = Depends(get_db)):
         # The hash is for an empty string, which will never match a real code.
         dummy_hash = Hash.bcrypt("")
         Hash.verify(code, dummy_hash) # This call is for timing consistency.
-        raise HTTPException(status_code=422, detail="Invalid or expired 1-time code")
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid secret code")
 
     # Check if the code is valid and not expired
     is_code_valid = Hash.verify(code, user.verification_code)
     is_code_expired = user.code_expiry.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc)
 
     if not is_code_valid or is_code_expired:
-        raise HTTPException(status_code=422, detail="Invalid or expired code")
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid secret code")
 
     user.is_verified = True
     user.verification_code = None
     user.code_expiry = None
-    initial_stats = db_user.UserStatsBase(name=user.username,
-                                            height=0,
-                                            weight=0.0,
-                                            birthdate="2001-01-01",
-                                            gender="unknown",
-                                            activity_level="sedentary")
+    initial_stats = db_user.UserStatsBase(
+        name=user.username,
+        height=0,
+        birthdate="01/01/1999",
+        gender="unknown",
+        activity_level="sedentary"
+    )
     db.commit()
     db_user.update_user_stats(db, user, initial_stats)
     logger.info(f"User {user.username} verified successfully")
@@ -193,14 +201,14 @@ def reset_password(email: str, code: str, password: str, db: Session = Depends(g
         # The hash is for an empty string, which will never match a real code.
         dummy_hash = Hash.bcrypt("")
         Hash.verify(code, dummy_hash) # This call is for timing consistency.
-        raise HTTPException(status_code=422, detail="Invalid or expired 1-time code")
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid secret code")
 
     # Check if the code is valid and not expired
     is_code_valid = Hash.verify(code, user.verification_code)
     is_code_expired = user.code_expiry.replace(tzinfo=timezone.utc) < datetime.now(timezone.utc)
 
     if not is_code_valid or is_code_expired:
-        raise HTTPException(status_code=422, detail="Invalid or expired code")
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid secret code")
 
     user.hashed_password = Hash.bcrypt(password)
     user.verification_code = None
@@ -208,16 +216,106 @@ def reset_password(email: str, code: str, password: str, db: Session = Depends(g
     db.commit()
     return {"message": "password reset successfully"}
 
-@router.get('/stats/', response_model=UserStatsDisplay, summary="Get user stats",
+@router.get('/stats', response_model=UserStatsDisplay, summary="Get user stats",
              description="This endpoint retrieves the stats of a user by their username.",
              response_description="The stats of the user.")
 def get_user_stats(db: Session = Depends(get_db),current_user: User = Depends(get_current_user)):
-    user_stats = db_user.get_user_stats_by_username(db, current_user.username)
+    user_stats = db_user.get_user_stats_by_username(db, current_user)
+    if user_stats.birthdate is not None:
+        if isinstance(user_stats.birthdate, datetime):
+            user_stats.birthdate = user_stats.birthdate.strftime("%d/%m/%Y")
+        else:
+            user_stats.birthdate = str(user_stats.birthdate)
+    if user_stats.profile_photo_url:
+        if os.path.isabs(user_stats.profile_photo_url):
+            rel = os.path.relpath(user_stats.profile_photo_url, r"E:\repos\mealmaster_backend\uploads").replace("\\", "/")
+            user_stats.profile_photo_url = f"{UPLOAD_BASE_URL}{rel}"
+        else:
+            user_stats.profile_photo_url = f"{UPLOAD_BASE_URL}{user_stats.profile_photo_url}"
+        print(f"user profile photo url: {user_stats.profile_photo_url}")
     return UserStatsDisplay.model_validate(user_stats)
 
-@router.put('/stats/', response_model=UserStatsDisplay, summary="Update user stats",
+@router.put('/stats', response_model=UserStatsDisplay, summary="Update user stats",
              description="This endpoint updates the stats of a user by their username.",
              response_description="The updated stats of the user.")
 def update_user_stats(stats: UserStatsBase, db: Session = Depends(get_db),current_user: User = Depends(get_current_user)):
     user_stats = db_user.update_user_stats(db, current_user, stats)
+    print(f"Updated stats for user {current_user.username}: {user_stats}")
+    print("stats dict:", user_stats.__dict__)
+    if user_stats.birthdate is not None:
+        if isinstance(user_stats.birthdate, datetime):
+            user_stats.birthdate = user_stats.birthdate.strftime("%d/%m/%Y")
+        else:
+            user_stats.birthdate = str(user_stats.birthdate)
     return UserStatsDisplay.model_validate(user_stats)
+
+@router.post('/profile_pic', summary="Upload profile picture", description="Upload a profile picture for the current user.",
+             response_description="The URL of the uploaded profile picture.")
+async def upload_profile_pic(file: UploadFile = File(...), db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    user_stats = db_user.get_user_stats_by_username(db, current_user)
+    contents = await validate_image(file)
+    extension = file.filename.split(".")[-1].lower()
+    filename = generate_filename(extension)
+    processed = process_image(contents)
+    upload_dir = "profile_pics"
+    path = save_image(processed, filename, upload_dir)
+    rel_path = os.path.relpath(path, r"E:\repos\mealmaster_backend\uploads").replace("\\", "/")
+    if user_stats.profile_photo_url:
+        if os.path.isabs(user_stats.profile_photo_url):
+            old_path = user_stats.profile_photo_url
+        else:
+            old_path = os.path.join(r"E:\repos\mealmaster_backend\uploads", user_stats.profile_photo_url.replace("/", "\\"))
+        try:
+            os.remove(old_path)
+        except:
+            pass
+
+    user_stats.profile_photo_url = rel_path
+    db.commit()
+    db.refresh(user_stats)
+    profile_photo_url = f"{UPLOAD_BASE_URL}{rel_path}"
+    logger.info(f"User {current_user.username} uploaded a new profile picture: {profile_photo_url}")
+    return {"profile_photo_url": profile_photo_url}
+
+@router.post('/measurements', summary="Add measurements entry", description="Add a new measurements entry for the current user.",
+             response_description="The created measurements entry.")
+def add_measurements_entry(entry: UserMeasurementsBase, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if not current_user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
+    measurement_entry = db_user.add_new_measurement_entry(db, current_user, entry)
+    logger.info(f"Added new measurements entry for user {current_user.username}: {measurement_entry}")
+    return {"message": "Measurements entry added successfully", "entry_id": measurement_entry.id}
+
+@router.put('/measurements', summary="Edit measurements entry", description="Edit an existing measurements entry for the current user.",
+             response_description="The updated measurements entry.")
+def modify_measurements_entry(entry_id: int, entry: UserMeasurementsBase, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if not current_user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
+    measurement_entry = db_user.update_measurement_entry(db, current_user, entry_id, entry)
+    logger.info(f"Updated measurements entry {entry_id} for user {current_user.username}: {measurement_entry}")
+    return {"message": "Measurements entry updated successfully", "entry_id": measurement_entry.id}
+
+@router.delete('/measurements', summary="Delete measurements entry", description="Delete an existing measurements entry for the current user.",
+             response_description="The deleted measurements entry.")
+def remove_measurements_entry(entry_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if not current_user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
+    measurement_entry = db_user.delete_measurement_entry(db, current_user, entry_id)
+    logger.info(f"Deleted measurements entry {entry_id} for user {current_user.username}: {measurement_entry}")
+    return {"message": "Measurements entry deleted successfully", "entry_id": measurement_entry.id}
+
+@router.get('/measurements', summary="List measurements entries", description="List all measurements entries for the current user.",
+             response_description="A list of measurements entries.", response_model=MeasurementsResponse)
+def list_measurements_entries(db: Session = Depends(get_db), current_user: User = Depends(get_current_user),
+                              limit: int = Query(20, ge=1, le=MAX_LIMIT),
+                              cursor: Optional[int] = None):
+    if not current_user:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
+    entries = db_user.get_user_measurement_entries(db, current_user)
+    has_more = len(entries) > limit
+    next_cursor = entries[-1].id if has_more else None
+    paginated_entries = entries[:limit]
+    logger.info(f"Listed measurements entries for user {current_user.username}: {paginated_entries}")
+    return {"entries": paginated_entries,
+             "has_more": has_more,
+               "next_cursor": next_cursor}

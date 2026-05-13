@@ -1,0 +1,93 @@
+[2025-10-04 13:44:54] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 13:44:54] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-04 13:44:54] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-04 13:44:54] [INFO] Deleting unverified user: user_4@fake.com
+[2025-10-04 13:45:09] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-04 13:46:12] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 13:46:14] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-04 13:46:14] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-04 13:46:14] [INFO] No unverified users to delete.
+[2025-10-04 13:47:05] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-04 13:48:07] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 13:48:08] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-04 13:48:08] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-04 13:48:08] [INFO] No unverified users to delete.
+[2025-10-04 13:48:27] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 13:48:28] [INFO] User created: user1
+[2025-10-04 13:48:29] [ERROR] Attempt to create a user that already exists: user1 or user_email@fake.com
+[2025-10-04 13:48:29] [ERROR] Attempt to create a user that already exists: user2 or user_email1@fake.com
+[2025-10-04 13:48:30] [INFO] User created: user3
+[2025-10-04 13:48:32] [ERROR] Failed to send verification email to invalid_email@email.c2m Reaseon Invalid email domain
+[2025-10-04 13:48:32] [ERROR] Failed to send verification email to invalid_email@email.c2m: 422: Failed to send verification email
+[2025-10-04 13:48:33] [INFO] User created: user4
+[2025-10-04 13:49:38] [ERROR] Invalid Credentials: user_not_existent
+[2025-10-04 13:49:38] [ERROR] Incorrect password for user: user1
+[2025-10-04 13:49:39] [ERROR] User not verified: user_4@fake.com
+[2025-10-04 13:49:41] [INFO] Password changed successfully for user: user1
+[2025-10-04 13:49:41] [ERROR] Incorrect password for user: user1
+[2025-10-04 13:51:31] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 13:51:31] [ERROR] Incorrect password for user: user_email1@fake.com
+[2025-10-04 13:54:57] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 13:54:57] [ERROR] Incorrect password for user: user_email1@fake.com
+[2025-10-04 13:57:16] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 13:57:17] [ERROR] Incorrect password for user: user_email1@fake.com
+[2025-10-04 14:00:58] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:07:34] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:07:55] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:08:58] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:09:45] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:11:37] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:12:30] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:15:30] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:19:50] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:20:18] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:22:34] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:24:40] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:27:39] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:28:52] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:31:01] [INFO] Ingredient created: string for user ID: 1
+[2025-10-04 14:32:48] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:34:35] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:35:54] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:39:05] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:39:05] [INFO] Ingredient created: Tomato for user ID: 1
+[2025-10-04 14:41:15] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:44:52] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:44:53] [INFO] Ingredient updated: id=1 by user 1
+[2025-10-04 14:45:56] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:45:57] [INFO] Ingredient deleted: id=1 by user 1
+[2025-10-04 14:46:17] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:46:17] [ERROR] Incorrect password for user: user_email1@fake.com
+[2025-10-04 14:46:49] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 14:46:50] [ERROR] Incorrect password for user: user_email1@fake.com
+[2025-10-04 14:47:41] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 15:45:44] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 15:47:44] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 15:47:45] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:12:31] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:19:23] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:19:23] [ERROR] Missing required ingredient fields.
+[2025-10-04 16:19:23] [ERROR] Nutritional values cannot be negative.
+[2025-10-04 16:19:33] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:21:10] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:22:22] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:24:32] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:26:01] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:26:02] [INFO] Ingredient created: Tomato for user ID: 1
+[2025-10-04 16:28:09] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-04 16:28:13] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:28:13] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-04 16:28:13] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-04 16:28:13] [INFO] Deleting unverified user: user_4@fake.com
+[2025-10-04 16:28:23] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:28:24] [ERROR] Ingredient with name Tomato already exists
+[2025-10-04 16:28:24] [ERROR] Ingredient with name Tomato already exists
+[2025-10-04 16:28:51] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:28:52] [ERROR] Ingredient with name Tomato already exists
+[2025-10-04 16:28:52] [ERROR] Ingredient with name Tomato already exists
+[2025-10-04 16:29:56] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:30:15] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:32:02] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:32:03] [INFO] Ingredient updated: id=1 by user 1
+[2025-10-04 16:36:02] [INFO] --- New logging session started: logs\app_20251004.log ---
+[2025-10-04 16:36:31] [INFO] --- New logging session started: logs\app_20251004.log ---

@@ -166,20 +166,56 @@ class CursorRecipesResponse(BaseModel):
     has_more: bool
 
 class UserStatsBase(BaseModel):
-    model_config = ConfigDict(extra='forbid')
     name: Optional[str] = None
     height: Optional[int] = None
-    weight: Optional[float] = None
     birthdate: Optional[str] = None
     gender: Optional[str] = None
     activity_level: Optional[str] = None
 
 class UserStatsDisplay(BaseModel):
+    user_id: int
     name: str
     height: int
-    weight: float
+    email: Optional[str] = None
+    username: Optional[str] = None
     birthdate: Optional[str] = None
     gender: Optional[str] = None
     activity_level: Optional[str] = None
+    profile_photo_url: Optional[str] = None
     class Config:
         from_attributes = True
+
+class UserMeasurementsBase(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    weight: Optional[float] = None
+    timestamp: Optional[str] = None
+    arm_circumference_r: Optional[float] = None
+    arm_circumference_l: Optional[float] = None
+    waist_circumference: Optional[float] = None
+    hip_circumference: Optional[float] = None
+    chest_circumference: Optional[float] = None
+    quad_circumference_r: Optional[float] = None
+    quad_circumference_l: Optional[float] = None
+    shoulder_circumference: Optional[float] = None
+    fat_percentage: Optional[int] = None
+
+class UserMeasurementsDisplay(BaseModel):
+    id: int
+    weight: float
+    timestamp: str
+    arm_circumference_r: float
+    arm_circumference_l: float
+    waist_circumference: float
+    hip_circumference: float
+    chest_circumference: float
+    quad_circumference_r: float
+    quad_circumference_l: float
+    shoulder_circumference: float
+    fat_percentage: int
+    class Config:
+        from_attributes = True
+
+class MeasurementsResponse(BaseModel):
+    entries: List[UserMeasurementsDisplay]
+    has_more: bool
+    next_cursor: Optional[int]

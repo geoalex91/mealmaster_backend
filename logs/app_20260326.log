@@ -1,0 +1,10 @@
+[2026-03-26 17:07:39] [INFO] --- New logging session started: logs\app_20260326.log ---
+[2026-03-26 17:07:42] [INFO] Ingredient cache built with 168 items.
+[2026-03-26 17:07:42] [INFO] Trie depth: 24
+[2026-03-26 17:07:42] [INFO] Recipe cache built with 117 items.
+[2026-03-26 17:07:42] [INFO] Trie depth: 30
+[2026-03-26 17:07:42] [INFO] Scheduler is running: queuing task to delete_unverified_users.
+[2026-03-26 17:07:42] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-26 17:07:42] [INFO] Background scheduler for deleting unverified users has been started.
+[2026-03-26 17:07:42] [INFO] Scheduler is running: queuing task to start_sync_thread.
+[2026-03-26 17:07:42] [INFO] No unverified users to delete.

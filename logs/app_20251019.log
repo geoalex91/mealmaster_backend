@@ -1,0 +1,474 @@
+[2025-10-19 13:11:16] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 13:12:35] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 13:12:39] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 13:12:39] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 13:12:39] [INFO] No unverified users to delete.
+[2025-10-19 13:12:39] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 13:12:41] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 13:12:41] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 13:12:41] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 13:12:41] [INFO] No unverified users to delete.
+[2025-10-19 13:12:48] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 13:15:17] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 13:15:17] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 13:15:17] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 13:15:17] [INFO] No unverified users to delete.
+[2025-10-19 13:17:23] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 13:17:24] [INFO] User created: user1
+[2025-10-19 13:17:25] [ERROR] Attempt to create a user that already exists: user1 or user_email@fake.com
+[2025-10-19 13:17:25] [ERROR] Attempt to create a user that already exists: user2 or user_email1@fake.com
+[2025-10-19 13:17:26] [INFO] User created: user3
+[2025-10-19 13:17:28] [ERROR] Failed to send verification email to invalid_email@email.c2m Reaseon Invalid email domain
+[2025-10-19 13:17:28] [ERROR] Failed to send verification email to invalid_email@email.c2m: 422: Failed to send verification email
+[2025-10-19 13:17:29] [INFO] User created: user4
+[2025-10-19 13:18:34] [ERROR] Invalid Credentials: user_not_existent
+[2025-10-19 13:18:34] [ERROR] Incorrect password for user: user1
+[2025-10-19 13:18:35] [ERROR] User not verified: user_4@fake.com
+[2025-10-19 13:18:37] [INFO] Password changed successfully for user: user1
+[2025-10-19 13:18:37] [ERROR] Incorrect password for user: user1
+[2025-10-19 14:24:33] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:24:34] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:24:34] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:24:34] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:24:34] [INFO] Deleting unverified user: user_4@fake.com
+[2025-10-19 14:24:42] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:24:43] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:24:43] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:24:43] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:24:43] [INFO] No unverified users to delete.
+[2025-10-19 14:24:47] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:24:49] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:24:49] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:24:49] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:24:49] [INFO] No unverified users to delete.
+[2025-10-19 14:25:31] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:25:33] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:25:33] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:25:33] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:25:33] [INFO] No unverified users to delete.
+[2025-10-19 14:26:38] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:26:39] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:26:39] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:26:39] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:26:39] [INFO] No unverified users to delete.
+[2025-10-19 14:27:00] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:27:02] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:27:02] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:27:02] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:27:02] [INFO] No unverified users to delete.
+[2025-10-19 14:36:46] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:36:48] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:36:48] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:36:48] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:36:48] [INFO] No unverified users to delete.
+[2025-10-19 14:39:54] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:39:56] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:39:56] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:39:56] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:39:56] [INFO] No unverified users to delete.
+[2025-10-19 14:40:23] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:40:25] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:40:25] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:40:25] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:40:25] [INFO] No unverified users to delete.
+[2025-10-19 14:42:28] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:42:30] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:42:30] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:42:30] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:42:30] [INFO] No unverified users to delete.
+[2025-10-19 14:44:34] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:44:35] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:44:35] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:44:35] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:44:35] [INFO] No unverified users to delete.
+[2025-10-19 14:44:49] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:44:50] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:44:50] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:44:50] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:44:50] [INFO] No unverified users to delete.
+[2025-10-19 14:45:00] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:45:01] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:45:01] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:45:01] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:45:01] [INFO] No unverified users to delete.
+[2025-10-19 14:45:04] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 14:45:06] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 14:45:06] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 14:45:06] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 14:45:06] [INFO] No unverified users to delete.
+[2025-10-19 15:13:52] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 15:13:54] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:13:54] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 15:13:54] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 15:13:54] [INFO] No unverified users to delete.
+[2025-10-19 15:14:49] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:14:50] [INFO] Ingredient created: Tomato for user ID: 1
+[2025-10-19 15:14:50] [INFO] Ingredient added to cache: Tomato
+[2025-10-19 15:14:56] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:16:51] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:20:09] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:20:09] [INFO] Ingredient updated: id=1 by user 1
+[2025-10-19 15:21:40] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:22:00] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:22:01] [INFO] Ingredient deleted: id=1 by user 1
+[2025-10-19 15:22:01] [ERROR] Failed to remove ingredient from cache: object of type 'NoneType' has no len()
+[2025-10-19 15:22:15] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:22:16] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 15:27:45] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 15:27:47] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:27:47] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 15:27:47] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 15:27:47] [INFO] No unverified users to delete.
+[2025-10-19 15:29:11] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:29:12] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 15:30:47] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 15:30:49] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:30:49] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 15:30:49] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 15:30:49] [INFO] No unverified users to delete.
+[2025-10-19 15:31:42] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 15:31:43] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:31:44] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 15:31:44] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 15:31:44] [INFO] No unverified users to delete.
+[2025-10-19 15:31:53] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:31:53] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 15:34:46] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 15:34:48] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:34:48] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 15:34:48] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 15:34:48] [INFO] No unverified users to delete.
+[2025-10-19 15:34:57] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:34:57] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 15:35:13] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 15:35:14] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 16:58:37] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 16:58:38] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 16:59:34] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 16:59:36] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 16:59:36] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 16:59:36] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 16:59:36] [INFO] No unverified users to delete.
+[2025-10-19 16:59:41] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 16:59:42] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 16:59:43] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 16:59:43] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 17:00:14] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 17:00:15] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:00:15] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 17:00:15] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 17:00:15] [INFO] No unverified users to delete.
+[2025-10-19 17:00:21] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:00:22] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 17:01:20] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:01:21] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 17:01:21] [ERROR] Error editing ingredient: 'NoneType' object has no attribute 'name'
+[2025-10-19 17:01:49] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 17:01:51] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:01:51] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 17:01:51] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 17:01:51] [INFO] No unverified users to delete.
+[2025-10-19 17:01:54] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:01:55] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 17:01:55] [ERROR] Error editing ingredient: 'NoneType' object has no attribute 'name'
+[2025-10-19 17:52:18] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 17:52:19] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:52:20] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 17:52:20] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 17:52:20] [INFO] No unverified users to delete.
+[2025-10-19 17:52:26] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:52:26] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:52:26] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 17:52:26] [ERROR] Error editing ingredient: 404: Ingredient not found
+[2025-10-19 17:52:27] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 17:52:27] [ERROR] Error editing ingredient: 404: Ingredient not found
+[2025-10-19 17:52:34] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:52:35] [ERROR] Missing required ingredient fields.
+[2025-10-19 17:52:35] [ERROR] Error creating ingredient: 422: Missing or invalid ingredient data.
+[2025-10-19 17:53:10] [INFO] Application shutting down. Signaling scheduler to stop.
+[2025-10-19 17:53:12] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:53:12] [INFO] Scheduler is running: queuing task to delete unverified users.
+[2025-10-19 17:53:12] [INFO] Background scheduler for deleting unverified users has been started.
+[2025-10-19 17:53:12] [INFO] No unverified users to delete.
+[2025-10-19 17:53:15] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:53:15] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:53:16] [ERROR] Missing required ingredient fields.
+[2025-10-19 17:53:16] [ERROR] Error creating ingredient: 422: Missing or invalid ingredient data.
+[2025-10-19 17:53:16] [ERROR] Missing required ingredient fields.
+[2025-10-19 17:53:16] [ERROR] Error creating ingredient: 422: Missing or invalid ingredient data.
+[2025-10-19 17:53:16] [ERROR] Nutritional values cannot be negative.
+[2025-10-19 17:53:16] [ERROR] Error creating ingredient: 422: Nutritional values must be non-negative.
+[2025-10-19 17:53:16] [ERROR] Nutritional values cannot be negative.
+[2025-10-19 17:53:16] [ERROR] Error creating ingredient: 422: Nutritional values must be non-negative.
+[2025-10-19 17:53:24] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:53:25] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:53:31] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:53:31] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:53:32] [INFO] Ingredient created: Tomato for user ID: 1
+[2025-10-19 17:53:32] [INFO] Ingredient added to cache: Tomato
+[2025-10-19 17:53:32] [ERROR] Ingredient with name Tomato already exists
+[2025-10-19 17:53:32] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:53:32] [ERROR] Ingredient with name Tomato already exists
+[2025-10-19 17:53:32] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:53:32] [ERROR] Ingredient with name Tomato already exists
+[2025-10-19 17:53:32] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:53:38] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:55:04] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:55:04] [ERROR] Error editing ingredient: 404: Ingredient not found
+[2025-10-19 17:55:31] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:55:32] [ERROR] Error editing ingredient: 404: Ingredient not found
+[2025-10-19 17:55:32] [ERROR] Error deleting ingredient: 404: Ingredient not found
+[2025-10-19 17:55:37] [INFO] --- New logging session started: logs\app_20251019.log ---
+[2025-10-19 17:55:38] [INFO] Ingredient created: Morcov for user ID: 1
+[2025-10-19 17:55:38] [INFO] Ingredient added to cache: Morcov
+[2025-10-19 17:55:38] [INFO] Ingredient created: Cartofi for user ID: 1
+[2025-10-19 17:55:38] [INFO] Ingredient added to cache: Cartofi
+[2025-10-19 17:55:38] [INFO] Ingredient created: Rosii for user ID: 1
+[2025-10-19 17:55:38] [INFO] Ingredient added to cache: Rosii
+[2025-10-19 17:55:39] [INFO] Ingredient created: Salata iceberg for user ID: 1
+[2025-10-19 17:55:39] [INFO] Ingredient added to cache: Salata iceberg
+[2025-10-19 17:55:39] [INFO] Ingredient created: Ceapa verde for user ID: 1
+[2025-10-19 17:55:39] [INFO] Ingredient added to cache: Ceapa verde
+[2025-10-19 17:55:40] [INFO] Ingredient created: Ridiche for user ID: 1
+[2025-10-19 17:55:40] [INFO] Ingredient added to cache: Ridiche
+[2025-10-19 17:55:40] [INFO] Ingredient created: Capsuni for user ID: 1
+[2025-10-19 17:55:40] [INFO] Ingredient added to cache: Capsuni
+[2025-10-19 17:55:40] [INFO] Ingredient created: Cirese for user ID: 1
+[2025-10-19 17:55:40] [INFO] Ingredient added to cache: Cirese
+[2025-10-19 17:55:41] [INFO] Ingredient created: Cartofi noi for user ID: 1
+[2025-10-19 17:55:41] [INFO] Ingredient added to cache: Cartofi noi
+[2025-10-19 17:55:41] [INFO] Ingredient created: Ceapa galbena for user ID: 1
+[2025-10-19 17:55:41] [INFO] Ingredient added to cache: Ceapa galbena
+[2025-10-19 17:55:41] [INFO] Ingredient created: Dovlecei for user ID: 1
+[2025-10-19 17:55:41] [INFO] Ingredient added to cache: Dovlecei
+[2025-10-19 17:55:42] [INFO] Ingredient created: Varza for user ID: 1
+[2025-10-19 17:55:42] [INFO] Ingredient added to cache: Varza
+[2025-10-19 17:55:42] [INFO] Ingredient created: Linte for user ID: 1
+[2025-10-19 17:55:42] [INFO] Ingredient added to cache: Linte
+[2025-10-19 17:55:42] [INFO] Ingredient created: Linte rosii for user ID: 1
+[2025-10-19 17:55:42] [INFO] Ingredient added to cache: Linte rosii
+[2025-10-19 17:55:43] [INFO] Ingredient created: Pulpe de pui for user ID: 1
+[2025-10-19 17:55:43] [INFO] Ingredient added to cache: Pulpe de pui
+[2025-10-19 17:55:43] [INFO] Ingredient created: Pulpe de pui dezosate for user ID: 1
+[2025-10-19 17:55:43] [INFO] Ingredient added to cache: Pulpe de pui dezosate
+[2025-10-19 17:55:43] [INFO] Ingredient created: Rosii Cherry for user ID: 1
+[2025-10-19 17:55:43] [INFO] Ingredient added to cache: Rosii Cherry
+[2025-10-19 17:55:43] [INFO] Ingredient created: Avocado for user ID: 1
+[2025-10-19 17:55:43] [INFO] Ingredient added to cache: Avocado
+[2025-10-19 17:55:44] [INFO] Ingredient created: Costita afumata for user ID: 1
+[2025-10-19 17:55:44] [INFO] Ingredient added to cache: Costita afumata
+[2025-10-19 17:55:44] [INFO] Ingredient created: Ulei de masline for user ID: 1
+[2025-10-19 17:55:44] [INFO] Ingredient added to cache: Ulei de masline
+[2025-10-19 17:55:44] [INFO] Ingredient created: Praf de copt for user ID: 1
+[2025-10-19 17:55:44] [INFO] Ingredient added to cache: Praf de copt
+[2025-10-19 17:55:45] [INFO] Ingredient created: Zahar for user ID: 1
+[2025-10-19 17:55:45] [INFO] Ingredient added to cache: Zahar
+[2025-10-19 17:55:45] [INFO] Ingredient created: Pecorino for user ID: 1
+[2025-10-19 17:55:45] [INFO] Ingredient added to cache: Pecorino
+[2025-10-19 17:55:45] [INFO] Ingredient created: Oua for user ID: 1
+[2025-10-19 17:55:45] [INFO] Ingredient added to cache: Oua
+[2025-10-19 17:55:46] [INFO] Ingredient created: Albus de ou for user ID: 1
+[2025-10-19 17:55:46] [INFO] Ingredient added to cache: Albus de ou
+[2025-10-19 17:55:46] [INFO] Ingredient created: Galbenus de ou for user ID: 1
+[2025-10-19 17:55:46] [INFO] Ingredient added to cache: Galbenus de ou
+[2025-10-19 17:55:46] [INFO] Ingredient created: Bacon for user ID: 1
+[2025-10-19 17:55:46] [INFO] Ingredient added to cache: Bacon
+[2025-10-19 17:55:47] [INFO] Ingredient created: Guanciale for user ID: 1
+[2025-10-19 17:55:47] [INFO] Ingredient added to cache: Guanciale
+[2025-10-19 17:55:47] [INFO] Ingredient created: Spaghete for user ID: 1
+[2025-10-19 17:55:47] [INFO] Ingredient added to cache: Spaghete
+[2025-10-19 17:55:47] [INFO] Ingredient created: Spaghete integrale for user ID: 1
+[2025-10-19 17:55:47] [INFO] Ingredient added to cache: Spaghete integrale
+[2025-10-19 17:55:48] [INFO] Ingredient created: Malai for user ID: 1
+[2025-10-19 17:55:48] [INFO] Ingredient added to cache: Malai
+[2025-10-19 17:55:48] [INFO] Ingredient created: Telemea de vaca for user ID: 1
+[2025-10-19 17:55:48] [INFO] Ingredient added to cache: Telemea de vaca
+[2025-10-19 17:55:48] [INFO] Ingredient created: Smantana 12% for user ID: 1
+[2025-10-19 17:55:48] [INFO] Ingredient added to cache: Smantana 12%
+[2025-10-19 17:55:49] [INFO] Ingredient created: Carne gulas vita for user ID: 1
+[2025-10-19 17:55:49] [INFO] Ingredient added to cache: Carne gulas vita
+[2025-10-19 17:55:49] [INFO] Ingredient created: Usturoi for user ID: 1
+[2025-10-19 17:55:49] [INFO] Ingredient added to cache: Usturoi
+[2025-10-19 17:55:49] [INFO] Ingredient created: Ardei kapia for user ID: 1
+[2025-10-19 17:55:49] [INFO] Ingredient added to cache: Ardei kapia
+[2025-10-19 17:55:50] [INFO] Ingredient created: Chimen for user ID: 1
+[2025-10-19 17:55:50] [INFO] Ingredient added to cache: Chimen
+[2025-10-19 17:55:50] [INFO] Ingredient created: Piper for user ID: 1
+[2025-10-19 17:55:50] [INFO] Ingredient added to cache: Piper
+[2025-10-19 17:55:50] [INFO] Ingredient created: Paprika for user ID: 1
+[2025-10-19 17:55:50] [INFO] Ingredient added to cache: Paprika
+[2025-10-19 17:55:51] [INFO] Ingredient created: Gulii for user ID: 1
+[2025-10-19 17:55:51] [INFO] Ingredient added to cache: Gulii
+[2025-10-19 17:55:51] [INFO] Ingredient created: Pulpa de porc for user ID: 1
+[2025-10-19 17:55:51] [INFO] Ingredient added to cache: Pulpa de porc
+[2025-10-19 17:55:52] [INFO] Ingredient created: Orez for user ID: 1
+[2025-10-19 17:55:52] [INFO] Ingredient added to cache: Orez
+[2025-10-19 17:55:52] [INFO] Ingredient created: Patrunjel for user ID: 1
+[2025-10-19 17:55:52] [INFO] Ingredient added to cache: Patrunjel
+[2025-10-19 17:55:52] [INFO] Ingredient created: Cimbru uscat for user ID: 1
+[2025-10-19 17:55:52] [INFO] Ingredient added to cache: Cimbru uscat
+[2025-10-19 17:55:53] [INFO] Ingredient created: Vinete for user ID: 1
+[2025-10-19 17:55:53] [INFO] Ingredient added to cache: Vinete
+[2025-10-19 17:55:53] [INFO] Ingredient created: Lamaie for user ID: 1
+[2025-10-19 17:55:53] [INFO] Ingredient added to cache: Lamaie
+[2025-10-19 17:55:53] [INFO] Ingredient created: Cardamon for user ID: 1
+[2025-10-19 17:55:53] [INFO] Ingredient added to cache: Cardamon
+[2025-10-19 17:55:54] [INFO] Ingredient created: Chimion for user ID: 1
+[2025-10-19 17:55:54] [INFO] Ingredient added to cache: Chimion
+[2025-10-19 17:55:54] [INFO] Ingredient created: Ceapa rosie for user ID: 1
+[2025-10-19 17:55:54] [INFO] Ingredient added to cache: Ceapa rosie
+[2025-10-19 17:55:54] [INFO] Ingredient created: Pezmet for user ID: 1
+[2025-10-19 17:55:54] [INFO] Ingredient added to cache: Pezmet
+[2025-10-19 17:55:55] [INFO] Ingredient created: Marar for user ID: 1
+[2025-10-19 17:55:55] [INFO] Ingredient added to cache: Marar
+[2025-10-19 17:55:55] [INFO] Ingredient created: Coriandru seminte for user ID: 1
+[2025-10-19 17:55:55] [INFO] Ingredient added to cache: Coriandru seminte
+[2025-10-19 17:55:56] [INFO] Ingredient created: Vin for user ID: 1
+[2025-10-19 17:55:56] [INFO] Ingredient added to cache: Vin
+[2025-10-19 17:55:56] [INFO] Ingredient created: Telemea de oaie for user ID: 1
+[2025-10-19 17:55:56] [INFO] Ingredient added to cache: Telemea de oaie
+[2025-10-19 17:55:56] [INFO] Ingredient created: Naut for user ID: 1
+[2025-10-19 17:55:56] [INFO] Ingredient added to cache: Naut
+[2025-10-19 17:55:57] [INFO] Ingredient created: Pastarnac for user ID: 1
+[2025-10-19 17:55:57] [INFO] Ingredient added to cache: Pastarnac
+[2025-10-19 17:55:57] [INFO] Ingredient created: Telina for user ID: 1
+[2025-10-19 17:55:57] [INFO] Ingredient added to cache: Telina
+[2025-10-19 17:55:57] [INFO] Ingredient created: Caracatita for user ID: 1
+[2025-10-19 17:55:57] [INFO] Ingredient added to cache: Caracatita
+[2025-10-19 17:55:58] [INFO] Ingredient created: Apio for user ID: 1
+[2025-10-19 17:55:58] [INFO] Ingredient added to cache: Apio
+[2025-10-19 17:55:58] [INFO] Ingredient created: Antricot vita for user ID: 1
+[2025-10-19 17:55:58] [INFO] Ingredient added to cache: Antricot vita
+[2025-10-19 17:55:58] [INFO] Ingredient created: Oase de vita for user ID: 1
+[2025-10-19 17:55:58] [INFO] Ingredient added to cache: Oase de vita
+[2025-10-19 17:55:59] [INFO] Ingredient created: Salau for user ID: 1
+[2025-10-19 17:55:59] [INFO] Ingredient added to cache: Salau
+[2025-10-19 17:55:59] [INFO] Ingredient created: Banane for user ID: 1
+[2025-10-19 17:55:59] [INFO] Ingredient added to cache: Banane
+[2025-10-19 17:55:59] [INFO] Ingredient created: Ananas for user ID: 1
+[2025-10-19 17:55:59] [INFO] Ingredient added to cache: Ananas
+[2025-10-19 17:56:00] [INFO] Ingredient created: Muschi de porc afumat for user ID: 1
+[2025-10-19 17:56:00] [INFO] Ingredient added to cache: Muschi de porc afumat
+[2025-10-19 17:56:00] [INFO] Ingredient created: Faina alba 000 for user ID: 1
+[2025-10-19 17:56:00] [INFO] Ingredient added to cache: Faina alba 000
+[2025-10-19 17:56:00] [INFO] Ingredient created: File de somon for user ID: 1
+[2025-10-19 17:56:00] [INFO] Ingredient added to cache: File de somon
+[2025-10-19 17:56:01] [INFO] Ingredient created: Iaurt 3.5% for user ID: 1
+[2025-10-19 17:56:01] [INFO] Ingredient added to cache: Iaurt 3.5%
+[2025-10-19 17:56:01] [INFO] Ingredient created: Homar for user ID: 1
+[2025-10-19 17:56:01] [INFO] Ingredient added to cache: Homar
+[2025-10-19 17:56:01] [INFO] Ingredient created: Creveti for user ID: 1
+[2025-10-19 17:56:01] [INFO] Ingredient added to cache: Creveti
+[2025-10-19 17:56:02] [INFO] Ingredient created: Ton afumat for user ID: 1
+[2025-10-19 17:56:02] [INFO] Ingredient added to cache: Ton afumat
+[2025-10-19 17:56:02] [INFO] Ingredient created: Tortelini for user ID: 1
+[2025-10-19 17:56:02] [INFO] Ingredient added to cache: Tortelini
+[2025-10-19 17:56:03] [INFO] Ingredient created: Capere for user ID: 1
+[2025-10-19 17:56:03] [INFO] Ingredient added to cache: Capere
+[2025-10-19 17:56:03] [INFO] Ingredient created: Masline negre for user ID: 1
+[2025-10-19 17:56:03] [INFO] Ingredient added to cache: Masline negre
+[2025-10-19 17:56:03] [INFO] Ingredient created: Branza de vaci for user ID: 1
+[2025-10-19 17:56:03] [INFO] Ingredient added to cache: Branza de vaci
+[2025-10-19 17:56:04] [INFO] Ingredient created: Urda for user ID: 1
+[2025-10-19 17:56:04] [INFO] Ingredient added to cache: Urda
+[2025-10-19 17:56:04] [INFO] Ingredient created: Branza de burduf for user ID: 1
+[2025-10-19 17:56:04] [INFO] Ingredient added to cache: Branza de burduf
+[2025-10-19 17:56:04] [INFO] Ingredient created: Pipet de pui for user ID: 1
+[2025-10-19 17:56:04] [INFO] Ingredient added to cache: Pipet de pui
+[2025-10-19 17:56:05] [INFO] Ingredient created: Pipt de rata for user ID: 1
+[2025-10-19 17:56:05] [INFO] Ingredient added to cache: Pipt de rata
+[2025-10-19 17:56:05] [INFO] Ingredient created: Portocale for user ID: 1
+[2025-10-19 17:56:05] [INFO] Ingredient added to cache: Portocale
+[2025-10-19 17:56:05] [INFO] Ingredient created: Miere de albine for user ID: 1
+[2025-10-19 17:56:05] [INFO] Ingredient added to cache: Miere de albine
+[2025-10-19 17:56:06] [INFO] Ingredient created: Boia dulce for user ID: 1
+[2025-10-19 17:56:06] [INFO] Ingredient added to cache: Boia dulce
+[2025-10-19 17:56:06] [INFO] Ingredient created: Rozmarin for user ID: 1
+[2025-10-19 17:56:06] [INFO] Ingredient added to cache: Rozmarin
+[2025-10-19 17:56:06] [INFO] Ingredient created: Unt 82% for user ID: 1
+[2025-10-19 17:56:06] [INFO] Ingredient added to cache: Unt 82%
+[2025-10-19 17:56:07] [INFO] Ingredient created: Sare for user ID: 1
+[2025-10-19 17:56:07] [INFO] Ingredient added to cache: Sare
+[2025-10-19 17:56:07] [INFO] Ingredient created: Ulei de floarea soarelui for user ID: 1
+[2025-10-19 17:56:07] [INFO] Ingredient added to cache: Ulei de floarea soarelui
+[2025-10-19 17:56:09] [INFO] Ingredient created: Urzici for user ID: 1
+[2025-10-19 17:56:09] [INFO] Ingredient added to cache: Urzici
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Ceapa rosie already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Pezmet already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Marar already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Coriandru seminte already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Vin already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Telemea de oaie already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Naut already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Pastarnac already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Telina already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Caracatita already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Apio already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Antricot vita already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Oase de vita already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Salau already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Banane already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Ananas already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Muschi de porc afumat already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Faina alba 000 already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name File de somon already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Iaurt 3.5% already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Homar already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Creveti already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Ton afumat already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Tortelini already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Capere already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Masline negre already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Branza de vaci already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Urda already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Branza de burduf already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Pipet de pui already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Pipt de rata already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Portocale already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Miere de albine already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Boia dulce already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Rozmarin already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Unt 82% already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Sare already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Ulei de floarea soarelui already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:09] [ERROR] Ingredient with name Urzici already exists
+[2025-10-19 17:56:09] [ERROR] Error creating ingredient: 409: An ingredient with that name already exists
+[2025-10-19 17:56:41] [INFO] --- New logging session started: logs\app_20251019.log ---

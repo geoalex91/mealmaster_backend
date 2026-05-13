@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.1 on win32)" generated="2026-03-05T17:25:01.084238" rpa="false" schemaversion="5">
+<suite id="s1" name="Users" source="e:\repos\mealmaster_backend\testing\tests\users.robot">
+<test id="s1-t1" name="1_Create_New_User" line="5">
+<kw name="Create New User" owner="keywords.meal_tracker_testing.MealTracker">
+<msg time="2026-03-05T17:25:04.474624" level="INFO">HTTP Request: POST http://localhost:8000/users/register "HTTP/1.1 200 OK"</msg>
+<msg time="2026-03-05T17:25:04.477624" level="INFO">[2026-03-05 17:25:03] [INFO] Creating user: {'username': 'user100', 'email': 'user_email100@fake.com', 'password': 'user_password'}
+[2026-03-05 17:25:04] [INFO] User created: user100
+[2026-03-05 17:25:04] [INFO] Response status code: 200</msg>
+<msg time="2026-03-05T17:25:04.477624" level="INFO">${msg} = {'username': 'user100'}</msg>
+<var>${msg}</var>
+<arg>user100</arg>
+<arg>user_email100@fake.com</arg>
+<arg>user_password</arg>
+<status status="PASS" start="2026-03-05T17:25:03.244773" elapsed="1.232851"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>User Creation failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-03-05T17:25:04.478623" elapsed="0.000000"/>
+</kw>
+<kw name="Get Verification Code" owner="keywords.meal_tracker_testing.MealTracker">
+<msg time="2026-03-05T17:25:04.479624" level="INFO">${verification_code} = 251617</msg>
+<var>${verification_code}</var>
+<arg>user_email100@fake.com</arg>
+<status status="PASS" start="2026-03-05T17:25:04.479624" elapsed="0.001155"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-03-05T17:25:04.481624" level="INFO">Length is 6.</msg>
+<arg>${verification_code}</arg>
+<arg>Verification code not found</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-03-05T17:25:04.480779" elapsed="0.000845"/>
+</kw>
+<kw name="Verify User" owner="keywords.meal_tracker_testing.MealTracker">
+<msg time="2026-03-05T17:25:05.060390" level="INFO">HTTP Request: POST http://localhost:8000/users/verify?email=user_email100%40fake.com&amp;code=251617 "HTTP/1.1 200 OK"</msg>
+<msg time="2026-03-05T17:25:05.060926" level="INFO">[2026-03-05 17:25:04] [INFO] Verifying user: {'email': 'user_email100@fake.com', 'code': '251617'}</msg>
+<msg time="2026-03-05T17:25:05.060926" level="INFO">${is_verified} = True</msg>
+<var>${is_verified}</var>
+<arg>user_email100@fake.com</arg>
+<arg>${verification_code}</arg>
+<status status="PASS" start="2026-03-05T17:25:04.481624" elapsed="0.579840"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${is_verified}</arg>
+<arg>User Verification failed</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-03-05T17:25:05.062021" elapsed="0.000531"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-03-05T17:25:05.063067" level="INFO">Test Case Passed</msg>
+<arg>Test Case Passed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-03-05T17:25:05.063067" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-03-05T17:25:03.242778" elapsed="1.821406"/>
+</test>
+<status status="PASS" start="2026-03-05T17:25:01.090753" elapsed="3.975211"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Users" id="s1" pass="1" fail="0" skip="0">Users</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
